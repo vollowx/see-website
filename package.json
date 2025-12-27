@@ -1,0 +1,22 @@
+{
+  "name": "see-website",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@vollowx/see": "^0.1.1",
+    "lightningcss": "^1.30.2",
+    "vite": "^7.3.0",
+    "vite-plugin-html": "^3.2.2"
+  }
+}
