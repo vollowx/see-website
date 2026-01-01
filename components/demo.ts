@@ -1,8 +1,8 @@
-import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { LitElement, html, css } from "lit";
+import { customElement } from "lit/decorators.js";
 
-@customElement('doc-demo-block')
-export class DocDemoBlock extends LitElement {
+@customElement("sw-demo")
+export class SwDemo extends LitElement {
   static override styles = css`
     :host {
       border-radius: 12px;
@@ -13,7 +13,7 @@ export class DocDemoBlock extends LitElement {
       border: 1px solid var(--md-sys-color-outline);
     }
 
-    [part~='contents'] {
+    [part~="contents"] {
       align-items: center;
       display: flex;
       flex-grow: 999;
@@ -22,7 +22,7 @@ export class DocDemoBlock extends LitElement {
       justify-content: center;
       padding: 24px;
     }
-    [part~='controls'] {
+    [part~="controls"] {
       background-color: var(--md-sys-color-surface-container-low);
       border-bottom-right-radius: 12px;
       border-inline-start: 1px solid var(--md-sys-color-outline);
@@ -31,28 +31,28 @@ export class DocDemoBlock extends LitElement {
       gap: 16px;
       min-width: 250px;
     }
-    :host-context([dir='rtl']) [part~='controls'] {
+    :host-context([dir="rtl"]) [part~="controls"] {
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 0;
       border-top-left-radius: 12px;
       border-top-right-radius: 0;
     }
 
-    [part~='controls-header'] {
+    [part~="controls-header"] {
       border-bottom: 1px solid var(--md-sys-color-outline);
       padding: 24px;
     }
-    [part~='controls-body'] {
+    [part~="controls-body"] {
       display: flex;
       flex-direction: column;
       gap: 16px;
       padding: 24px;
     }
-    [part~='controls'] h3 {
+    [part~="controls"] h3 {
       font: var(--md-sys-typography-title-medium);
       margin: 0;
     }
-    :host(:not([hascontrols])) [part~='controls'] {
+    :host(:not([hascontrols])) [part~="controls"] {
       display: none;
     }
 
@@ -60,7 +60,7 @@ export class DocDemoBlock extends LitElement {
       :host {
         flex-direction: column;
       }
-      [part~='controls'] {
+      [part~="controls"] {
         border-bottom-left-radius: 12px;
         border-inline-start: none;
         border-top: 1px solid var(--md-sys-color-outline);
@@ -85,6 +85,6 @@ export class DocDemoBlock extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'doc-demo-block': DocDemoBlock;
+    "sw-demo": SwDemo;
   }
 }
