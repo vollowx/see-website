@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-md-theme="dark">
   <head>
     <meta charset="utf-8" />
@@ -15,12 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,reply,search,send,settings,snooze,tab,videocam,width&display=block"
     />
   </head>
   <body>
@@ -106,30 +106,30 @@
         </label>
 
         <script>
-          const cButton = document.querySelector("#button-controlled");
+          const cButton = document.querySelector('#button-controlled');
           document
-            .querySelector("#button-opt-disabled")
-            .addEventListener("change", (e) => (cButton.disabled = e.detail));
+            .querySelector('#button-opt-disabled')
+            .addEventListener('change', (e) => (cButton.disabled = e.detail));
           document
-            .querySelector("#button-opt-size")
-            .addEventListener("change", (e) => (cButton.size = e.target.value));
+            .querySelector('#button-opt-size')
+            .addEventListener('change', (e) => (cButton.size = e.target.value));
           document
-            .querySelector("#button-opt-shape")
+            .querySelector('#button-opt-shape')
             .addEventListener(
-              "change",
-              (e) => (cButton.shape = e.target.value),
+              'change',
+              (e) => (cButton.shape = e.target.value)
             );
           document
-            .querySelector("#button-opt-variant")
+            .querySelector('#button-opt-variant')
             .addEventListener(
-              "change",
-              (e) => (cButton.variant = e.target.value),
+              'change',
+              (e) => (cButton.variant = e.target.value)
             );
           document
-            .querySelector("#button-opt-color")
+            .querySelector('#button-opt-color')
             .addEventListener(
-              "change",
-              (e) => (cButton.color = e.target.value),
+              'change',
+              (e) => (cButton.color = e.target.value)
             );
         </script>
       </sw-demo>
@@ -306,7 +306,7 @@
           <md-icon>videocam</md-icon>
         </md-icon-button>
         <md-icon-button variant="tonal" aria-label="Settings">
-          <md-icon>Settings</md-icon>
+          <md-icon>settings</md-icon>
         </md-icon-button>
         <md-icon-button variant="outlined" aria-label="More options">
           <md-icon>more_vert</md-icon>
@@ -377,9 +377,9 @@
 
         <script>
           document
-            .querySelector("#link-icon-button")
-            .addEventListener("click", () => {
-              location.href = "https://google.com";
+            .querySelector('#link-icon-button')
+            .addEventListener('click', () => {
+              location.href = 'https://google.com';
             });
         </script>
       </sw-demo>
@@ -545,34 +545,34 @@
 
         <script>
           (() => {
-            const menu = document.querySelector("#demo-menu");
-            const anchor = document.querySelector("#menu-anchor");
-            const output = document.querySelector("#menu-output");
+            const menu = document.querySelector('#demo-menu');
+            const anchor = document.querySelector('#menu-anchor');
+            const output = document.querySelector('#menu-output');
 
-            anchor.addEventListener("click", () => {
+            anchor.addEventListener('click', () => {
               menu.open = !menu.open;
             });
 
             const updateOutput = (text) => {
-              output.textContent = "Selected: " + text;
+              output.textContent = 'Selected: ' + text;
             };
 
             document
-              .querySelector("#menu-item-one")
-              .addEventListener("click", () => {
-                updateOutput("Item One");
+              .querySelector('#menu-item-one')
+              .addEventListener('click', () => {
+                updateOutput('Item One');
                 menu.open = false;
               });
             document
-              .querySelector("#menu-item-two")
-              .addEventListener("click", () => {
-                updateOutput("Item Two");
+              .querySelector('#menu-item-two')
+              .addEventListener('click', () => {
+                updateOutput('Item Two');
                 menu.open = false;
               });
             document
-              .querySelector("#menu-item-four")
-              .addEventListener("click", () => {
-                updateOutput("Item Four");
+              .querySelector('#menu-item-four')
+              .addEventListener('click', () => {
+                updateOutput('Item Four');
                 menu.open = false;
               });
           })();
@@ -612,22 +612,22 @@
         </label>
 
         <script>
-          const cCheckbox = document.querySelector("#checkbox-controlled");
+          const cCheckbox = document.querySelector('#checkbox-controlled');
           document
-            .querySelector("#checkbox-opt-checked")
-            .addEventListener("change", (e) => (cCheckbox.checked = e.detail));
+            .querySelector('#checkbox-opt-checked')
+            .addEventListener('change', (e) => (cCheckbox.checked = e.detail));
           document
-            .querySelector("#checkbox-opt-indeterminate")
+            .querySelector('#checkbox-opt-indeterminate')
             .addEventListener(
-              "change",
-              (e) => (cCheckbox.indeterminate = e.detail),
+              'change',
+              (e) => (cCheckbox.indeterminate = e.detail)
             );
           document
-            .querySelector("#checkbox-opt-disabled")
-            .addEventListener("change", (e) => (cCheckbox.disabled = e.detail));
+            .querySelector('#checkbox-opt-disabled')
+            .addEventListener('change', (e) => (cCheckbox.disabled = e.detail));
           document
-            .querySelector("#checkbox-opt-error")
-            .addEventListener("change", (e) => (cCheckbox.error = e.detail));
+            .querySelector('#checkbox-opt-error')
+            .addEventListener('change', (e) => (cCheckbox.error = e.detail));
         </script>
       </sw-demo>
 
@@ -796,8 +796,8 @@
               <br />
             </div>
             <script>
-              const ripple = document.querySelector("#ripple");
-              const control = document.querySelector("#ripple-control");
+              const ripple = document.querySelector('#ripple');
+              const control = document.querySelector('#ripple-control');
               onload = () => ripple.attach(control);
             </script>
           </sw-demo>
@@ -842,21 +842,21 @@
         </label>
 
         <script>
-          const cSwitch = document.querySelector("#switch-controlled");
+          const cSwitch = document.querySelector('#switch-controlled');
           document
-            .querySelector("#switch-opt-checked")
-            .addEventListener("change", (e) => (cSwitch.checked = e.detail));
+            .querySelector('#switch-opt-checked')
+            .addEventListener('change', (e) => (cSwitch.checked = e.detail));
           document
-            .querySelector("#switch-opt-disabled")
-            .addEventListener("change", (e) => (cSwitch.disabled = e.detail));
+            .querySelector('#switch-opt-disabled')
+            .addEventListener('change', (e) => (cSwitch.disabled = e.detail));
           document
-            .querySelector("#switch-opt-icons")
-            .addEventListener("change", (e) => (cSwitch.icons = e.detail));
+            .querySelector('#switch-opt-icons')
+            .addEventListener('change', (e) => (cSwitch.icons = e.detail));
           document
-            .querySelector("#switch-opt-checkedicononly")
+            .querySelector('#switch-opt-checkedicononly')
             .addEventListener(
-              "change",
-              (e) => (cSwitch.checkedIconOnly = e.detail),
+              'change',
+              (e) => (cSwitch.checkedIconOnly = e.detail)
             );
         </script>
       </sw-demo>
