@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500&display=swap"
       rel="stylesheet"
     />
     <link
@@ -39,19 +39,6 @@
       <ul id="toc"></ul>
 
       <h2>Button</h2>
-
-      <p>
-        Buttons communicate actions that users can take. They are typically
-        placed throughout your UI, in places like:
-      </p>
-
-      <ul>
-        <li>Dialogs</li>
-        <li>Modal windows</li>
-        <li>Forms</li>
-        <li>Cards</li>
-        <li>Toolbars</li>
-      </ul>
 
       <h3>Interactive Demo</h3>
 
@@ -111,33 +98,21 @@
         </label>
 
         <script>
-          const cButton = document.querySelector('#button-controlled');
-          const buttonLabel = cButton.querySelector('span');
+          const demoButton = document.querySelector('#button-controlled');
+          const buttonLabel = demoButton.querySelector('span');
           document.querySelector('#button-opt-label').addEventListener('input', (e) => (buttonLabel.textContent = e.target.value))
+          const bindProperty = (target, sharedID, prop) => {
+            document.
+              .querySelector(`#${sharedID}-${prop}`)
+              .addEventListener('change', e => target[prop] = e.target.value)
+          }
           document
             .querySelector('#button-opt-disabled')
-            .addEventListener('change', (e) => (cButton.disabled = e.detail));
-          document
-            .querySelector('#button-opt-size')
-            .addEventListener('change', (e) => (cButton.size = e.target.value));
-          document
-            .querySelector('#button-opt-shape')
-            .addEventListener(
-              'change',
-              (e) => (cButton.shape = e.target.value)
-            );
-          document
-            .querySelector('#button-opt-variant')
-            .addEventListener(
-              'change',
-              (e) => (cButton.variant = e.target.value)
-            );
-          document
-            .querySelector('#button-opt-color')
-            .addEventListener(
-              'change',
-              (e) => (cButton.color = e.target.value)
-            );
+            .addEventListener('change', (e) => (demoButton.disabled = e.detail));
+          bindProperty(demoButton, 'button-opt', 'size')
+          bindProperty(demoButton, 'button-opt', 'shape')
+          bindProperty(demoButton, 'button-opt', 'variant')
+          bindProperty(demoButton, 'button-opt', 'color')
         </script>
       </sw-demo>
 
@@ -162,22 +137,12 @@
 
       <h3>Usage</h3>
 
-      <p>
-        Buttons have label text that describes the action that will occur if a
-        user taps a button.
-      </p>
-
       <sw-demo>
         <md-button variant="outlined">Back</md-button>
         <md-button>Complete</md-button>
       </sw-demo>
 
       <h4>Icon</h4>
-
-      <p>
-        An icon may optionally be added to a button to help communicate the
-        button's action and help draw attention.
-      </p>
 
       <sw-demo>
         <md-button variant="tonal">
@@ -192,8 +157,6 @@
       </sw-demo>
 
       <h3>Toggle Button</h3>
-
-      <p>Button toggles allow users to switch between two states.</p>
 
       <h4>Interactive Demo</h4>
 
