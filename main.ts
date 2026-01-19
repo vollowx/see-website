@@ -56,7 +56,10 @@ import "./components/toolbar.js";
   demos.forEach((demo) => {
     // Find the interactive element (main controlled element)
     const interactive = demo.querySelector("[id$='-interactive']");
-    if (!interactive) return;
+    if (!interactive) {
+      console.warn('Interactive demo missing element with id ending in "-interactive"', demo);
+      return;
+    }
     
     // Extract the base name from the interactive element's ID
     // e.g., "button-interactive" -> "button"
