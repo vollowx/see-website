@@ -7,7 +7,9 @@
     "preview": "vite preview --host"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "markdown-it": "^14.1.0",
+    "vite-plugin-markdown": "^2.2.0"
   },
   "dependencies": {
     "@vollowx/see": "^0.6.0",
