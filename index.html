@@ -43,19 +43,19 @@
       <h3>Interactive Demo</h3>
 
       <sw-demo hascontrols>
-        <md-button id="button-controlled">
+        <md-button id="button-interactive">
           <md-icon slot="icon">search</md-icon>
           <span>Controlled</span>
         </md-button>
 
-        <label slot="controls" for="button-opt-label">
+        <label slot="controls" for="button-properties-label">
           Label
-          <md-outlined-text-field id="button-opt-label" value="Controlled"></md-outlined-text-field>
+          <md-outlined-text-field id="button-properties-label" value="Controlled"></md-outlined-text-field>
         </label>
 
-        <label slot="controls" for="button-opt-size">
+        <label slot="controls" for="button-properties-size">
           Size
-          <md-outlined-select name="size" id="button-opt-size" value="small">
+          <md-outlined-select name="size" id="button-properties-size" value="small">
             <md-option value="xsmall">xsmall</md-option>
             <md-option value="small">small</md-option>
             <md-option value="medium">medium</md-option>
@@ -64,17 +64,17 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-opt-shape">
+        <label slot="controls" for="button-properties-shape">
           Shape
-          <md-outlined-select name="shape" id="button-opt-shape" value="rounded">
+          <md-outlined-select name="shape" id="button-properties-shape" value="rounded">
             <md-option value="rounded">rounded</md-option>
             <md-option value="square">square</md-option>
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-opt-variant">
+        <label slot="controls" for="button-properties-variant">
           Variant
-          <md-outlined-select name="variant" id="button-opt-variant" value="filled">
+          <md-outlined-select name="variant" id="button-properties-variant" value="filled">
             <md-option value="filled">filled</md-option>
             <md-option value="tonal">tonal</md-option>
             <md-option value="elevated">elevated</md-option>
@@ -83,37 +83,19 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-opt-color">
+        <label slot="controls" for="button-properties-color">
           Color
-          <md-outlined-select name="color" id="button-opt-color" value="primary">
+          <md-outlined-select name="color" id="button-properties-color" value="primary">
             <md-option value="primary">primary</md-option>
             <md-option value="secondary">secondary</md-option>
             <md-option value="tertiary">tertiary</md-option>
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-opt-disabled">
+        <label slot="controls" for="button-properties-disabled">
           Disabled
-          <md-switch id="button-opt-disabled"></md-switch>
+          <md-switch id="button-properties-disabled"></md-switch>
         </label>
-
-        <script>
-          const demoButton = document.querySelector('#button-controlled');
-          const buttonLabel = demoButton.querySelector('span');
-          document.querySelector('#button-opt-label').addEventListener('input', (e) => (buttonLabel.textContent = e.target.value))
-          const bindProperty = (target, sharedID, prop) => {
-            document
-              .querySelector(`#${sharedID}-${prop}`)
-              .addEventListener('change', e => target[prop] = e.target.value)
-          }
-          document
-            .querySelector('#button-opt-disabled')
-            .addEventListener('change', (e) => (demoButton.disabled = e.detail));
-          bindProperty(demoButton, 'button-opt', 'size')
-          bindProperty(demoButton, 'button-opt', 'shape')
-          bindProperty(demoButton, 'button-opt', 'variant')
-          bindProperty(demoButton, 'button-opt', 'color')
-        </script>
       </sw-demo>
 
       <p>
@@ -161,7 +143,7 @@
       <h4>Interactive Demo</h4>
 
       <sw-demo hascontrols>
-        <md-button-toggle id="button-toggle-controlled">
+        <md-button-toggle id="button-toggle-interactive">
           <md-icon slot="icon">bookmark</md-icon>
           <md-icon slot="icon-checked" style="font-variation-settings: 'FILL' 1"
             >bookmark</md-icon
@@ -170,11 +152,11 @@
           <span slot="checked">Bookmarked</span>
         </md-button-toggle>
 
-        <label slot="controls" for="button-toggle-opt-variant">
+        <label slot="controls" for="button-toggle-properties-variant">
           Variant
           <md-outlined-select
             name="variant"
-            id="button-toggle-opt-variant"
+            id="button-toggle-properties-variant"
             value="filled"
           >
             <md-option value="filled">filled</md-option>
@@ -184,17 +166,17 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-toggle-opt-shape">
+        <label slot="controls" for="button-toggle-properties-shape">
           Shape
-          <md-outlined-select name="shape" id="button-toggle-opt-shape" value="rounded">
+          <md-outlined-select name="shape" id="button-toggle-properties-shape" value="rounded">
             <md-option value="rounded">rounded</md-option>
             <md-option value="square">square</md-option>
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-toggle-opt-size">
+        <label slot="controls" for="button-toggle-properties-size">
           Size
-          <md-outlined-select name="size" id="button-toggle-opt-size" value="small">
+          <md-outlined-select name="size" id="button-toggle-properties-size" value="small">
             <md-option value="xsmall">xsmall</md-option>
             <md-option value="small">small</md-option>
             <md-option value="medium">medium</md-option>
@@ -203,40 +185,10 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="button-toggle-opt-disabled">
+        <label slot="controls" for="button-toggle-properties-disabled">
           Disabled
-          <md-switch id="button-toggle-opt-disabled"></md-switch>
+          <md-switch id="button-toggle-properties-disabled"></md-switch>
         </label>
-
-        <script>
-          const cButtonToggle = document.querySelector(
-            '#button-toggle-controlled'
-          );
-          document
-            .querySelector('#button-toggle-opt-disabled')
-            .addEventListener(
-              'change',
-              (e) => (cButtonToggle.disabled = e.detail)
-            );
-          document
-            .querySelector('#button-toggle-opt-variant')
-            .addEventListener(
-              'change',
-              (e) => (cButtonToggle.variant = e.target.value)
-            );
-          document
-            .querySelector('#button-toggle-opt-shape')
-            .addEventListener(
-              'change',
-              (e) => (cButtonToggle.shape = e.target.value)
-            );
-          document
-            .querySelector('#button-toggle-opt-size')
-            .addEventListener(
-              'change',
-              (e) => (cButtonToggle.size = e.target.value)
-            );
-        </script>
       </sw-demo>
 
       <h4>Usage</h4>
@@ -274,13 +226,13 @@
       <h3>Interactive Demo</h3>
 
       <sw-demo hascontrols>
-        <md-icon-button id="icon-button-controlled">
+        <md-icon-button id="icon-button-interactive">
           <md-icon>settings</md-icon>
         </md-icon-button>
 
-        <label slot="controls" for="icon-button-opt-size">
+        <label slot="controls" for="icon-button-properties-size">
           Size
-          <md-outlined-select name="size" id="icon-button-opt-size" value="small">
+          <md-outlined-select name="size" id="icon-button-properties-size" value="small">
             <md-option value="xsmall">xsmall</md-option>
             <md-option value="small">small</md-option>
             <md-option value="medium">medium</md-option>
@@ -289,9 +241,9 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-opt-variant">
+        <label slot="controls" for="icon-button-properties-variant">
           Variant
-          <md-outlined-select name="variant" id="icon-button-opt-variant" value="text">
+          <md-outlined-select name="variant" id="icon-button-properties-variant" value="text">
             <md-option value="filled">filled</md-option>
             <md-option value="tonal">tonal</md-option>
             <md-option value="outlined">outlined</md-option>
@@ -299,47 +251,19 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-opt-width">
+        <label slot="controls" for="icon-button-properties-width">
           Width
-          <md-outlined-select name="width" id="icon-button-opt-width" value="standard">
+          <md-outlined-select name="width" id="icon-button-properties-width" value="standard">
             <md-option value="standard">standard</md-option>
             <md-option value="narrow">narrow</md-option>
             <md-option value="wide">wide</md-option>
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-opt-disabled">
+        <label slot="controls" for="icon-button-properties-disabled">
           Disabled
-          <md-switch id="icon-button-opt-disabled"></md-switch>
+          <md-switch id="icon-button-properties-disabled"></md-switch>
         </label>
-
-        <script>
-          const cIconButton = document.querySelector('#icon-button-controlled');
-          document
-            .querySelector('#icon-button-opt-disabled')
-            .addEventListener(
-              'change',
-              (e) => (cIconButton.disabled = e.detail)
-            );
-          document
-            .querySelector('#icon-button-opt-size')
-            .addEventListener(
-              'change',
-              (e) => (cIconButton.size = e.target.value)
-            );
-          document
-            .querySelector('#icon-button-opt-variant')
-            .addEventListener(
-              'change',
-              (e) => (cIconButton.variant = e.target.value)
-            );
-          document
-            .querySelector('#icon-button-opt-width')
-            .addEventListener(
-              'change',
-              (e) => (cIconButton.width = e.target.value)
-            );
-        </script>
       </sw-demo>
 
       <h3>Types</h3>
@@ -366,18 +290,18 @@
       <h4>Interactive Demo</h4>
 
       <sw-demo hascontrols>
-        <md-icon-button-toggle id="icon-button-toggle-controlled">
+        <md-icon-button-toggle id="icon-button-toggle-interactive">
           <md-icon>favorite</md-icon>
           <md-icon slot="checked" style="font-variation-settings: 'FILL' 1"
             >favorite</md-icon
           >
         </md-icon-button-toggle>
 
-        <label slot="controls" for="icon-button-toggle-opt-variant">
+        <label slot="controls" for="icon-button-toggle-properties-variant">
           Variant
           <md-outlined-select
             name="variant"
-            id="icon-button-toggle-opt-variant"
+            id="icon-button-toggle-properties-variant"
             value="text"
           >
             <md-option value="filled">filled</md-option>
@@ -387,9 +311,9 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-toggle-opt-size">
+        <label slot="controls" for="icon-button-toggle-properties-size">
           Size
-          <md-outlined-select name="size" id="icon-button-toggle-opt-size" value="small">
+          <md-outlined-select name="size" id="icon-button-toggle-properties-size" value="small">
             <md-option value="xsmall">xsmall</md-option>
             <md-option value="small">small</md-option>
             <md-option value="medium">medium</md-option>
@@ -398,11 +322,11 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-toggle-opt-width">
+        <label slot="controls" for="icon-button-toggle-properties-width">
           Width
           <md-outlined-select
             name="width"
-            id="icon-button-toggle-opt-width"
+            id="icon-button-toggle-properties-width"
             value="standard"
           >
             <md-option value="standard">standard</md-option>
@@ -411,40 +335,10 @@
           </md-outlined-select>
         </label>
 
-        <label slot="controls" for="icon-button-toggle-opt-disabled">
+        <label slot="controls" for="icon-button-toggle-properties-disabled">
           Disabled
-          <md-switch id="icon-button-toggle-opt-disabled"></md-switch>
+          <md-switch id="icon-button-toggle-properties-disabled"></md-switch>
         </label>
-
-        <script>
-          const cIconButtonToggle = document.querySelector(
-            '#icon-button-toggle-controlled'
-          );
-          document
-            .querySelector('#icon-button-toggle-opt-disabled')
-            .addEventListener(
-              'change',
-              (e) => (cIconButtonToggle.disabled = e.detail)
-            );
-          document
-            .querySelector('#icon-button-toggle-opt-variant')
-            .addEventListener(
-              'change',
-              (e) => (cIconButtonToggle.variant = e.target.value)
-            );
-          document
-            .querySelector('#icon-button-toggle-opt-size')
-            .addEventListener(
-              'change',
-              (e) => (cIconButtonToggle.size = e.target.value)
-            );
-          document
-            .querySelector('#icon-button-toggle-opt-width')
-            .addEventListener(
-              'change',
-              (e) => (cIconButtonToggle.width = e.target.value)
-            );
-        </script>
       </sw-demo>
 
       <h4>Types</h4>
@@ -700,37 +594,37 @@
 
       <sw-demo hascontrols>
         <span style="position: relative; display: inline-block">
-          <md-button id="menu-controlled-btn">Open Controlled Menu</md-button>
-          <md-menu id="menu-controlled" for="menu-controlled-btn">
+          <md-button id="menu-interactive-btn">Open Controlled Menu</md-button>
+          <md-menu id="menu-interactive" for="menu-interactive-btn">
             <md-menu-item>Item 1</md-menu-item>
             <md-menu-item>Item 2</md-menu-item>
             <md-menu-item>Item 3</md-menu-item>
           </md-menu>
         </span>
 
-        <label slot="controls" for="menu-opt-keep-open-focus-lost">
+        <label slot="controls" for="menu-properties-keepOpenBlur">
           Keep Open (Focus Lost)
-          <md-switch id="menu-opt-keep-open-focus-lost"></md-switch>
+          <md-switch id="menu-properties-keepOpenBlur"></md-switch>
         </label>
 
-        <label slot="controls" for="menu-opt-keep-open-click-item">
+        <label slot="controls" for="menu-properties-keepOpenClickItem">
           Keep Open (Click Item)
-          <md-switch id="menu-opt-keep-open-click-item"></md-switch>
+          <md-switch id="menu-properties-keepOpenClickItem"></md-switch>
         </label>
 
-        <label slot="controls" for="menu-opt-keep-open-click-outside">
+        <label slot="controls" for="menu-properties-keepOpenClickOutside">
           Keep Open (Click Outside)
-          <md-switch id="menu-opt-keep-open-click-outside"></md-switch>
+          <md-switch id="menu-properties-keepOpenClickOutside"></md-switch>
         </label>
 
-        <label slot="controls" for="menu-opt-quick">
+        <label slot="controls" for="menu-properties-quick">
           Quick
-          <md-switch id="menu-opt-quick"></md-switch>
+          <md-switch id="menu-properties-quick"></md-switch>
         </label>
 
-        <label slot="controls" for="menu-opt-align">
+        <label slot="controls" for="menu-properties-align">
           Align
-          <md-outlined-select name="align" id="menu-opt-align" value="bottom-start">
+          <md-outlined-select name="align" id="menu-properties-align" value="bottom-start">
             <md-option value="top">top</md-option>
             <md-option value="top-start">top-start</md-option>
             <md-option value="top-end">top-end</md-option>
@@ -745,41 +639,6 @@
             <md-option value="left-end">left-end</md-option>
           </md-outlined-select>
         </label>
-
-        <script>
-          const cMenuBtn = document.getElementById('menu-controlled-btn');
-          const cMenu = document.getElementById('menu-controlled');
-
-          cMenuBtn.addEventListener('click', () => {
-            cMenu.open = !cMenu.open;
-          });
-
-          document
-            .getElementById('menu-opt-keep-open-focus-lost')
-            .addEventListener('change', (e) => (cMenu.keepOpenBlur = e.detail));
-
-          document
-            .getElementById('menu-opt-keep-open-click-item')
-            .addEventListener(
-              'change',
-              (e) => (cMenu.keepOpenClickItem = e.detail)
-            );
-
-          document
-            .getElementById('menu-opt-keep-open-click-outside')
-            .addEventListener(
-              'change',
-              (e) => (cMenu.keepOpenClickOutside = e.detail)
-            );
-
-          document
-            .getElementById('menu-opt-quick')
-            .addEventListener('change', (e) => (cMenu.quick = e.detail));
-
-          document
-            .getElementById('menu-opt-align')
-            .addEventListener('change', (e) => (cMenu.align = e.target.value));
-        </script>
       </sw-demo>
 
       <h3>Usage</h3>
@@ -830,46 +689,27 @@
       <h3>Interactive Demo</h3>
 
       <sw-demo hascontrols>
-        <label for="checkbox-controlled">
-          <md-checkbox id="checkbox-controlled"></md-checkbox>
+        <label for="checkbox-interactive">
+          <md-checkbox id="checkbox-interactive"></md-checkbox>
           Controlled
         </label>
 
-        <label slot="controls" for="checkbox-opt-checked">
+        <label slot="controls" for="checkbox-properties-checked">
           Checked
-          <md-switch id="checkbox-opt-checked"></md-switch>
+          <md-switch id="checkbox-properties-checked"></md-switch>
         </label>
-        <label slot="controls" for="checkbox-opt-indeterminate">
+        <label slot="controls" for="checkbox-properties-indeterminate">
           Indeterminate
-          <md-switch id="checkbox-opt-indeterminate"></md-switch>
+          <md-switch id="checkbox-properties-indeterminate"></md-switch>
         </label>
-        <label slot="controls" for="checkbox-opt-disabled">
+        <label slot="controls" for="checkbox-properties-disabled">
           Disabled
-          <md-switch id="checkbox-opt-disabled"></md-switch>
+          <md-switch id="checkbox-properties-disabled"></md-switch>
         </label>
-        <label slot="controls" for="checkbox-opt-error">
+        <label slot="controls" for="checkbox-properties-error">
           Error
-          <md-switch id="checkbox-opt-error"></md-switch>
+          <md-switch id="checkbox-properties-error"></md-switch>
         </label>
-
-        <script>
-          const cCheckbox = document.querySelector('#checkbox-controlled');
-          document
-            .querySelector('#checkbox-opt-checked')
-            .addEventListener('change', (e) => (cCheckbox.checked = e.detail));
-          document
-            .querySelector('#checkbox-opt-indeterminate')
-            .addEventListener(
-              'change',
-              (e) => (cCheckbox.indeterminate = e.detail)
-            );
-          document
-            .querySelector('#checkbox-opt-disabled')
-            .addEventListener('change', (e) => (cCheckbox.disabled = e.detail));
-          document
-            .querySelector('#checkbox-opt-error')
-            .addEventListener('change', (e) => (cCheckbox.error = e.detail));
-        </script>
       </sw-demo>
 
       <h3>Usage</h3>
@@ -1122,46 +962,27 @@
       <h3>Interactive Demo</h3>
 
       <sw-demo hascontrols>
-        <label for="switch-controlled">
-          <md-switch id="switch-controlled"></md-switch>
+        <label for="switch-interactive">
+          <md-switch id="switch-interactive"></md-switch>
           Controlled
         </label>
 
-        <label slot="controls" for="switch-opt-checked">
+        <label slot="controls" for="switch-properties-checked">
           Checked
-          <md-switch id="switch-opt-checked"></md-switch>
+          <md-switch id="switch-properties-checked"></md-switch>
         </label>
-        <label slot="controls" for="switch-opt-disabled">
+        <label slot="controls" for="switch-properties-disabled">
           Disabled
-          <md-switch id="switch-opt-disabled"></md-switch>
+          <md-switch id="switch-properties-disabled"></md-switch>
         </label>
-        <label slot="controls" for="switch-opt-icons">
+        <label slot="controls" for="switch-properties-icons">
           Icons
-          <md-switch id="switch-opt-icons"></md-switch>
+          <md-switch id="switch-properties-icons"></md-switch>
         </label>
-        <label slot="controls" for="switch-opt-checkedicononly">
+        <label slot="controls" for="switch-properties-checkedIconOnly">
           Checked Icon Only
-          <md-switch id="switch-opt-checkedicononly"></md-switch>
+          <md-switch id="switch-properties-checkedIconOnly"></md-switch>
         </label>
-
-        <script>
-          const cSwitch = document.querySelector('#switch-controlled');
-          document
-            .querySelector('#switch-opt-checked')
-            .addEventListener('change', (e) => (cSwitch.checked = e.detail));
-          document
-            .querySelector('#switch-opt-disabled')
-            .addEventListener('change', (e) => (cSwitch.disabled = e.detail));
-          document
-            .querySelector('#switch-opt-icons')
-            .addEventListener('change', (e) => (cSwitch.icons = e.detail));
-          document
-            .querySelector('#switch-opt-checkedicononly')
-            .addEventListener(
-              'change',
-              (e) => (cSwitch.checkedIconOnly = e.detail)
-            );
-        </script>
       </sw-demo>
 
       <h3>Usage</h3>
