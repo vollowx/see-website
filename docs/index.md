@@ -10,24 +10,28 @@ Presenting contents from `@vollowx/see@0.6.0`
 
 ## Base
 
+### Components
+
+- [Button](/base/components/button/)
+
 ### Mixins
 
-- [`FormAssociated`](/mixins/form-associated/)
+- [`FormAssociated`](/base/mixins/form-associated/)
 
 ## Material You Expressive
 
 ### Components
 
-- [Button](/components/button/)
-- [Icon Button](/components/icon-button/)
-- [FAB](/components/fab/)
-- [Toolbar](/components/toolbar/)
-- [Menu](/components/menu/)
-- [Checkbox](/components/checkbox/)
-- [Ripple](/components/ripple/)
-- [Switch](/components/switch/)
-- [Text Field](/components/text-field/)
-- [Tooltip](/components/tooltip/)
-- [Select](/components/select/)
+- [Button](/m3/components/button/)
+- [Icon Button](/m3/components/icon-button/)
+- [FAB](/m3/components/fab/)
+- [Toolbar](/m3/components/toolbar/)
+- [Menu](/m3/components/menu/)
+- [Checkbox](/m3/components/checkbox/)
+- [Ripple](/m3/components/ripple/)
+- [Switch](/m3/components/switch/)
+- [Text Field](/m3/components/text-field/)
+- [Tooltip](/m3/components/tooltip/)
+- [Select](/m3/components/select/)
 
 ### Mixins

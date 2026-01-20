@@ -36,4 +36,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # Generated HTML files (built from markdown)
 index.html
 components/*/index.html
+m3/*/index.html
+base/*/index.html
+mixins/*/index.html
 package-lock.json
