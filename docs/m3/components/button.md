@@ -119,15 +119,19 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
 
 ### Properties
 
-|Name|Type|Description|
-|---|---|---|
-|`color`|`'primary'|'secondary'|'tertiary'`||
-|`shape`|||
-|`size`|`'xsmall'|'small'|'medium'|'large'|'xlarge'`||
-|`trailingIcon`|Boolean|Whether the icon is displayed at the end of the button.|
-|`variants`|||
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`color`|`'primary' \| 'secondary' \| 'tertiary'`|`'primary'`|The color variant of the button.|
+|`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
+|`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
+|`trailingIcon`|`boolean`|`false`|Whether the icon is displayed at the end of the button.|
+|`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'`|`'filled'`|The visual style variant of the button.|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
+|`disabled`|`boolean`|`false`|Whether the button is disabled (inherited from FormAssociated).|
 
 ### Methods
+
+Inherits all standard HTMLElement methods. Use `click()` to programmatically trigger the button.
 
 ## Toggle Button
 
@@ -194,3 +198,20 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
     </md-icon-button>
   </div>
 </sw-demo>
+
+### Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`checked`|`boolean`|`false`|Whether the button is in the checked state (inherited from Switch).|
+|`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
+|`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
+|`trailingIcon`|`boolean`|`false`|Whether the icon is displayed at the end of the button.|
+|`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined'`|`'filled'`|The visual style variant of the button.|
+|`disabled`|`boolean`|`false`|Whether the button is disabled (inherited from FormAssociated).|
+
+### Events
+
+|Name|Type|Description|
+|---|---|---|
+|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|

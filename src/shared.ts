@@ -6,7 +6,7 @@ import "./components/toolbar.ts";
 (() => {
   const headings = document
     .querySelector("main")
-    .querySelectorAll("h1, h2, h3, h4, h5, h6");
+    .querySelectorAll("h2, h3, h4, h5, h6"); // Exclude h1 from TOC
   const container = document.getElementById("toc");
 
   if (!container) return;
@@ -32,13 +32,15 @@ import "./components/toolbar.ts";
     let item = document.createElement("li");
     item.appendChild(link);
 
-    // Get or create the appropriate container for this level
-    if (level === 1) {
+    // Adjust level for h2-based TOC (h2 is now level 1 in the TOC)
+    let tocLevel = level - 1;
+    
+    if (tocLevel === 1) {
       container.appendChild(item);
-      currentContainers[level] = item;
+      currentContainers[tocLevel] = item;
     } else {
       // Check if we need to create a new list at this level
-      let parentItem = currentContainers[level - 1];
+      let parentItem = currentContainers[tocLevel - 1];
       let existingList = parentItem.querySelector(":scope > ol");
 
       if (!existingList) {
@@ -47,7 +49,7 @@ import "./components/toolbar.ts";
       }
 
       existingList.appendChild(item);
-      currentContainers[level] = item;
+      currentContainers[tocLevel] = item;
     }
   });
 })();
