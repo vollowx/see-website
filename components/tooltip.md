@@ -1,3 +1,7 @@
+---
+title: Tooltip - SEE
+---
+
 ## Tooltip
 
 <sw-demo>

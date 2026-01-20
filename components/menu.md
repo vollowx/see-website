@@ -1,31 +1,13 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-md-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu - SEE</title>
-    <meta name="description" content="Documentation of SEE the web components library." />
+---
+title: Menu - SEE
+---
 
-    <link rel="stylesheet" href="../../main.css" />
-    <script type="module" src="../../main.ts"></script>
+## Menu
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,pause,play_arrow,replay,reply,search,send,settings,snooze,stop,tab,videocam,width&display=block"
-    />
-  </head>
-  <body>
-    <main>
-      <sw-toolbar></sw-toolbar>
-      <h2>Menu</h2>
-<p>Menus display a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.</p>
-<h3>Interactive Demo</h3>
+Menus display a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.
+
+### Interactive Demo
+
 <sw-demo hascontrols>
   <span style="position: relative; display: inline-block">
     <md-button id="menu-interactive-btn">Open Controlled Menu</md-button>
@@ -35,22 +17,27 @@
       <md-menu-item>Item 3</md-menu-item>
     </md-menu>
   </span>
+
   <label slot="controls" for="menu-properties-keepOpenBlur">
     Keep Open (Focus Lost)
     <md-switch id="menu-properties-keepOpenBlur"></md-switch>
   </label>
+
   <label slot="controls" for="menu-properties-keepOpenClickItem">
     Keep Open (Click Item)
     <md-switch id="menu-properties-keepOpenClickItem"></md-switch>
   </label>
+
   <label slot="controls" for="menu-properties-keepOpenClickOutside">
     Keep Open (Click Outside)
     <md-switch id="menu-properties-keepOpenClickOutside"></md-switch>
   </label>
+
   <label slot="controls" for="menu-properties-quick">
     Quick
     <md-switch id="menu-properties-quick"></md-switch>
   </label>
+
   <label slot="controls" for="menu-properties-align">
     Align
     <md-outlined-select name="align" id="menu-properties-align" value="bottom-start">
@@ -69,7 +56,9 @@
     </md-outlined-select>
   </label>
 </sw-demo>
-<h3>Usage</h3>
+
+### Usage
+
 <sw-demo>
   <span style="position: relative; display: inline-block">
     <md-button id="some-menu-btn">Menu with Anchor Set</md-button>
@@ -85,9 +74,11 @@
       <md-menu-item id="item-save-as">Save As...</md-menu-item>
     </md-menu>
   </span>
-<p><label style="display: block">event:
-<input type="text" readonly id="some-menu-fires" />
-</label></p>
+
+  <label style="display: block">event:
+    <input type="text" readonly id="some-menu-fires" />
+  </label>
+
   <script>
     const menuButton = document.getElementById('some-menu-btn');
     const menuOutput = document.getElementById('some-menu-fires');
@@ -102,7 +93,3 @@
     });
   </script>
 </sw-demo>
-
-    </main>
-  </body>
-</html>

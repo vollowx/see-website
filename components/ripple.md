@@ -1,3 +1,7 @@
+---
+title: Ripple - SEE
+---
+
 ## Ripple
 
 Ripples are state layers used to communicate the status of a component or interactive element.

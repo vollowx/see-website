@@ -6,35 +6,64 @@ import MarkdownIt from 'markdown-it';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const md = new MarkdownIt({ html: true });
 
+// Parse frontmatter from markdown
+function parseFrontmatter(content) {
+  const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+  const match = content.match(frontmatterRegex);
+  
+  if (!match) {
+    return { frontmatter: {}, content };
+  }
+  
+  const frontmatter = {};
+  const lines = match[1].split('\n');
+  
+  for (const line of lines) {
+    const [key, ...valueParts] = line.split(':');
+    if (key && valueParts.length > 0) {
+      frontmatter[key.trim()] = valueParts.join(':').trim();
+    }
+  }
+  
+  return {
+    frontmatter,
+    content: match[2]
+  };
+}
+
 // Component list
 const components = [
-  { name: 'button', title: 'Button' },
-  { name: 'icon-button', title: 'Icon Button' },
-  { name: 'fab', title: 'FAB' },
-  { name: 'toolbar', title: 'Toolbar' },
-  { name: 'menu', title: 'Menu' },
-  { name: 'checkbox', title: 'Checkbox' },
-  { name: 'ripple', title: 'Ripple' },
-  { name: 'switch', title: 'Switch' },
-  { name: 'text-field', title: 'Text Field' },
-  { name: 'tooltip', title: 'Tooltip' },
-  { name: 'select', title: 'Select' },
+  'button',
+  'icon-button',
+  'fab',
+  'toolbar',
+  'menu',
+  'checkbox',
+  'ripple',
+  'switch',
+  'text-field',
+  'tooltip',
+  'select',
 ];
 
 // Read template
 const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf-8');
 
 // Generate index.html
-const homeContent = fs.readFileSync(path.join(__dirname, 'content/home.md'), 'utf-8');
-let indexContent = md.render(homeContent);
+const indexMd = fs.readFileSync(path.join(__dirname, 'index.md'), 'utf-8');
+const indexParsed = parseFrontmatter(indexMd);
+let indexContent = md.render(indexParsed.content);
 
+// Add all component content to index
 for (const comp of components) {
-  const mdContent = fs.readFileSync(path.join(__dirname, `content/${comp.name}.md`), 'utf-8');
-  indexContent += md.render(mdContent);
+  const mdPath = path.join(__dirname, 'components', `${comp}.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const parsed = parseFrontmatter(mdContent);
+  indexContent += md.render(parsed.content);
 }
 
 const indexHtml = template
-  .replace('{{TITLE}}', 'SEE')
+  .replace('{{TITLE}}', indexParsed.frontmatter.title || 'SEE')
   .replace('{{CONTENT}}', indexContent)
   .replace('{{CSS_PATH}}', './main.css')
   .replace('{{SCRIPT_PATH}}', './main.ts');
@@ -43,13 +72,16 @@ fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtml);
 
 // Generate component pages
 for (const comp of components) {
-  const dir = path.join(__dirname, 'components', comp.name);
+  const dir = path.join(__dirname, 'components', comp);
   fs.mkdirSync(dir, { recursive: true });
   
-  const mdContent = fs.readFileSync(path.join(__dirname, `content/${comp.name}.md`), 'utf-8');
+  const mdPath = path.join(__dirname, 'components', `${comp}.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const parsed = parseFrontmatter(mdContent);
+  
   const html = template
-    .replace('{{TITLE}}', `${comp.title} - SEE`)
-    .replace('{{CONTENT}}', md.render(mdContent))
+    .replace('{{TITLE}}', parsed.frontmatter.title || comp)
+    .replace('{{CONTENT}}', md.render(parsed.content))
     .replace('{{CSS_PATH}}', '../../main.css')
     .replace('{{SCRIPT_PATH}}', '../../main.ts');
   

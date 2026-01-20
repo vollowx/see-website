@@ -1,35 +1,18 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-md-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Icon Button - SEE</title>
-    <meta name="description" content="Documentation of SEE the web components library." />
+---
+title: Icon Button - SEE
+---
 
-    <link rel="stylesheet" href="../../main.css" />
-    <script type="module" src="../../main.ts"></script>
+## Icon button
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,pause,play_arrow,replay,reply,search,send,settings,snooze,stop,tab,videocam,width&display=block"
-    />
-  </head>
-  <body>
-    <main>
-      <sw-toolbar></sw-toolbar>
-      <h2>Icon button</h2>
-<p>Icon buttons help people take minor actions with one tap.</p>
-<h3>Interactive Demo</h3>
+Icon buttons help people take minor actions with one tap.
+
+### Interactive Demo
+
 <sw-demo hascontrols>
   <md-icon-button id="icon-button-interactive">
     <md-icon>settings</md-icon>
   </md-icon-button>
+
   <label slot="controls" for="icon-button-properties-size">
     Size
     <md-outlined-select name="size" id="icon-button-properties-size" value="small">
@@ -40,6 +23,7 @@
       <md-option value="xlarge">xlarge</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-properties-variant">
     Variant
     <md-outlined-select name="variant" id="icon-button-properties-variant" value="text">
@@ -49,6 +33,7 @@
       <md-option value="text">text</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-properties-width">
     Width
     <md-outlined-select name="width" id="icon-button-properties-width" value="standard">
@@ -57,26 +42,34 @@
       <md-option value="wide">wide</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-properties-disabled">
     Disabled
     <md-switch id="icon-button-properties-disabled"></md-switch>
   </label>
 </sw-demo>
-<h3>Types</h3>
+
+### Types
+
 <sw-demo>
   <md-icon-button variant="filled"><md-icon>settings</md-icon></md-icon-button>
   <md-icon-button variant="tonal"><md-icon>settings</md-icon></md-icon-button>
   <md-icon-button variant="outlined"><md-icon>settings</md-icon></md-icon-button>
   <md-icon-button variant="text"><md-icon>settings</md-icon></md-icon-button>
 </sw-demo>
-<h3>Toggle Icon Button</h3>
-<p>Icon buttons can be used to select between two states.</p>
-<h4>Interactive Demo</h4>
+
+### Toggle Icon Button
+
+Icon buttons can be used to select between two states.
+
+#### Interactive Demo
+
 <sw-demo hascontrols>
   <md-icon-button-toggle id="icon-button-toggle-interactive">
     <md-icon>favorite</md-icon>
     <md-icon slot="checked" style="font-variation-settings: 'FILL' 1">favorite</md-icon>
   </md-icon-button-toggle>
+
   <label slot="controls" for="icon-button-toggle-properties-variant">
     Variant
     <md-outlined-select name="variant" id="icon-button-toggle-properties-variant" value="text">
@@ -86,6 +79,7 @@
       <md-option value="text">text</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-toggle-properties-size">
     Size
     <md-outlined-select name="size" id="icon-button-toggle-properties-size" value="small">
@@ -96,6 +90,7 @@
       <md-option value="xlarge">xlarge</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-toggle-properties-width">
     Width
     <md-outlined-select name="width" id="icon-button-toggle-properties-width" value="standard">
@@ -104,12 +99,15 @@
       <md-option value="wide">wide</md-option>
     </md-outlined-select>
   </label>
+
   <label slot="controls" for="icon-button-toggle-properties-disabled">
     Disabled
     <md-switch id="icon-button-toggle-properties-disabled"></md-switch>
   </label>
 </sw-demo>
-<h4>Types</h4>
+
+#### Types
+
 <sw-demo>
   <md-icon-button-toggle variant="filled">
     <md-icon>favorite</md-icon>
@@ -128,7 +126,3 @@
     <md-icon slot="checked" style="font-variation-settings: 'FILL' 1">favorite</md-icon>
   </md-icon-button-toggle>
 </sw-demo>
-
-    </main>
-  </body>
-</html>

@@ -1,31 +1,13 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-md-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toolbar - SEE</title>
-    <meta name="description" content="Documentation of SEE the web components library." />
+---
+title: Toolbar - SEE
+---
 
-    <link rel="stylesheet" href="../../main.css" />
-    <script type="module" src="../../main.ts"></script>
+## Toolbar
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,pause,play_arrow,replay,reply,search,send,settings,snooze,stop,tab,videocam,width&display=block"
-    />
-  </head>
-  <body>
-    <main>
-      <sw-toolbar></sw-toolbar>
-      <h2>Toolbar</h2>
-<p>Toolbars display frequently used actions relevant to the current page or context and group controls into a compact surface.</p>
-<h3>Types</h3>
+Toolbars display frequently used actions relevant to the current page or context and group controls into a compact surface.
+
+### Types
+
 <sw-demo>
   <md-toolbar>
     <md-icon-button aria-label="Back">
@@ -45,7 +27,9 @@
     </md-icon-button>
   </md-toolbar>
 </sw-demo>
-<h4>Floating</h4>
+
+#### Floating
+
 <sw-demo>
   <md-toolbar type="floating">
     <md-icon-button-toggle variant="tonal" checked>
@@ -63,7 +47,9 @@
     <md-button>Share</md-button>
   </md-toolbar>
 </sw-demo>
-<h4>Vertical (Floating Only)</h4>
+
+#### Vertical (Floating Only)
+
 <sw-demo>
   <md-toolbar type="floating" orientation="vertical">
     <md-icon-button-toggle variant="tonal">
@@ -80,7 +66,9 @@
     </md-icon-button-toggle>
   </md-toolbar>
 </sw-demo>
-<h4>With FAB</h4>
+
+#### With FAB
+
 <sw-demo>
   <md-toolbar type="floating">
     <md-icon-button id="toolbar-archive">
@@ -109,7 +97,3 @@
     <md-tooltip for="toolbar-reply">Reply</md-tooltip>
   </md-toolbar>
 </sw-demo>
-
-    </main>
-  </body>
-</html>

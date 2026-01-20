@@ -1,36 +1,19 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-md-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkbox - SEE</title>
-    <meta name="description" content="Documentation of SEE the web components library." />
+---
+title: Checkbox - SEE
+---
 
-    <link rel="stylesheet" href="../../main.css" />
-    <script type="module" src="../../main.ts"></script>
+## Checkbox
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,pause,play_arrow,replay,reply,search,send,settings,snooze,stop,tab,videocam,width&display=block"
-    />
-  </head>
-  <body>
-    <main>
-      <sw-toolbar></sw-toolbar>
-      <h2>Checkbox</h2>
-<p>Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.</p>
-<h3>Interactive Demo</h3>
+Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
+
+### Interactive Demo
+
 <sw-demo hascontrols>
   <label for="checkbox-interactive">
     <md-checkbox id="checkbox-interactive"></md-checkbox>
     Controlled
   </label>
+
   <label slot="controls" for="checkbox-properties-checked">
     Checked
     <md-switch id="checkbox-properties-checked"></md-switch>
@@ -48,13 +31,17 @@
     <md-switch id="checkbox-properties-error"></md-switch>
   </label>
 </sw-demo>
-<h3>Usage</h3>
-<p>Checkboxes may be standalone, pre-checked, or indeterminate.</p>
+
+### Usage
+
+Checkboxes may be standalone, pre-checked, or indeterminate.
+
 <sw-demo>
   <md-checkbox></md-checkbox>
   <md-checkbox checked></md-checkbox>
   <md-checkbox indeterminate></md-checkbox>
 </sw-demo>
+
 <sw-demo>
   <div>
     <label>
@@ -82,6 +69,7 @@
       </li>
     </ul>
   </div>
+
   <script>
     const parentCheckbox = document.getElementById('parent-checkbox');
     const childCheckboxes = document.querySelectorAll('.child-checkbox');
@@ -102,27 +90,32 @@
     });
   </script>
 </sw-demo>
-<h4>Label</h4>
-<p>Associate a label with a checkbox using the <code>&lt;label&gt;</code> element.</p>
+
+#### Label
+
+Associate a label with a checkbox using the `<label>` element.
+
 <sw-demo>
   <label>
     <md-checkbox></md-checkbox>
     Checkbox one
   </label>
-<p><md-checkbox id="checkbox-two"></md-checkbox>
-<label for="checkbox-two">Checkbox two</label>
-</sw-demo></p>
-<h3>Accessibility</h3>
-<p>Add an <code>aria-label</code> attribute to checkboxes without labels or checkboxes whose labels need to be more descriptive.</p>
+
+  <md-checkbox id="checkbox-two"></md-checkbox>
+  <label for="checkbox-two">Checkbox two</label>
+</sw-demo>
+
+### Accessibility
+
+Add an `aria-label` attribute to checkboxes without labels or checkboxes whose labels need to be more descriptive.
+
 <sw-demo>
   <md-checkbox aria-label="Select all checkboxes"></md-checkbox>
+
   <label>
     <md-checkbox aria-label="Agree to terms and conditions"></md-checkbox>
     Agree
   </label>
 </sw-demo>
-<p>Note: checkboxes are not automatically labelled by <code>&lt;label&gt;</code> elements and always need an <code>aria-label</code>.</p>
 
-    </main>
-  </body>
-</html>
+Note: checkboxes are not automatically labelled by `<label>` elements and always need an `aria-label`.

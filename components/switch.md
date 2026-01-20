@@ -1,3 +1,7 @@
+---
+title: Switch - SEE
+---
+
 ## Switch
 
 Switches are the preferred way to adjust settings. They're used to control binary options – think On/Off or True/False.
