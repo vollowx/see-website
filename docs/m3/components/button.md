@@ -6,6 +6,10 @@ title: Button - SEE
 
 <ul id="toc"></ul>
 
+## Action Button
+
+- Inherits: [`Button`](/base/components/button/)
+
 ## Interactive Demo
 
 <sw-demo hascontrols>
@@ -71,7 +75,16 @@ title: Button - SEE
 
 Note: `color` is not part of the official Material You. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
 
-### Types
+### Usage
+
+<sw-demo>
+  <md-button variant="outlined">Back</md-button>
+  <md-button>Complete</md-button>
+</sw-demo>
+
+### Configurations
+
+#### Varients
 
 <sw-demo>
   <md-button>Filled</md-button>
@@ -82,13 +95,6 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
   </md-button>
   <md-button variant="outlined">Outlined</md-button>
   <md-button variant="text">Text</md-button>
-</sw-demo>
-
-### Usage
-
-<sw-demo>
-  <md-button variant="outlined">Back</md-button>
-  <md-button>Complete</md-button>
 </sw-demo>
 
 #### Icon
@@ -117,9 +123,15 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
 </md-button>
 ```
 
-### Toggle Button
+### Properties
 
-#### Interactive Demo
+### Methods
+
+## Toggle Button
+
+- Inherits: [`Switch`](/base/components/switch/)
+
+### Interactive Demo
 
 <sw-demo hascontrols>
   <md-button-toggle id="button-toggle-interactive">
@@ -164,7 +176,7 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
   </label>
 </sw-demo>
 
-#### Usage
+### Usage
 
 <sw-demo>
   <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
