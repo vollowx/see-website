@@ -99,3 +99,11 @@ Toolbars display frequently used actions relevant to the current page or context
     <md-tooltip for="toolbar-reply">Reply</md-tooltip>
   </md-toolbar>
 </sw-demo>
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`type`|`'docked' \| 'floating'`|`'docked'`|The visual style type of the toolbar.|
+|`color`|`string`|`'standard'`|The color variant of the toolbar.|
+|`orientation`|`'horizontal' \| 'vertical'`|`'horizontal'`|The orientation of the toolbar (only for floating type).|

@@ -22,3 +22,27 @@ Selects allow users to choose one or more items from a list of values.
     <md-option value="watermelon">Watermelon</md-option>
   </md-outlined-select>
 </sw-demo>
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`value`|`string`|`''`|The value of the selected option (inherited from Select).|
+|`placeholder`|`string`|`''`|The placeholder text when no option is selected (inherited from Select).|
+|`label`|`string`|`''`|The label text for the select field.|
+|`supportingText`|`string`|`''`|Helper text displayed below the select field.|
+|`error`|`boolean`|`false`|Whether the select is in an error state.|
+|`open`|`boolean`|`false`|Whether the select menu is open (inherited from Select).|
+|`required`|`boolean`|`false`|Whether the select is required (inherited from Select).|
+|`quick`|`boolean`|`false`|Whether to use quick mode for menu opening (inherited from Select).|
+|`align`|`string`|`'bottom-start'`|The alignment of the menu relative to the select (inherited from Select).|
+|`alignStrategy`|`string`|`'absolute'`|The positioning strategy for the menu (inherited from Select).|
+|`offset`|`number`|`0`|The offset distance for the menu (inherited from Select).|
+|`disabled`|`boolean`|`false`|Whether the select is disabled (inherited from FormAssociated).|
+
+## Methods
+
+|Name|Description|
+|---|---|
+|`focus()`|Focuses the select element.|
+|`blur()`|Removes focus from the select element.|

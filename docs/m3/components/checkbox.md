@@ -121,3 +121,18 @@ Add an `aria-label` attribute to checkboxes without labels or checkboxes whose l
 </sw-demo>
 
 Note: checkboxes are not automatically labelled by `<label>` elements and always need an `aria-label`.
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`checked`|`boolean`|`false`|Whether the checkbox is checked (inherited from Checkbox).|
+|`indeterminate`|`boolean`|`false`|Whether the checkbox is in an indeterminate state (inherited from Checkbox).|
+|`error`|`boolean`|`false`|Whether the checkbox is in an error state.|
+|`disabled`|`boolean`|`false`|Whether the checkbox is disabled (inherited from FormAssociated).|
+
+## Events
+
+|Name|Type|Description|
+|---|---|---|
+|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|

@@ -287,3 +287,48 @@ label:has(md-outlined-text-field) {
 label:has(md-switch:disabled) {
   pointer-events: none;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+  display: table;
+}
+
+th,
+td {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  padding: 8px 12px;
+  text-align: left;
+  min-width: 100px;
+}
+
+th {
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  font-weight: 500;
+}
+
+td {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+td code {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  thead,
+  tbody,
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+}

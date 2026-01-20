@@ -87,3 +87,17 @@ FABs may be small, medium (default), or large by setting the `size` attribute.
 Icon-only FABs must include an `aria-label` that describes its action. Otherwise if `aria-label` is not provided, the FAB will default to announcing its visible contents.
 
 Extended FABs use their `label` for accessibility. Add an `aria-label` for additional context if needed. By supplying the `label` attribute, the extended FAB will make sure that the icon is not announced.
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`size`|`'small' \| 'medium' \| 'large'`|`'medium'`|The size of the FAB.|
+|`color`|`'surface' \| 'primary' \| 'secondary' \| 'tertiary'`|`'surface'`|The color variant of the FAB.|
+|`lowered`|`boolean`|`false`|Whether the FAB has lowered elevation.|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
+|`disabled`|`boolean`|`false`|Whether the FAB is disabled (inherited from FormAssociated).|
+
+## Methods
+
+Inherits all standard HTMLElement methods. Use `click()` to programmatically trigger the FAB.

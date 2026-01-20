@@ -109,3 +109,18 @@ Ripples display on press pointer interactions. They may be attached to a control
    </sw-demo>
 
 Note: ripples must be placed within a `position: relative` container.
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`clickBehavior`|`string`|`'always'`|Controls when ripple appears on click events.|
+|`enterBehavior`|`string`|`'always'`|Controls when ripple appears on pointer enter events.|
+|`spaceBehavior`|`string`|`'once'`|Controls when ripple appears on space key press.|
+|`for`|`string`|`''`|The ID of the element that the ripple is attached to.|
+
+## Methods
+
+|Name|Description|
+|---|---|
+|`attach(element)`|Attaches the ripple to a specific element programmatically.|

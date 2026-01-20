@@ -21,3 +21,18 @@ title: Tooltip - SEE
   </md-button>
   <md-tooltip for="tooltip-anchor-3">Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus. Praesent non nunc mollis, fermentum neque at, semper arcu. Nullam eget est sed sem iaculis gravida eget vitae justo.</md-tooltip>
 </sw-demo>
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`align`|`string`|`'top'`|The alignment of the tooltip relative to the anchor element (inherited from Tooltip).|
+|`offset`|`number`|`4`|The offset distance from the anchor element (inherited from Tooltip).|
+|`for`|`string`|`''`|The ID of the element that the tooltip is attached to.|
+
+## Methods
+
+|Name|Description|
+|---|---|
+|`show()`|Shows the tooltip.|
+|`hide()`|Hides the tooltip.|

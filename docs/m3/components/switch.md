@@ -83,3 +83,18 @@ Add an `aria-label` attribute to switches without labels or switches whose label
 </sw-demo>
 
 Note: switches are not automatically labelled by `<label>` elements and always need an `aria-label`.
+
+## Properties
+
+|Name|Type|Default|Description|
+|---|---|---|---|
+|`checked`|`boolean`|`false`|Whether the switch is checked (inherited from Switch).|
+|`icons`|`boolean`|`false`|Whether to display icons in the switch thumb.|
+|`checkedIconOnly`|`boolean`|`false`|Whether to display the icon only when checked.|
+|`disabled`|`boolean`|`false`|Whether the switch is disabled (inherited from FormAssociated).|
+
+## Events
+
+|Name|Type|Description|
+|---|---|---|
+|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|
