@@ -10,7 +10,7 @@ title: Button - SEE
 
 - Inherits: [`Button`](/base/components/button/)
 
-## Interactive Demo
+### Interactive Demo
 
 <sw-demo hascontrols>
   <md-button id="button-interactive">
@@ -74,13 +74,6 @@ title: Button - SEE
 </sw-demo>
 
 Note: `color` is not part of the official Material You. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
-
-### Usage
-
-<sw-demo>
-  <md-button variant="outlined">Back</md-button>
-  <md-button>Complete</md-button>
-</sw-demo>
 
 ### Configurations
 
