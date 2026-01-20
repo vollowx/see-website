@@ -1,5 +1,5 @@
 ---
-title: Button - SEE
+title: Button - M3 - SEE
 ---
 
 # Button
@@ -8,6 +8,7 @@ title: Button - SEE
 
 ## Action Button
 
+- Follows: [Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
 - Inherits: [`Button`](/base/components/button/)
 
 ### Interactive Demo
@@ -117,6 +118,14 @@ Note: `color` is not part of the official Material You. Color of tonal buttons i
 ```
 
 ### Properties
+
+|Name|Type|Description|
+|---|---|---|
+|`color`|`'primary'|'secondary'|'tertiary'`||
+|`shape`|||
+|`size`|`'xsmall'|'small'|'medium'|'large'|'xlarge'`||
+|`trailingIcon`|Boolean|Whether the icon is displayed at the end of the button.|
+|`variants`|||
 
 ### Methods
 
