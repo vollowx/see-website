@@ -253,9 +253,6 @@ a,
 a code {
   color: var(--md-sys-color-primary);
 }
-a:not(:hover):not(:focus-visible) {
-  text-decoration: none;
-}
 
 a:has(md-button),
 a:has(md-fab),
