@@ -1,6 +1,6 @@
 import "@vollowx/see";
-import "./components/demo.js";
-import "./components/toolbar.js";
+import "./components/demo.ts";
+import "./components/toolbar.ts";
 
 // Generate table of contents
 (() => {

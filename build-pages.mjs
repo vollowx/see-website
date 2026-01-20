@@ -47,10 +47,10 @@ const components = [
 ];
 
 // Read template
-const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf-8');
+const template = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf-8');
 
 // Generate index.html
-const indexMd = fs.readFileSync(path.join(__dirname, 'index.md'), 'utf-8');
+const indexMd = fs.readFileSync(path.join(__dirname, 'contents', 'index.md'), 'utf-8');
 const indexParsed = parseFrontmatter(indexMd);
 let indexContent = md.render(indexParsed.content);
 
@@ -65,7 +65,7 @@ for (const comp of components) {
   const dir = path.join(__dirname, 'components', comp);
   fs.mkdirSync(dir, { recursive: true });
   
-  const mdPath = path.join(__dirname, 'components', `${comp}.md`);
+  const mdPath = path.join(__dirname, 'contents', 'components', `${comp}.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const parsed = parseFrontmatter(mdContent);
   
