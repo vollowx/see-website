@@ -31,38 +31,56 @@ function parseFrontmatter(content) {
   };
 }
 
+// Recursively find all markdown files in a directory
+function findMarkdownFiles(dir, baseDir = dir) {
+  const files = [];
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...findMarkdownFiles(fullPath, baseDir));
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      files.push(path.relative(baseDir, fullPath));
+    }
+  }
+  
+  return files;
+}
+
 // Read template
 const template = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf-8');
 
-// Generate index.html
-const indexMd = fs.readFileSync(path.join(__dirname, 'docs', 'index.md'), 'utf-8');
-const indexParsed = parseFrontmatter(indexMd);
-let indexContent = md.render(indexParsed.content);
+// Find all markdown files in docs directory
+const docsDir = path.join(__dirname, 'docs');
+const markdownFiles = findMarkdownFiles(docsDir);
 
-const indexHtml = template
-  .replace('{{TITLE}}', indexParsed.frontmatter.title || 'SEE')
-  .replace('{{CONTENT}}', indexContent);
-
-fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtml);
-
-// Generate component pages by iterating through files in docs/components
-const componentsDir = path.join(__dirname, 'docs', 'components');
-const componentFiles = fs.readdirSync(componentsDir).filter(file => file.endsWith('.md'));
-
-for (const file of componentFiles) {
-  const comp = path.basename(file, '.md');
-  const dir = path.join(__dirname, 'components', comp);
-  fs.mkdirSync(dir, { recursive: true });
-  
-  const mdPath = path.join(componentsDir, file);
+// Generate HTML for each markdown file
+for (const mdFile of markdownFiles) {
+  const mdPath = path.join(docsDir, mdFile);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const parsed = parseFrontmatter(mdContent);
   
+  // Determine output path
+  // For index.md -> index.html
+  // For path/name.md -> path/name/index.html
+  let outputPath;
+  if (mdFile === 'index.md') {
+    outputPath = path.join(__dirname, 'index.html');
+  } else {
+    const baseName = path.basename(mdFile, '.md');
+    const dirName = path.dirname(mdFile);
+    const outputDir = path.join(__dirname, dirName === '.' ? baseName : path.join(dirName, baseName));
+    fs.mkdirSync(outputDir, { recursive: true });
+    outputPath = path.join(outputDir, 'index.html');
+  }
+  
+  // Generate HTML
   const html = template
-    .replace('{{TITLE}}', parsed.frontmatter.title || comp)
+    .replace('{{TITLE}}', parsed.frontmatter.title || path.basename(mdFile, '.md'))
     .replace('{{CONTENT}}', md.render(parsed.content));
   
-  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  fs.writeFileSync(outputPath, html);
 }
 
 console.log('✓ Generated HTML pages');
