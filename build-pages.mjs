@@ -31,26 +31,11 @@ function parseFrontmatter(content) {
   };
 }
 
-// Component list
-const components = [
-  'button',
-  'icon-button',
-  'fab',
-  'toolbar',
-  'menu',
-  'checkbox',
-  'ripple',
-  'switch',
-  'text-field',
-  'tooltip',
-  'select',
-];
-
 // Read template
 const template = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf-8');
 
 // Generate index.html
-const indexMd = fs.readFileSync(path.join(__dirname, 'contents', 'index.md'), 'utf-8');
+const indexMd = fs.readFileSync(path.join(__dirname, 'docs', 'index.md'), 'utf-8');
 const indexParsed = parseFrontmatter(indexMd);
 let indexContent = md.render(indexParsed.content);
 
@@ -60,12 +45,16 @@ const indexHtml = template
 
 fs.writeFileSync(path.join(__dirname, 'index.html'), indexHtml);
 
-// Generate component pages
-for (const comp of components) {
+// Generate component pages by iterating through files in docs/components
+const componentsDir = path.join(__dirname, 'docs', 'components');
+const componentFiles = fs.readdirSync(componentsDir).filter(file => file.endsWith('.md'));
+
+for (const file of componentFiles) {
+  const comp = path.basename(file, '.md');
   const dir = path.join(__dirname, 'components', comp);
   fs.mkdirSync(dir, { recursive: true });
   
-  const mdPath = path.join(__dirname, 'contents', 'components', `${comp}.md`);
+  const mdPath = path.join(componentsDir, file);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const parsed = parseFrontmatter(mdContent);
   
