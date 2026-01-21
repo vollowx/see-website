@@ -7,21 +7,7 @@ const THEME_STORAGE_KEY = "sw-theme-preference";
 export class SwThemeSwitcher extends LitElement {
   static override styles = css`
     :host {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      z-index: 101;
-    }
-    md-icon {
-      display: inline-block;
-      font-family: "Material Symbols Rounded";
-      font-style: normal;
-      font-weight: normal;
-      letter-spacing: normal;
-      line-height: 1;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
+      display: contents;
     }
   `;
 
@@ -85,22 +71,8 @@ export class SwThemeSwitcher extends LitElement {
     }
   }
 
-  private _toggleThemeMenu(e: Event) {
-    const menu = this.shadowRoot?.querySelector("#theme-menu") as any;
-    if (menu) {
-      menu.open = !menu.open;
-    }
-  }
-
   override render() {
     return html`
-      <md-icon-button
-        id="action-toggle-theme"
-        variant="tonal"
-        @click=${this._toggleThemeMenu}
-      >
-        <md-icon aria-label="Change theme">palette</md-icon>
-      </md-icon-button>
       <md-menu
         id="theme-menu"
         for="action-toggle-theme"
@@ -118,9 +90,6 @@ export class SwThemeSwitcher extends LitElement {
           Device Default
         </md-menu-item>
       </md-menu>
-      <md-tooltip for="action-toggle-theme">
-        Change theme
-      </md-tooltip>
     `;
   }
 }

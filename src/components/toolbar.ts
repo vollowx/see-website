@@ -44,6 +44,13 @@ export class SwToolbar extends LitElement {
     return this.tooltipTexts[type][checked ? 1 : 0];
   }
 
+  private _toggleThemeMenu() {
+    const menu = document.querySelector("sw-theme-switcher")?.shadowRoot?.querySelector("#theme-menu") as any;
+    if (menu) {
+      menu.open = !menu.open;
+    }
+  }
+
   private _handleDir(e: CustomEvent) {
     this.rtl = e.detail;
     document.documentElement.dir = this.rtl ? "rtl" : "ltr";
@@ -60,6 +67,17 @@ export class SwToolbar extends LitElement {
   override render() {
     return html`
       <md-toolbar type="floating">
+        <md-icon-button
+          id="action-toggle-theme"
+          variant="tonal"
+          @click=${this._toggleThemeMenu}
+        >
+          <md-icon aria-label="Change theme">palette</md-icon>
+        </md-icon-button>
+        <md-tooltip for="action-toggle-theme">
+          Change theme
+        </md-tooltip>
+
         <md-icon-button-toggle
           id="action-toggle-direction"
           variant="tonal"
