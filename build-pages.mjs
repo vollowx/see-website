@@ -76,9 +76,15 @@ for (const mdFile of markdownFiles) {
   }
   
   // Generate HTML
+  let content = md.render(parsed.content);
+  
+  // Wrap tables in a scrollable container
+  content = content.replace(/<table([^>]*)>/g, '<div class="table-wrapper"><table$1>');
+  content = content.replace(/<\/table>/g, '</table></div>');
+  
   const html = template
     .replace('{{TITLE}}', parsed.frontmatter.title || path.basename(mdFile, '.md'))
-    .replace('{{CONTENT}}', md.render(parsed.content));
+    .replace('{{CONTENT}}', content);
   
   fs.writeFileSync(outputPath, html);
 }
