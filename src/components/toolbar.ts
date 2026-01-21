@@ -138,16 +138,16 @@ export class SwToolbar extends LitElement {
           Device Default
         </md-menu-item>
       </md-menu>
+
       <md-toolbar type="floating">
         <md-icon-button
-          id="action-toggle-theme"
-          @click=${this._toggleThemeMenu}
+          id="action-open-repo"
+          aria-label="GitHub repository"
+          @click=${this._handleGithubClick}
         >
-          <md-icon aria-label="Change theme">palette</md-icon>
+          <md-icon>code_blocks</md-icon>
         </md-icon-button>
-        <md-tooltip for="action-toggle-theme">
-          Change theme
-        </md-tooltip>
+        <md-tooltip for="action-open-repo">View source code</md-tooltip>
 
         <md-icon-button-toggle
           id="action-toggle-direction"
@@ -167,13 +167,14 @@ export class SwToolbar extends LitElement {
         </md-tooltip>
 
         <md-icon-button
-          id="action-open-repo"
-          aria-label="GitHub repository"
-          @click=${this._handleGithubClick}
+          id="action-toggle-theme"
+          @click=${this._toggleThemeMenu}
         >
-          <md-icon>code_blocks</md-icon>
+          <md-icon aria-label="Change theme">palette</md-icon>
         </md-icon-button>
-        <md-tooltip for="action-open-repo">View source on GitHub</md-tooltip>
+        <md-tooltip for="action-toggle-theme">
+          Change theme
+        </md-tooltip>
 
         <md-fab
           slot="fab"
