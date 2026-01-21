@@ -1,13 +1,16 @@
 ---
-title: List Item - SEE
+title: ListItem - Base - SEE
 ---
 
-# List Item
+# ListItem
 
 - Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
 - Mixes: [`FormAssociated`](/base/mixins/form-associated/)
 
 Base list item component for interactive list items in menus and selects.
+
+Since `ariaActiveDescendant` is used, list items are not actually focused, instead,
+use `:state(focused)` in CSS or handle custom behaviors by overriding `changed()`.
 
 ## Properties
 
@@ -21,5 +24,5 @@ Base list item component for interactive list items in menus and selects.
 
 |Name|Description|
 |---|---|
-|`focus()`|Sets the focused state to true.|
-|`blur()`|Sets the focused state to false.|
+|`focus()`|Visually sets the focused state to true.|
+|`blur()`|Visually sets the focused state to false.|
