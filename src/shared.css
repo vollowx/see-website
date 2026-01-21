@@ -251,6 +251,7 @@ pre,
   overflow-x: auto;
   margin: 0 calc(0 - var(--padding-inline));
   padding: 0 var(--padding-inline);
+  box-sizing: border-box;
 }
 
 table {
