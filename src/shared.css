@@ -285,7 +285,8 @@ label:has(md-switch:disabled) {
 }
 
 table {
-  max-width: max-content;
+  max-width: calc(100vw - 32px);
+  overflow-x: auto;;
 }
 
 table {
