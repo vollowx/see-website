@@ -284,6 +284,11 @@ label:has(md-switch:disabled) {
   pointer-events: none;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
 table {
   max-width: max-content;
 }
