@@ -8,6 +8,9 @@ title: Switch - SEE
 
 Switches are the preferred way to adjust settings. They're used to control binary options – think On/Off or True/False.
 
+- Follows: [Switches - Material Design 3](https://m3.material.io/components/switch/overview)
+- Inherits: [`Switch`](/base/components/switch/)
+
 ## Interactive Demo
 
 <sw-demo hascontrols>

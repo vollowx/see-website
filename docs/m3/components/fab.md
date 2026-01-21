@@ -6,6 +6,11 @@ title: Fab - SEE
 
 <ul id="toc"></ul>
 
+Floating action buttons (FABs) help people take primary actions.
+
+- Follows: [FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
+- Inherits: [`Button`](/base/components/button/)
+
 ## Types
 
 <sw-demo>
