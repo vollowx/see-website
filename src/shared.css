@@ -192,10 +192,6 @@ body {
   color: var(--md-sys-color-on-tertiary-container);
 }
 
-html {
-  scroll-padding-block-start: 0;
-}
-
 body {
   font: var(--md-sys-typography-body-large);
   margin: 0;
@@ -291,9 +287,8 @@ label:has(md-switch:disabled) {
 table {
   border-collapse: separate;
   border-spacing: 0;
-  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
-  display: table;
   border-radius: 24px;
 }
 
@@ -322,8 +317,8 @@ tr:last-child td:last-child {
 }
 
 th {
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface-variant);
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
   font-weight: 500;
 }
 
