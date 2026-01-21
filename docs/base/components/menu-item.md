@@ -1,5 +1,5 @@
 ---
-title: Menu Item - SEE
+title: MenuItem - Base - SEE
 ---
 
 # MenuItem

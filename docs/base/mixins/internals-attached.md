@@ -1,5 +1,5 @@
 ---
-title: InternalsAttached - Mixins - SEE
+title: InternalsAttached - Base - SEE
 ---
 
 # InternalsAttached

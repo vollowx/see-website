@@ -1,5 +1,5 @@
 ---
-title: Menu - SEE
+title: Menu - Base - SEE
 ---
 
 # Menu

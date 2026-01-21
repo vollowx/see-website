@@ -1,5 +1,5 @@
 ---
-title: Checkbox - SEE
+title: Checkbox - Base - SEE
 ---
 
 # Checkbox
