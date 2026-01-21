@@ -32,10 +32,31 @@ export class SwToolbar extends LitElement {
     rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
   };
 
+  private _prefersDarkQuery?: MediaQueryList;
+
   override connectedCallback() {
     super.connectedCallback();
     this._initializeTheme();
+    this._setupThemeListener();
   }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this._prefersDarkQuery) {
+      this._prefersDarkQuery.removeEventListener("change", this._handleSystemThemeChange);
+    }
+  }
+
+  private _setupThemeListener() {
+    this._prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    this._prefersDarkQuery.addEventListener("change", this._handleSystemThemeChange);
+  }
+
+  private _handleSystemThemeChange = () => {
+    if (this.themeMode === "auto") {
+      this._applyTheme();
+    }
+  };
 
   private _initializeTheme() {
     this._applyTheme();
@@ -44,7 +65,8 @@ export class SwToolbar extends LitElement {
 
   private _applyTheme() {
     if (this.themeMode === "auto") {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const prefersDark = this._prefersDarkQuery?.matches ?? 
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
       document.documentElement.dataset["mdTheme"] = prefersDark ? "dark" : "light";
     } else {
       document.documentElement.dataset["mdTheme"] = this.themeMode;
