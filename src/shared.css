@@ -249,8 +249,8 @@ pre,
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin: calc(0 - var(--padding-inline)) 0;
-  padding: var(--padding-inline) 0;
+  margin: 0 calc(0 - var(--padding-inline));
+  padding: 0 var(--padding-inline);
 }
 
 table {
