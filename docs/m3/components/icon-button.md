@@ -1,17 +1,17 @@
 ---
-title: Icon Button - SEE
+title: Icon Button - M3 - SEE
 ---
 
 # Icon button
 
+<ul id="toc"></ul>
+
+## Action Button
+
 - Follows: [Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
 - Inherits: [`Button`](/base/components/button/)
 
-<ul id="toc"></ul>
-
-Icon buttons help people take minor actions with one tap.
-
-## Interactive Demo
+### Interactive Demo
 
 <sw-demo hascontrols>
   <md-icon-button id="icon-button-interactive">
@@ -77,7 +77,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
   <md-icon-button variant="text"><md-icon>settings</md-icon></md-icon-button>
 </sw-demo>
 
-### Toggle Icon Button
+## Toggle Button
 
 - Inherits: [`Switch`](/base/components/switch/)
 
@@ -127,7 +127,7 @@ Icon buttons can be used to select between two states.
   </label>
 </sw-demo>
 
-#### Properties
+### Properties
 
 |Name|Type|Default|Description|
 |---|---|---|---|
@@ -137,13 +137,13 @@ Icon buttons can be used to select between two states.
 |`width`|`'standard' \| 'narrow' \| 'wide'`|`'standard'`|The width variant of the icon button toggle.|
 |`disabled`|`boolean`|`false`|Whether the icon button toggle is disabled (inherited from FormAssociated).|
 
-#### Events
+### Events
 
 |Name|Type|Description|
 |---|---|---|
 |`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|
 
-#### Types
+### Types
 
 <sw-demo>
   <md-icon-button-toggle variant="filled">
