@@ -235,18 +235,24 @@ h4 {
 
 pre {
   overflow: auto;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--md-sys-color-surface-variant);
+}
+
+:not(pre) > code {
+  margin-inline: 2px;
+  padding-inline: 2px;
+  border-radius: 4px;
+  outline: 2px solid var(--md-sys-color-surface-variant);
 }
 
 pre,
 :not(pre) > code {
   background-color: var(--md-sys-color-surface-container);
-  border-radius: 4px;
   color: var(--md-sys-color-on-surface);
   font: var(--md-sys-typography-body-large);
   font-family: monospace;
-  margin-inline: 2px;
-  outline: 2px solid var(--md-sys-color-surface-variant);
-  padding-inline: 2px;
 }
 
 .table-wrapper {
