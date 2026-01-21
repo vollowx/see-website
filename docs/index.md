@@ -18,7 +18,7 @@ Presenting contents from `@vollowx/see@0.6.0`
 
 - [`FormAssociated`](/base/mixins/form-associated/)
 
-## Material You Expressive
+## Material Design 3
 
 ### Components
 

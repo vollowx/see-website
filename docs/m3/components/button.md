@@ -74,7 +74,7 @@ title: Button - M3 - SEE
   </label>
 </sw-demo>
 
-Note: `color` is not part of the official Material You. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
+Note: `color` is not part of the official Material Design 3. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
 
 ### Configurations
 
