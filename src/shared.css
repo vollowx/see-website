@@ -235,7 +235,7 @@ pre {
 }
 
 pre,
-code {
+:not(pre) > code {
   background-color: var(--md-sys-color-surface-container);
   border-radius: 4px;
   color: var(--md-sys-color-on-surface);
@@ -249,7 +249,7 @@ code {
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin: var(--padding-inline);
+  margin: calc(0 - var(--padding-inline)) 0;
   padding: var(--padding-inline) 0;
 }
 
