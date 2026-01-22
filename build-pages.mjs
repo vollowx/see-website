@@ -101,6 +101,18 @@ function processDemoCodeBlocks(context) {
  * @returns {HandlerContext} Modified context
  */
 
+// Helper function to escape HTML special characters
+function escapeHtml(text) {
+  const htmlEscapes = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return text.replace(/[&<>"']/g, char => htmlEscapes[char]);
+}
+
 // Post-handler: Wrap tables in a scrollable container
 function wrapTables(context) {
   const { content } = context;
@@ -144,7 +156,11 @@ function generateToc(context) {
     const level = parseInt(match[1]);
     const attributes = match[2];
     const fullHtml = match[3];
-    const text = fullHtml.replace(/<[^>]+>/g, ''); // Strip HTML tags from heading text
+    // Strip HTML tags from heading text for TOC display
+    // This is safe because:
+    // 1. Content comes from markdown-it which already sanitizes input
+    // 2. Text is HTML-escaped before being inserted into TOC (see escapeHtml usage)
+    const text = fullHtml.replace(/<[^>]+>/g, '');
     const offset = match.index;
     headings.push({ level, text, fullHtml, attributes, offset });
   }
@@ -201,7 +217,7 @@ function generateToc(context) {
       tocHtml += '</li>';
     }
     
-    tocHtml += `<li><a href="#${formattedId}">${text}</a>`;
+    tocHtml += `<li><a href="#${formattedId}">${escapeHtml(text)}</a>`;
     currentLevel = level;
   });
   
