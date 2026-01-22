@@ -80,16 +80,17 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 #### Varients
 
-<sw-demo>
-  <md-button>Filled</md-button>
-  <md-button variant="tonal">Tonal</md-button>
-  <md-button class="buttons" variant="elevated">
-    <md-icon slot="icon">search</md-icon>
-    Elevated
-  </md-button>
-  <md-button variant="outlined">Outlined</md-button>
-  <md-button variant="text">Text</md-button>
-</sw-demo>
+<!-- @docs-demo-code-block -->
+```html
+<md-button>Filled</md-button>
+<md-button variant="tonal">Tonal</md-button>
+<md-button class="buttons" variant="elevated">
+  <md-icon slot="icon">search</md-icon>
+  Elevated
+</md-button>
+<md-button variant="outlined">Outlined</md-button>
+<md-button variant="text">Text</md-button>
+```
 
 #### Icon
 
