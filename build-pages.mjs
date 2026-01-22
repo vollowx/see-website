@@ -56,6 +56,32 @@ function wrapTables(content) {
     .replace(/<\/table>/g, '</table></div>');
 }
 
+// Handler: Process @docs-demo-code-block pattern
+function processDemoCodeBlocks(content) {
+  // Match the pattern: <!-- @docs-demo-code-block --> followed by a code block
+  // The code block can be in markdown format (```lang\n...\n```)
+  const pattern = /<!-- @docs-demo-code-block -->\s*\n(```[\s\S]*?```)/g;
+  
+  return content.replace(pattern, (match, codeBlock) => {
+    // Extract the code content from the markdown code block
+    // Match ```html\n<content>\n``` or similar, with optional trailing newline
+    const codeMatch = codeBlock.match(/```(\w*)\n([\s\S]*?)\n?```/);
+    
+    if (!codeMatch) {
+      // If we can't parse the code block, return the original match
+      return match;
+    }
+    
+    const codeContent = codeMatch[2];
+    
+    // Create the demo wrapper with the same content
+    // Preserve the original code content without adding extra whitespace
+    const demoBlock = `<sw-demo>\n${codeContent}\n</sw-demo>\n\n${codeBlock}`;
+    
+    return demoBlock;
+  });
+}
+
 // Parse frontmatter from markdown
 function parseFrontmatter(content) {
   const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
@@ -126,7 +152,10 @@ for (const mdFile of markdownFiles) {
   }
   
   // Transform .md links to HTML paths before rendering
-  const transformedContent = transformMdLinks(parsed.content, mdFile);
+  let transformedContent = transformMdLinks(parsed.content, mdFile);
+  
+  // Process @docs-demo-code-block pattern
+  transformedContent = processDemoCodeBlocks(transformedContent);
   
   // Generate HTML
   let content = md.render(transformedContent);

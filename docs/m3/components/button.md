@@ -93,18 +93,7 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 #### Icon
 
-<sw-demo>
-  <md-button variant="tonal">
-    Send
-    <md-icon slot="icon">send</md-icon>
-  </md-button>
-
-  <md-button variant="text" trailingicon>
-    <md-icon slot="icon">open_in_new</md-icon>
-    Open
-  </md-button>
-</sw-demo>
-
+<!-- @docs-demo-code-block -->
 ```html
 <md-button variant="tonal">
   Send
