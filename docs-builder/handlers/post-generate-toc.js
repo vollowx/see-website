@@ -17,7 +17,7 @@ function escapeHtml(text) {
 export function generateToc(context) {
   const { content, frontmatter } = context;
   
-  // Check if TOC is disabled in frontmatter (default is true)
+  // TOC is enabled by default unless toc: false is specified in frontmatter
   const tocEnabled = frontmatter.toc !== 'false' && frontmatter.toc !== false;
   
   if (!tocEnabled) {

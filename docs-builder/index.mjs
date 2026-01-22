@@ -76,6 +76,28 @@ function findMarkdownFiles(dir, baseDir = dir) {
 }
 
 /**
+ * Get the template path, falling back to default if specified template doesn't exist
+ */
+function getTemplatePath(templatesDir, templateName) {
+  const templatePath = path.join(templatesDir, templateName, 'template.html');
+  const defaultTemplatePath = path.join(templatesDir, 'default', 'template.html');
+  
+  if (fs.existsSync(templatePath)) {
+    return templatePath;
+  }
+  
+  if (templateName !== 'default') {
+    console.error(`Warning: Template '${templateName}' not found at ${templatePath}, using default template at ${defaultTemplatePath}`);
+  }
+  
+  if (!fs.existsSync(defaultTemplatePath)) {
+    throw new Error(`Default template not found at ${defaultTemplatePath}`);
+  }
+  
+  return defaultTemplatePath;
+}
+
+/**
  * Build HTML pages from markdown files
  * @param {string} docsDir - Directory containing markdown files
  * @param {string} outputDir - Base output directory for HTML files
@@ -93,22 +115,10 @@ export function buildPages(docsDir, outputDir, templatesDir) {
     
     // Determine which template to use (from frontmatter or default)
     const templateName = parsed.frontmatter.template || 'default';
-    const templatePath = path.join(templatesDir, templateName, 'template.html');
-    
-    // Check if template exists
-    if (!fs.existsSync(templatePath)) {
-      console.error(`Warning: Template '${templateName}' not found at ${templatePath}, using 'default'`);
-      const defaultTemplatePath = path.join(templatesDir, 'default', 'template.html');
-      if (!fs.existsSync(defaultTemplatePath)) {
-        throw new Error(`Default template not found at ${defaultTemplatePath}`);
-      }
-    }
+    const templatePath = getTemplatePath(templatesDir, templateName);
     
     // Read template
-    const template = fs.readFileSync(
-      fs.existsSync(templatePath) ? templatePath : path.join(templatesDir, 'default', 'template.html'),
-      'utf-8'
-    );
+    const template = fs.readFileSync(templatePath, 'utf-8');
     
     // Determine output path
     // For index.md -> index.html
