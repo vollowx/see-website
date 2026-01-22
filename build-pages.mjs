@@ -64,8 +64,8 @@ function processDemoCodeBlocks(content) {
   
   return content.replace(pattern, (match, codeBlock) => {
     // Extract the code content from the markdown code block
-    // Match ```html\n<content>\n``` or similar
-    const codeMatch = codeBlock.match(/```(\w*)\n([\s\S]*?)\n```/);
+    // Match ```html\n<content>\n``` or similar, with optional trailing newline
+    const codeMatch = codeBlock.match(/```(\w*)\n([\s\S]*?)\n?```/);
     
     if (!codeMatch) {
       // If we can't parse the code block, return the original match
@@ -75,6 +75,7 @@ function processDemoCodeBlocks(content) {
     const codeContent = codeMatch[2];
     
     // Create the demo wrapper with the same content
+    // Preserve the original code content without adding extra whitespace
     const demoBlock = `<sw-demo>\n${codeContent}\n</sw-demo>\n\n${codeBlock}`;
     
     return demoBlock;
