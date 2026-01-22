@@ -69,9 +69,9 @@ function transformMdLinks(context) {
 // Pre-handler: Process @docs-uncomment pattern
 function processUncommentBlocks(context) {
   const { content } = context;
-  // Match the pattern: <!-- @docs-uncomment ... @end-docs-uncomment -->
+  // Match the pattern: <!-- @docs-uncomment ... @docs-uncomment-end -->
   // This pattern allows hiding content in markdown that should be revealed in the build
-  const pattern = /<!--\s*@docs-uncomment\s*\n([\s\S]*?)\n\s*@end-docs-uncomment\s*-->/g;
+  const pattern = /<!--\s*@docs-uncomment\s*\n([\s\S]*?)\n\s*@docs-uncomment-end\s*-->/g;
   
   const transformedContent = content.replace(pattern, (match, uncommentedContent) => {
     // Simply return the content without the comment markers
@@ -191,13 +191,19 @@ function generateToc(context) {
   let modifiedContent = content;
   const higherIds = [];
   
-  // Process headings in reverse order to avoid offset issues when replacing
+  // First pass: Generate IDs for all headings (in forward order to build hierarchy)
+  const headingIds = [];
+  headings.forEach((heading) => {
+    const { level, text } = heading;
+    const formattedId = generateId(text, level, higherIds);
+    headingIds.push(formattedId);
+  });
+  
+  // Second pass: Replace headings with IDs (in reverse order to avoid offset issues)
   for (let i = headings.length - 1; i >= 0; i--) {
     const heading = headings[i];
     const { level, fullHtml } = heading;
-    
-    // Generate the ID for this heading
-    const formattedId = generateId(heading.text, level, [...higherIds]);
+    const formattedId = headingIds[i];
     
     // Replace the heading in the content to add the ID
     const originalHeading = `<h${level}${heading.attributes}>${fullHtml}</h${level}>`;
@@ -212,7 +218,7 @@ function generateToc(context) {
   // Build TOC HTML (process headings in forward order for proper nesting)
   headings.forEach((heading, index) => {
     const { level, text } = heading;
-    const formattedId = generateId(text, level, higherIds);
+    const formattedId = headingIds[index];
     
     // Adjust for deeper levels
     if (level > currentLevel) {

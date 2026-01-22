@@ -37,7 +37,7 @@ Switches are the preferred way to adjust settings. They're used to control binar
     <md-switch id="switch-properties-checkedIconOnly"></md-switch>
   </label>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 ### Usage
 

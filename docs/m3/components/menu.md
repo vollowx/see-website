@@ -62,7 +62,7 @@ Menus display a list of choices on a temporary surface. They appear when users i
     </md-outlined-select>
   </label>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 ### Usage
 

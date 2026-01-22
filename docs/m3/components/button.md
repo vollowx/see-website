@@ -74,7 +74,7 @@ title: Button - M3 - SEE
     <md-switch id="button-properties-trailingIcon"></md-switch>
   </label>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 Note: `color` is not part of the official Material Design 3. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
 
@@ -183,7 +183,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
     <md-switch id="button-toggle-properties-disabled"></md-switch>
   </label>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 ### Usage
 

@@ -37,7 +37,7 @@ Checkboxes allow users to select one or more items from a set. Checkboxes can tu
     <md-switch id="checkbox-properties-error"></md-switch>
   </label>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 ### Usage
 

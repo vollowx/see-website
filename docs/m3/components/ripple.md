@@ -75,7 +75,7 @@ A state layer is a semi-transparent covering on an element that indicates its st
     </div>
   </div>
 </sw-demo>
-@end-docs-uncomment -->
+@docs-uncomment-end -->
 
 ### Usage
 
