@@ -22,13 +22,16 @@ function transformMdLinks(content, sourceMdFile) {
       
       // If it's a relative path, resolve it relative to the source file's directory
       if (!htmlPath.startsWith('/')) {
-        const sourceDir = path.dirname(sourceMdFile);
-        const resolvedPath = path.posix.normalize(path.posix.join(sourceDir, htmlPath));
+        // Normalize to forward slashes for consistent handling
+        const sourceDir = path.dirname(sourceMdFile).replace(/\\/g, '/');
+        const normalizedHtmlPath = htmlPath.replace(/\\/g, '/');
+        const resolvedPath = path.posix.normalize(path.posix.join(sourceDir, normalizedHtmlPath));
         
         // Convert to absolute path for the website
         // docs/base/components/button -> /base/components/button/
         // docs/index -> /
-        if (resolvedPath === 'index' || resolvedPath === '.') {
+        const baseName = path.posix.basename(resolvedPath);
+        if (baseName === 'index' || resolvedPath === '.' || resolvedPath === '') {
           htmlPath = '/';
         } else {
           // Remove 'docs/' prefix if present and add trailing slash
