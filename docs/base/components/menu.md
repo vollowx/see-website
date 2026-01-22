@@ -4,8 +4,8 @@ title: Menu - Base - SEE
 
 # Menu
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
-- Mixes: [`Attachable`](/base/mixins/attachable/)
+- Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`Attachable`](../mixins/attachable.md)
 
 Base menu component for dropdown and popup menus.
 

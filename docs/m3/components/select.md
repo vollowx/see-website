@@ -9,7 +9,7 @@ title: Select - M3 - SEE
 Selects allow users to choose one or more items from a list of values.
 
 - Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- Inherits: [`Select`](/base/components/select/)
+- Inherits: [`Select`](../../base/components/select.md)
 
 <sw-demo>
   <md-outlined-select>

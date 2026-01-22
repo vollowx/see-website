@@ -4,8 +4,8 @@ title: Select - Base - SEE
 
 # Select
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
-- Mixes: [`FormAssociated`](/base/mixins/form-associated/)
+- Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`FormAssociated`](../mixins/form-associated.md)
 
 Base select component for dropdown selection controls.
 

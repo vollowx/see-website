@@ -4,7 +4,7 @@ title: MenuItem - Base - SEE
 
 # MenuItem
 
-- Inherits: [`ListItem`](/base/components/list-item/)
+- Inherits: [`ListItem`](list-item.md)
 
 Menu item component for use within menus.
 

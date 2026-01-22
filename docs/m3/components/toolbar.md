@@ -8,7 +8,7 @@ title: Toolbar - M3 - SEE
 
 Toolbars display frequently used actions relevant to the current page or context and group controls into a compact surface.
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
+- Mixes: [`InternalsAttached`](../../base/mixins/internals-attached.md)
 
 ## Types
 

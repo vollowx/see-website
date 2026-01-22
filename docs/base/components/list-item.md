@@ -4,8 +4,8 @@ title: ListItem - Base - SEE
 
 # ListItem
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
-- Mixes: [`FormAssociated`](/base/mixins/form-associated/)
+- Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`FormAssociated`](../mixins/form-associated.md)
 
 Base list item component for interactive list items in menus and selects.
 

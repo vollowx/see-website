@@ -9,7 +9,7 @@ title: Icon Button - M3 - SEE
 ## Action Button
 
 - Follows: [Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
-- Inherits: [`Button`](/base/components/button/)
+- Inherits: [`Button`](../../base/components/button.md)
 
 ### Interactive Demo
 
@@ -79,7 +79,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
 ## Toggle Button
 
-- Inherits: [`Switch`](/base/components/switch/)
+- Inherits: [`Switch`](../../base/components/switch.md)
 
 Icon buttons can be used to select between two states.
 

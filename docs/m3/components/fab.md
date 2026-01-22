@@ -9,7 +9,7 @@ title: Fab - M3 - SEE
 Floating action buttons (FABs) help people take primary actions.
 
 - Follows: [FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
-- Inherits: [`Button`](/base/components/button/)
+- Inherits: [`Button`](../../base/components/button.md)
 
 ## Types
 

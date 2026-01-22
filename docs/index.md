@@ -14,39 +14,39 @@ box, while being designed for easy extension and restyling.
 
 ### Components
 
-- [`Button`](/base/components/button/)
-- [`Checkbox`](/base/components/checkbox/)
-- [`Field`](/base/components/field/)
-- [`Input`](/base/components/input/)
-- [`Item`](/base/components/item/)
-- [`ListItem`](/base/components/list-item/)
-- [`Menu`](/base/components/menu/)
-- [`MenuItem`](/base/components/menu-item/)
-- [`Option`](/base/components/option/)
-- [`Select`](/base/components/select/)
-- [`Switch`](/base/components/switch/)
-- [`Tooltip`](/base/components/tooltip/)
+- [`Button`](base/components/button.md)
+- [`Checkbox`](base/components/checkbox.md)
+- [`Field`](base/components/field.md)
+- [`Input`](base/components/input.md)
+- [`Item`](base/components/item.md)
+- [`ListItem`](base/components/list-item.md)
+- [`Menu`](base/components/menu.md)
+- [`MenuItem`](base/components/menu-item.md)
+- [`Option`](base/components/option.md)
+- [`Select`](base/components/select.md)
+- [`Switch`](base/components/switch.md)
+- [`Tooltip`](base/components/tooltip.md)
 
 ### Mixins
 
-- [`Attachable`](/base/mixins/attachable/)
-- [`FormAssociated`](/base/mixins/form-associated/)
-- [`InternalsAttached`](/base/mixins/internals-attached/)
+- [`Attachable`](base/mixins/attachable.md)
+- [`FormAssociated`](base/mixins/form-associated.md)
+- [`InternalsAttached`](base/mixins/internals-attached.md)
 
 ## Material Design 3
 
 ### Components
 
-- [Button](/m3/components/button/)
-- [Icon Button](/m3/components/icon-button/)
-- [FAB](/m3/components/fab/)
-- [Toolbar](/m3/components/toolbar/)
-- [Menu](/m3/components/menu/)
-- [Checkbox](/m3/components/checkbox/)
-- [Ripple](/m3/components/ripple/)
-- [Switch](/m3/components/switch/)
-- [Text Field](/m3/components/text-field/)
-- [Tooltip](/m3/components/tooltip/)
-- [Select](/m3/components/select/)
+- [Button](m3/components/button.md)
+- [Icon Button](m3/components/icon-button.md)
+- [FAB](m3/components/fab.md)
+- [Toolbar](m3/components/toolbar.md)
+- [Menu](m3/components/menu.md)
+- [Checkbox](m3/components/checkbox.md)
+- [Ripple](m3/components/ripple.md)
+- [Switch](m3/components/switch.md)
+- [Text Field](m3/components/text-field.md)
+- [Tooltip](m3/components/tooltip.md)
+- [Select](m3/components/select.md)
 
 ### Mixins

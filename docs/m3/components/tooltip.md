@@ -9,7 +9,7 @@ title: Tooltip - M3 - SEE
 Tooltips display informative text when users hover over, focus on, or tap an element.
 
 - Follows: [Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
-- Inherits: [`Tooltip`](/base/components/tooltip/)
+- Inherits: [`Tooltip`](../../base/components/tooltip.md)
 
 <sw-demo>
   <md-icon-button id="tooltip-anchor">

@@ -9,7 +9,7 @@ title: Button - M3 - SEE
 ## Action Button
 
 - Follows: [Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
-- Inherits: [`Button`](/base/components/button/)
+- Inherits: [`Button`](../../base/components/button.md)
 
 ### Interactive Demo
 
@@ -135,7 +135,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
 ## Toggle Button
 
-- Inherits: [`Switch`](/base/components/switch/)
+- Inherits: [`Switch`](../../base/components/switch.md)
 
 ### Interactive Demo
 

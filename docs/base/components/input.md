@@ -4,8 +4,8 @@ title: Input - Base - SEE
 
 # Input
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
-- Mixes: [`FormAssociated`](/base/mixins/form-associated/)
+- Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`FormAssociated`](../mixins/form-associated.md)
 
 Base input component for text-based form inputs.
 

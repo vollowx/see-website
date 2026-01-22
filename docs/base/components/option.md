@@ -4,7 +4,7 @@ title: Option - Base - SEE
 
 # Option
 
-- Inherits: [`List Item`](/base/components/list-item/)
+- Inherits: [`List Item`](list-item.md)
 
 Option component for use within select dropdowns.
 

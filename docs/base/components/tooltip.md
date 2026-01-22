@@ -4,8 +4,8 @@ title: Tooltip - Base - SEE
 
 # Tooltip
 
-- Mixes: [`InternalsAttached`](/base/mixins/internals-attached/)
-- Mixes: [`Attachable`](/base/mixins/attachable/)
+- Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`Attachable`](../mixins/attachable.md)
 
 Base tooltip component for displaying contextual information.
 
