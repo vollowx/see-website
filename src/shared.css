@@ -259,11 +259,11 @@ pre,
   width: 100%;
   overflow-x: auto;
   margin-inline: 0 !important;
-  padding-inline: var(--padding-inline);
   box-sizing: border-box;
 }
 
 table {
+  margin-inline: var(--padding-inline);
   max-width: max-content;
   border-spacing: 0;
 }
