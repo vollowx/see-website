@@ -37,3 +37,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 index.html
 docs/**/*.html
 package-lock.json
+
+# Generated HTML directories (built from markdown in docs/)
+/base/
+/m3/
