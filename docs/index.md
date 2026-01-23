@@ -1,13 +1,13 @@
 ---
-title: SEE
+title: SEELE
 toc: false
 ---
 
 # Standard Extensible Elements
 
-Presenting: `@vollowx/see@0.6.0`.
+Presenting: `@vollowx/seele@0.6.2`.
 
-SEE is a modern, lightweight Web Components library. It provides a set of highly
+SEELE is a modern, lightweight Web Components library. It provides a set of highly
 customizable UI components that follow the Material Design 3 guidelines out of the
 box, while being designed for easy extension and restyling.
 
@@ -49,5 +49,3 @@ box, while being designed for easy extension and restyling.
 - [Text Field](m3/components/text-field.md)
 - [Tooltip](m3/components/tooltip.md)
 - [Select](m3/components/select.md)
-
-### Mixins
