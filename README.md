@@ -1,4 +1,4 @@
-# see-website
+# seele-docs
 
 ```bash
 bun install
