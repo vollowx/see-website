@@ -1,5 +1,5 @@
 ---
-title: Tooltip - Base - SEE
+title: Tooltip - Base - SEELE
 ---
 
 # Tooltip

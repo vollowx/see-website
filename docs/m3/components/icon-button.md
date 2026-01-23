@@ -1,5 +1,5 @@
 ---
-title: Icon Button - M3 - SEE
+title: Icon Button - M3 - SEELE
 ---
 
 # Icon button

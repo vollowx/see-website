@@ -1,4 +1,4 @@
-import "@vollowx/see";
+import "@vollowx/seele";
 import "./components/demo.ts";
 import "./components/toolbar.ts";
 

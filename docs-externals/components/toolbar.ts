@@ -24,7 +24,7 @@ export class SwToolbar extends LitElement {
     }
   `;
 
-  @property({ type: String }) githubUrl = "https://github.com/vollowx/see";
+  @property({ type: String }) githubUrl = "https://github.com/vollowx/seele";
   @property({ type: Boolean }) rtl = false;
 
   @state() private themeMode: "light" | "dark" | "auto" = "auto";

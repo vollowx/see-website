@@ -1,5 +1,5 @@
 ---
-title: Ripple - M3 - SEE
+title: Ripple - M3 - SEELE
 ---
 
 # Ripple

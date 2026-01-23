@@ -1,5 +1,5 @@
 ---
-title: Checkbox - M3 - SEE
+title: Checkbox - M3 - SEELE
 ---
 
 # Checkbox
