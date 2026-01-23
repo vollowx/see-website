@@ -139,7 +139,7 @@ export class SwToolbar extends LitElement {
         </md-menu-item>
       </md-menu>
 
-      <md-toolbar type="floating">
+      <md-toolbar type="floating" color="expressive">
         <md-icon-button
           id="action-open-repo"
           aria-label="GitHub repository"
