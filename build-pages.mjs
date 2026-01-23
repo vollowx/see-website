@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Define paths
 const docsDir = path.join(__dirname, 'docs');
 const outputDir = __dirname;
-const templatesDir = path.join(__dirname, 'templates');
+const templatesDir = path.join(__dirname, 'docs-externals', 'templates');
 
 // Build all pages
 buildPages(docsDir, outputDir, templatesDir);

@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import MarkdownIt from 'markdown-it';
+import matter from 'gray-matter';
 
 // Import handlers
 import { processUncommentBlocks } from './handlers/pre-uncomment-blocks.js';
@@ -33,28 +34,12 @@ const postHandlers = [
   generateToc,
 ];
 
-// Parse frontmatter from markdown
+// Parse frontmatter from markdown using gray-matter
 function parseFrontmatter(content) {
-  const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
-  const match = content.match(frontmatterRegex);
-  
-  if (!match) {
-    return { frontmatter: {}, content };
-  }
-  
-  const frontmatter = {};
-  const lines = match[1].split('\n');
-  
-  for (const line of lines) {
-    const [key, ...valueParts] = line.split(':');
-    if (key && valueParts.length > 0) {
-      frontmatter[key.trim()] = valueParts.join(':').trim();
-    }
-  }
-  
+  const { data, content: markdownContent } = matter(content);
   return {
-    frontmatter,
-    content: match[2]
+    frontmatter: data,
+    content: markdownContent
   };
 }
 
@@ -79,8 +64,8 @@ function findMarkdownFiles(dir, baseDir = dir) {
  * Get the template path, falling back to default if specified template doesn't exist
  */
 function getTemplatePath(templatesDir, templateName) {
-  const templatePath = path.join(templatesDir, templateName, 'template.html');
-  const defaultTemplatePath = path.join(templatesDir, 'default', 'template.html');
+  const templatePath = path.join(templatesDir, `${templateName}.html`);
+  const defaultTemplatePath = path.join(templatesDir, 'default.html');
   
   if (fs.existsSync(templatePath)) {
     return templatePath;
