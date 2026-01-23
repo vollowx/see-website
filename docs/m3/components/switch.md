@@ -97,10 +97,10 @@ Note: switches are not automatically labelled by `<label>` elements and always n
 
 |Name|Type|Default|Description|
 |---|---|---|---|
-|`checked`|`boolean`|`false`|Whether the switch is checked (inherited from Switch).|
-|`icons`|`boolean`|`false`|Whether to display icons in the switch thumb.|
-|`checkedIconOnly`|`boolean`|`false`|Whether to display the icon only when checked.|
-|`disabled`|`boolean`|`false`|Whether the switch is disabled (inherited from FormAssociated).|
+|`checked`|Boolean|`false`|Whether the switch is checked (inherited from `Switch`).|
+|`icons`|Boolean|`false`|Whether to display icons in the switch thumb.|
+|`checkedIconOnly`|Boolean|`false`|Whether to display the icon only when checked.|
+|`disabled`|Boolean|`false`|Whether the switch is disabled (inherited from `FormAssociated`).|
 
 ## Events
 

@@ -135,10 +135,10 @@ Note: checkboxes are not automatically labelled by `<label>` elements and always
 
 |Name|Type|Default|Description|
 |---|---|---|---|
-|`checked`|`boolean`|`false`|Whether the checkbox is checked (inherited from Checkbox).|
-|`indeterminate`|`boolean`|`false`|Whether the checkbox is in an indeterminate state (inherited from Checkbox).|
-|`error`|`boolean`|`false`|Whether the checkbox is in an error state.|
-|`disabled`|`boolean`|`false`|Whether the checkbox is disabled (inherited from FormAssociated).|
+|`checked`|Boolean|`false`|Whether the checkbox is checked (inherited from `Checkbox`).|
+|`indeterminate`|Boolean|`false`|Whether the checkbox is in an indeterminate state (inherited from `Checkbox`).|
+|`error`|Boolean|`false`|Whether the checkbox is in an error state.|
+|`disabled`|Boolean|`false`|Whether the checkbox is disabled (inherited from `FormAssociated`).|
 
 ## Events
 

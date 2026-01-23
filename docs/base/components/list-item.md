@@ -18,7 +18,7 @@ use `:state(focused)` in CSS or handle custom behaviors by overriding `changed()
 |---|---|---|---|
 |`selected`|Boolean|`false`|Whether the list item is selected.|
 |`focused`|Boolean|`false`|Whether the list item has focus.|
-|`disabled`|Boolean|`false`|Whether the list item is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the list item is disabled (inherited from `FormAssociated`).|
 
 ## Methods
 

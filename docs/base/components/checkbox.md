@@ -14,7 +14,7 @@ title: Checkbox - Base - SEE
 |`checked`|Boolean|`false`|Whether the checkbox is checked.|
 |`indeterminate`|Boolean|`false`|Whether the checkbox is in an indeterminate state.|
 |`required`|Boolean|`false`|Whether the checkbox is required for form submission.|
-|`disabled`|Boolean|`false`|Whether the checkbox is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the checkbox is disabled (inherited from `FormAssociated`).|
 
 ## Events
 

@@ -18,7 +18,7 @@ Base select component for dropdown selection controls.
 |`placeholder`|String|`''`|Placeholder text when no value is selected.|
 |`open`|Boolean|`false`|Whether the dropdown menu is open.|
 |`required`|Boolean|`false`|Whether a selection is required for form submission.|
-|`disabled`|Boolean|`false`|Whether the select is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the select is disabled (inherited from `FormAssociated`).|
 
 ## Events
 

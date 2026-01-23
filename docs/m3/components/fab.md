@@ -105,9 +105,9 @@ Extended FABs use their `label` for accessibility. Add an `aria-label` for addit
 |---|---|---|---|
 |`size`|`'small' \| 'medium' \| 'large'`|`'medium'`|The size of the FAB.|
 |`color`|`'surface' \| 'primary' \| 'secondary' \| 'tertiary'`|`'surface'`|The color variant of the FAB.|
-|`lowered`|`boolean`|`false`|Whether the FAB has lowered elevation.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
-|`disabled`|`boolean`|`false`|Whether the FAB is disabled (inherited from FormAssociated).|
+|`lowered`|Boolean|`false`|Whether the FAB has lowered elevation.|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
+|`disabled`|Boolean|`false`|Whether the FAB is disabled (inherited from `FormAssociated`).|
 
 ## Methods
 

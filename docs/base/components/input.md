@@ -26,7 +26,7 @@ Base input component for text-based form inputs.
 |`maxLength`|Number|`-1`|Maximum length for text inputs.|
 |`pattern`|String|`''`|Regular expression pattern for validation.|
 |`autocomplete`|String|`''`|Autocomplete hint for the browser.|
-|`disabled`|Boolean|`false`|Whether the input is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the input is disabled (inherited from `FormAssociated`).|
 
 ## Methods
 

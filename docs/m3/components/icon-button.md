@@ -63,8 +63,8 @@ title: Icon Button - M3 - SEE
 |`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the icon button.|
 |`variant`|`'filled' \| 'tonal' \| 'outlined' \| 'text'`|`'text'`|The visual style variant of the icon button.|
 |`width`|`'standard' \| 'narrow' \| 'wide'`|`'standard'`|The width variant of the icon button.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
-|`disabled`|`boolean`|`false`|Whether the icon button is disabled (inherited from FormAssociated).|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
+|`disabled`|Boolean|`false`|Whether the icon button is disabled (inherited from `FormAssociated`).|
 
 ### Methods
 
@@ -136,11 +136,11 @@ Icon buttons can be used to select between two states.
 
 |Name|Type|Default|Description|
 |---|---|---|---|
-|`checked`|`boolean`|`false`|Whether the icon button is in the checked state (inherited from Switch).|
+|`checked`|Boolean|`false`|Whether the icon button is in the checked state (inherited from `Switch`).|
 |`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the icon button toggle.|
 |`variant`|`'filled' \| 'tonal' \| 'outlined' \| 'text'`|`'text'`|The visual style variant of the icon button toggle.|
 |`width`|`'standard' \| 'narrow' \| 'wide'`|`'standard'`|The width variant of the icon button toggle.|
-|`disabled`|`boolean`|`false`|Whether the icon button toggle is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the icon button toggle is disabled (inherited from `FormAssociated`).|
 
 ### Events
 

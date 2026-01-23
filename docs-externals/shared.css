@@ -1,25 +1,6 @@
 :root {
-  --font-family: 'Poppins', poppins-fallback, poppins-fallback-android,
-    sans-serif;
+  --font-family: 'DM Sans', sans-serif;
   font-display: swap;
-}
-
-@font-face {
-  font-family: poppins-fallback;
-  src: local('Arial');
-  size-adjust: 60.85099821%;
-  ascent-override: 164.3358416%;
-  descent-override: 57.51754455%;
-  line-gap-override: 16.43358416%;
-}
-
-@font-face {
-  font-family: poppins-fallback-android;
-  src: local('Roboto');
-  size-adjust: 55.5193474%;
-  ascent-override: 180.1173909%;
-  descent-override: 63.04108683%;
-  line-gap-override: 18.01173909%;
 }
 
 md-icon {
@@ -252,7 +233,7 @@ pre,
   background-color: var(--md-sys-color-surface-container);
   color: var(--md-sys-color-on-surface);
   font: var(--md-sys-typography-body-large);
-  font-family: monospace;
+  font-family: 'DM Mono', monospace;
 }
 
 .table-wrapper {

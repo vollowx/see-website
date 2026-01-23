@@ -106,14 +106,14 @@ Menus display a list of choices on a temporary surface. They appear when users i
 
 |Name|Type|Default|Description|
 |---|---|---|---|
-|`open`|`boolean`|`false`|Whether the menu is open (inherited from Menu).|
-|`quick`|`boolean`|`false`|Whether to use quick mode for menu opening (inherited from Menu).|
-|`align`|`string`|`'bottom-start'`|The alignment of the menu relative to the anchor (inherited from Menu).|
-|`alignStrategy`|`string`|`'absolute'`|The positioning strategy for the menu (inherited from Menu).|
-|`offset`|`number`|`0`|The offset distance for the menu (inherited from Menu).|
-|`keepOpenBlur`|`boolean`|`false`|Whether to keep the menu open when focus is lost (inherited from Menu).|
-|`keepOpenClickItem`|`boolean`|`false`|Whether to keep the menu open when an item is clicked (inherited from Menu).|
-|`keepOpenClickOutside`|`boolean`|`false`|Whether to keep the menu open when clicking outside (inherited from Menu).|
+|`open`|Boolean|`false`|Whether the menu is open (inherited from `Menu`).|
+|`quick`|Boolean|`false`|Whether to use quick mode for menu opening (inherited from `Menu`).|
+|`align`|[Placement](https://floating-ui.com/docs/computePosition#placement)|`'bottom-start'`|The alignment of the menu relative to the anchor (inherited from `Menu`).|
+|`alignStrategy`|[Strategy](https://floating-ui.com/docs/computePosition#strategy)|`'absolute'`|The positioning strategy for the menu (inherited from `Menu`).|
+|`offset`|Number|`0`|The offset distance for the menu (inherited from `Menu`).|
+|`keepOpenBlur`|Boolean|`false`|Whether to keep the menu open when focus is lost (inherited from `Menu`).|
+|`keepOpenClickItem`|Boolean|`false`|Whether to keep the menu open when an item is clicked (inherited from `Menu`).|
+|`keepOpenClickOutside`|Boolean|`false`|Whether to keep the menu open when clicking outside (inherited from `Menu`).|
 
 ## Methods
 

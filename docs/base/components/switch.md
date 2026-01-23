@@ -12,7 +12,7 @@ title: Switch - Base - SEE
 |Name|Type|Default|Description|
 |---|---|---|---|
 |`checked`|Boolean|`false`|Whether the switch is in the checked/on state.|
-|`disabled`|Boolean|`false`|Whether the switch is disabled (inherited from FormAssociated).|
+|`disabled`|Boolean|`false`|Whether the switch is disabled (inherited from `FormAssociated`).|
 
 ## Events
 

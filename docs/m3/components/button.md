@@ -116,10 +116,10 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 |`color`|`'primary' \| 'secondary' \| 'tertiary'`|`'primary'`|The color variant of the button.|
 |`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
 |`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
-|`trailingIcon`|`boolean`|`false`|Whether the icon is displayed at the end of the button.|
+|`trailingIcon`|Boolean|`false`|Whether the icon is displayed at the end of the button.|
 |`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'`|`'filled'`|The visual style variant of the button.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
-|`disabled`|`boolean`|`false`|Whether the button is disabled (inherited from FormAssociated).|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
+|`disabled`|Boolean|`false`|Whether the button is disabled (inherited from `FormAssociated`).|
 
 ### Methods
 
@@ -207,14 +207,14 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
 |Name|Type|Default|Description|
 |---|---|---|---|
-|`checked`|`boolean`|`false`|Whether the button is in the checked state (inherited from Switch).|
+|`checked`|Boolean|`false`|Whether the button is in the checked state (inherited from `Switch`).|
 |`color`|`'primary' \| 'secondary' \| 'tertiary'`|`'primary'`|The color variant of the button.|
 |`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
 |`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
-|`trailingIcon`|`boolean`|`false`|Whether the icon is displayed at the end of the button.|
+|`trailingIcon`|Boolean|`false`|Whether the icon is displayed at the end of the button.|
 |`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined'`|`'filled'`|The visual style variant of the button.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from base Button).|
-|`disabled`|`boolean`|`false`|Whether the button is disabled (inherited from FormAssociated).|
+|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
+|`disabled`|Boolean|`false`|Whether the button is disabled (inherited from `FormAssociated`).|
 
 ### Events
 
