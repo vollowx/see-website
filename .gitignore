@@ -5,6 +5,7 @@ node_modules
 out
 dist
 dist-ssr
+docs-externals/build
 *.tgz
 
 # code coverage

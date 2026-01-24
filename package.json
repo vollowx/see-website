@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "prebuild": "node build-ssr.js && npx @11ty/eleventy",
-    "dev": "npx @11ty/eleventy && vite --host",
-    "build": "vite build",
-    "preview": "vite preview --host"
+    "build:client": "node build-client.js",
+    "build": "npm run prebuild && npm run build:client",
+    "dev": "npx @11ty/eleventy && npm run serve",
+    "serve": "wds --watch --root-dir . --open",
+    "preview": "wds --root-dir ."
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -14,6 +16,7 @@
     "@lit-labs/ssr": "^4.0.0",
     "@lit-labs/ssr-client": "^1.1.8",
     "@types/bun": "latest",
+    "@web/dev-server": "^0.4.6",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "esbuild": "^0.27.2",
     "tsx": "^4.21.0"
@@ -21,8 +24,6 @@
   "dependencies": {
     "@vollowx/seele": "^0.8.2",
     "glob": "^13.0.0",
-    "lightningcss": "^1.30.2",
-    "vite": "^7.3.0",
-    "vite-plugin-html": "^3.2.2"
+    "lightningcss": "^1.30.2"
   }
 }
