@@ -17,7 +17,15 @@ export default function(eleventyConfig) {
   // Pass through node_modules for client-side hydration support
   eleventyConfig.addPassthroughCopy({
     'node_modules/@lit-labs/ssr-client': '_lit-labs/ssr-client',
-    'node_modules/@vollowx/seele/src': 'node_modules/@vollowx/seele/src'
+    'node_modules/@vollowx/seele/src': 'node_modules/@vollowx/seele/src',
+    'node_modules/lit': 'node_modules/lit',
+    'node_modules/lit-html': 'node_modules/lit-html',
+    'node_modules/lit-element': 'node_modules/lit-element',
+    'node_modules/@lit/reactive-element': 'node_modules/@lit/reactive-element',
+    'node_modules/@floating-ui/dom/dist': 'node_modules/@floating-ui/dom/dist',
+    'node_modules/@floating-ui/core/dist': 'node_modules/@floating-ui/core/dist',
+    'node_modules/@floating-ui/utils/dist': 'node_modules/@floating-ui/utils/dist',
+    'node_modules/tslib': 'node_modules/tslib'
   });
   
   // Add Lit SSR plugin for server-side rendering and hydration
