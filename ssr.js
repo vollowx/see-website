@@ -1,21 +1,14 @@
 /**
  * SSR entry point for Lit components
  * 
- * IMPORTANT: This file requires compiled JavaScript components.
- * TypeScript files (.ts) cannot be loaded directly by Node.js for SSR.
- * 
- * To enable SSR:
- * 1. Set up a build step to compile TypeScript to JavaScript
- * 2. Update the imports below to point to compiled .js files
- * 3. Run with: ENABLE_SSR=true npm run prebuild
- * 
- * Currently, SSR is disabled and components are loaded client-side via shared.ts
+ * This file imports all custom Lit components that should be server-side rendered.
+ * The @lit-labs/eleventy-plugin-lit will use this to render components on the server.
  */
 
-// TODO: Replace with compiled JavaScript imports when TypeScript build is set up
-// import './docs-externals/components/demo.js';
-// import './docs-externals/components/toolbar.js';
+// Import custom Lit components for SSR
+import './docs-externals/components/demo.ts';
+import './docs-externals/components/toolbar.ts';
 
 // Export all components for SSR
-// export * from './docs-externals/components/demo.js';
-// export * from './docs-externals/components/toolbar.js';
+export * from './docs-externals/components/demo.ts';
+export * from './docs-externals/components/toolbar.ts';

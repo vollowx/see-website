@@ -44,11 +44,33 @@ export default function(eleventyConfig) {
 }
 ```
 
-## Lit SSR Support
+## Lit SSR & Hydration
 
-The project includes `@lit-labs/eleventy-plugin-lit` for server-side rendering of Lit components. Currently, SSR is disabled by default since components are TypeScript and require compilation. The components are loaded client-side via `shared.ts` and hydrate naturally.
+The project uses `@lit-labs/eleventy-plugin-lit` for server-side rendering of Lit components with client-side hydration.
 
-To enable SSR in the future:
-1. Set up TypeScript compilation to output JavaScript
-2. Update `ssr.js` to point to compiled files
-3. Enable SSR: `ENABLE_SSR=true npm run prebuild`
+### How It Works
+
+1. **Build Step**: `build-ssr.js` compiles TypeScript components to JavaScript using esbuild
+2. **SSR**: Eleventy renders components on the server with Declarative Shadow DOM
+3. **Hydration**: Client-side JavaScript hydrates the pre-rendered components
+
+### SSR Process
+
+```
+TypeScript Components → esbuild → dist-ssr/ssr.js → Lit SSR Plugin → HTML with DSD
+                                                                           ↓
+                                                                    Client Hydration
+```
+
+### Benefits
+
+- **Faster Initial Load**: Components render immediately without JavaScript
+- **SEO-Friendly**: Search engines see fully rendered content
+- **Progressive Enhancement**: Works even if JavaScript fails to load
+- **Improved Performance**: No layout shift, instant interactivity
+
+### Build Commands
+
+- `npm run prebuild`: Compiles SSR components + generates HTML pages
+- `npm run build`: Full production build with Vite
+- `npm run dev`: Development mode with hot reload

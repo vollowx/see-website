@@ -7,22 +7,16 @@ import { markdownPreprocessor } from './eleventy-helpers/plugins/markdown-prepro
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Enable SSR only if explicitly requested and components are compiled
-const ENABLE_SSR = process.env.ENABLE_SSR === 'true';
-
 export default function(eleventyConfig) {
   // Pass through docs-externals directory for CSS/JS/components
   eleventyConfig.addPassthroughCopy('docs-externals');
   
   // Add Lit SSR plugin for server-side rendering and hydration
-  // Note: SSR is currently disabled as it requires compiled JavaScript
-  // The components are loaded client-side via shared.ts and hydrate naturally
-  if (ENABLE_SSR) {
-    eleventyConfig.addPlugin(litPlugin, {
-      mode: 'worker',
-      componentModules: ['./ssr.js']
-    });
-  }
+  // Components are rendered on the server and then hydrated on the client
+  eleventyConfig.addPlugin(litPlugin, {
+    mode: 'worker',
+    componentModules: ['./dist-ssr/ssr.js']
+  });
   
   // Apply markdown preprocessor plugin
   markdownPreprocessor(eleventyConfig);
