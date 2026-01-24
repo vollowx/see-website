@@ -35,6 +35,7 @@ await esbuild.build({
   outdir,
   format: 'esm',
   target: 'es2020',
+  treeShaking: true,
   minify: !DEV,
   splitting: false, // Don't split - this must be standalone
   sourcemap: DEV,
