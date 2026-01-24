@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{TITLE}}</title>
+    <title>{{ title or page.fileSlug }}</title>
     <meta name="description" content="Documentation of SEELE the web components library." />
 
     <link rel="stylesheet" href="/docs-externals/shared.css" />
@@ -23,7 +23,7 @@
   <body>
     <main>
       <sw-toolbar></sw-toolbar>
-      {{CONTENT}}
+      {{ content | safe }}
     </main>
   </body>
 </html>
