@@ -46,12 +46,12 @@ export default function(eleventyConfig) {
 
 ## Lit SSR & Hydration
 
-The project uses `@lit-labs/eleventy-plugin-lit` for server-side rendering of custom Lit components (`sw-demo`, `sw-toolbar`) with client-side hydration.
+The project uses `@lit-labs/eleventy-plugin-lit` for server-side rendering of ALL Lit components (custom and seele) with client-side hydration.
 
 ### How It Works
 
 1. **Build Step**: `build-ssr.js` compiles TypeScript components to JavaScript using esbuild
-2. **SSR**: Eleventy renders custom components on the server with Declarative Shadow DOM (DSD)
+2. **SSR**: Eleventy renders ALL components on the server with Declarative Shadow DOM (DSD)
 3. **Hydration**: `@lit-labs/ssr-client` enables client-side hydration of pre-rendered components
 4. **DSD Polyfill**: Inline polyfill for Firefox and browsers without native DSD support
 
@@ -65,9 +65,12 @@ TypeScript Components → esbuild → dist-ssr/ssr.js → Lit SSR Plugin → HTM
                                                                     Client Hydration
 ```
 
-### Important Notes
+### Components Rendered
 
-**Custom Components Only**: Only `sw-demo` and `sw-toolbar` are server-side rendered. The `@vollowx/seele` components (md-button, md-switch, etc.) cannot be SSR'd because they use browser APIs (document, window) in their constructors. These are loaded client-side only.
+**All Components are SSR'd**:
+- ✅ Custom components: `sw-demo`, `sw-toolbar`
+- ✅ Seele components: `md-button`, `md-switch`, `md-menu`, `md-toolbar`, `md-ripple`, `md-focus-ring`, etc.
+- ✅ All nested components (ripples, focus rings, fields, etc.)
 
 **Hydration Order**: The hydration support script (`lit-element-hydrate-support.js`) MUST be loaded before any Lit components to prevent double-rendering.
 
@@ -75,11 +78,12 @@ TypeScript Components → esbuild → dist-ssr/ssr.js → Lit SSR Plugin → HTM
 
 ### Benefits
 
-- **Faster Initial Load**: Custom components render immediately without JavaScript
-- **SEO-Friendly**: Search engines see fully rendered content
+- **Faster Initial Load**: ALL components render immediately without JavaScript
+- **SEO-Friendly**: Search engines see fully rendered content with all component markup
 - **Progressive Enhancement**: Pre-rendered components work even if JavaScript fails
 - **Improved Performance**: No layout shift, instant interactivity
 - **Firefox Support**: DSD polyfill ensures compatibility across all browsers
+- **Complete SSR**: Every Lit component on the page is pre-rendered
 
 ### Build Commands
 

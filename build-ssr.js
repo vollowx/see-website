@@ -11,7 +11,7 @@ await esbuild.build({
   format: 'esm',
   platform: 'node',
   outfile: './dist-ssr/ssr.js',
-  external: ['lit', 'lit/*', '@lit/*', '@vollowx/seele', '@floating-ui/dom'],
+  external: ['lit', 'lit/*', '@lit/*', '@vollowx/seele', '@floating-ui/dom', 'tslib'],
   target: 'node18',
   sourcemap: false,
 });
