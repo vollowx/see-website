@@ -16,53 +16,55 @@ A state layer is a semi-transparent covering on an element that indicates its st
 <!-- @docs-uncomment
 ## Interactive Demo
 
+
+<style>
+  .row {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+  }
+
+  .container {
+    align-items: center;
+    border-radius: 24px;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    outline: 1px solid var(--md-sys-color-outline);
+    padding: 16px;
+    position: relative;
+    width: 64px;
+  }
+
+  .container:has(.unbounded) {
+    border-radius: 50%;
+    outline-style: dashed;
+  }
+
+  .anchor {
+    background: var(--md-sys-color-primary-container);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+
+    /* Recommended styles for an unbounded ripple's anchor. */
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  md-ripple.unbounded {
+    height: 64px;
+    width: 64px;
+
+    /* Recommended styles for an unbounded ripple. */
+    border-radius: 50%;
+    inset: unset;
+  }
+</style>
+
 <sw-demo>
-  <style>
-    .row {
-      align-items: center;
-      display: flex;
-      gap: 32px;
-    }
-
-    .container {
-      align-items: center;
-      border-radius: 24px;
-      display: flex;
-      height: 64px;
-      justify-content: center;
-      outline: 1px solid var(--md-sys-color-outline);
-      padding: 16px;
-      position: relative;
-      width: 64px;
-    }
-
-    .container:has(.unbounded) {
-      border-radius: 50%;
-      outline-style: dashed;
-    }
-
-    .anchor {
-      background: var(--md-sys-color-primary-container);
-      border: 1px solid var(--md-sys-color-outline);
-      border-radius: 50%;
-      height: 24px;
-      width: 24px;
-
-      /* Recommended styles for an unbounded ripple's anchor. */
-      display: grid;
-      place-items: center;
-      position: relative;
-    }
-
-    md-ripple.unbounded {
-      height: 64px;
-      width: 64px;
-
-      /* Recommended styles for an unbounded ripple. */
-      border-radius: 50%;
-      inset: unset;
-    }
-  </style>
   <div class="row">
     <div class="container">
       <md-ripple></md-ripple>
@@ -102,12 +104,9 @@ Ripples display on press pointer interactions. They may be attached to a control
 3. Attached imperatively
    <!-- @docs-demo-code-block -->
    ```html
-   <div style="position: relative">
+   <div style="position: relative; height: 100px">
      <md-ripple id="ripple"></md-ripple>
-     <br />
      <button id="ripple-control">Button</button>
-     <br />
-     <br />
    </div>
    <script>
      const ripple = document.querySelector('#ripple');
