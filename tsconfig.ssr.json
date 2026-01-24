@@ -9,7 +9,6 @@
     "sourceMap": false
   },
   "include": [
-    "docs-externals/components/**/*.ts",
-    "ssr.js"
+    "docs-externals/components/**/*.ts"
   ]
 }
