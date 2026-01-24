@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node build-pages.mjs",
-    "dev": "node build-pages.mjs && vite --host",
+    "prebuild": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy && vite --host",
     "build": "vite build",
     "preview": "vite preview --host"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
     "@types/bun": "latest",
     "glob": "^13.0.0",
     "markdown-it": "^14.1.0"
