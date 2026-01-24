@@ -11,7 +11,9 @@ await esbuild.build({
   format: 'esm',
   platform: 'node',
   outfile: './_middle/ssr/ssr.js',
-  external: ['lit', 'lit/*', '@lit/*', '@vollowx/seele', '@floating-ui/dom', 'tslib'],
+  // Mark seele components as external to prevent SSR issues with form elements
+  // The client-side bundle will handle their rendering
+  external: ['lit', 'lit/*', '@lit/*', '@vollowx/seele', '@vollowx/seele/*', '@floating-ui/dom', 'tslib'],
   target: 'node18',
   sourcemap: false,
 });
