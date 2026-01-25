@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node docs-web/build-ssr.js && node docs-web/build-client.js && npx @11ty/eleventy --config=docs-web/eleventy.config.js",
-    "dev": "npx @11ty/eleventy --config=docs-web/eleventy.config.js && npm run serve",
-    "serve": "wds --watch --root-dir docs-web/_site --open",
-    "preview": "wds --root-dir docs-web/_site"
+    "build": "node build-ssr.js && node build-client.js && npx @11ty/eleventy --config=eleventy.config.js",
+    "dev": "npx @11ty/eleventy --config=eleventy.config.js && npm run serve",
+    "serve": "wds --watch --root-dir _site --open",
+    "preview": "wds --root-dir _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

@@ -12,14 +12,14 @@ const projectRoot = path.resolve(__dirname, '..');
 export default function(eleventyConfig) {
   // Pass through built docs-web directory for JS/components and minified CSS
   eleventyConfig.addPassthroughCopy({
-    [path.join(projectRoot, 'docs-web/_middle/docs-web')]: 'docs-web'
+    '_middle/docs-web': 'docs-web'
   });
   
   // Add Lit SSR plugin for server-side rendering
   // Components are rendered on the server; client-side JS will upgrade them
   eleventyConfig.addPlugin(litPlugin, {
     mode: 'worker',
-    componentModules: [path.join(projectRoot, 'docs-web/_middle/ssr/ssr.js')]
+    componentModules: ['./_middle/ssr/ssr.js']
   });
   
   // Apply markdown preprocessor plugin
@@ -33,7 +33,7 @@ export default function(eleventyConfig) {
   return {
     dir: {
       input: path.join(projectRoot, 'docs'),
-      output: path.join(projectRoot, 'docs-web/_site'),
+      output: '_site',
       includes: '../docs-web/_includes'
     },
     templateFormats: ['md'],

@@ -1,6 +1,9 @@
 # seele-docs
 
 ```bash
-bun install
-bun dev
+cd docs-web
+npm install
+npm run build
+# or for development:
+npm run dev
 ```
