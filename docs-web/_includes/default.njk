@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
     <title>{{ title or page.fileSlug }}</title>
     <meta name="description" content="{{ desc or 'Documentation of SEELE the web components library.' }}" />
+    <meta name="keywords" content="seele, web components, documentation, components, library, ui, design system" />
+    <meta name="author" content="Vollow" />
 
     <style>{% inlineCss "_middle/docs-web/build/client.css" %}</style>
+    <script>
+      try {
+        const stored = localStorage.getItem("sw-theme-preference");
+        const themeMode = stored === "light" || stored === "dark" || stored === "auto" ? stored : "auto";
+        if (themeMode === "auto") {
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset["mdTheme"] = prefersDark ? "dark" : "light";
+        } else {
+          document.documentElement.dataset["mdTheme"] = themeMode;
+        }
+      } catch (e) {}
+    </script>
     <!-- MUST be loaded before any lit components to enable hydration -->
     <script type="module" src="/docs-web/build/lit-hydrate-support.js"></script>
     <!-- Load components and interactive logic -->
