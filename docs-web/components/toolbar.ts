@@ -157,8 +157,8 @@ export class SwToolbar extends LitElement {
           ?checked=${this.rtl}
           @change=${this._handleDir}
         >
-          <iconify-icon icon="material-symbols:format-textdirection-r-to-l" aria-label="Set direction to RTL"></iconify-icon>
-          <iconify-icon slot="checked" icon="material-symbols:format-textdirection-l-to-r" aria-label="Set direction to LTR"></iconify-icon>
+          <iconify-icon icon="material-symbols:format-textdirection-r-to-l"></iconify-icon>
+          <iconify-icon slot="checked" icon="material-symbols:format-textdirection-l-to-r"></iconify-icon>
         </md-icon-button-toggle>
         <md-tooltip for="action-toggle-direction" offset="16">
           ${this._getTooltipText("rtl", this.rtl)}
@@ -168,7 +168,7 @@ export class SwToolbar extends LitElement {
           id="action-toggle-theme"
           @click=${this._toggleThemeMenu}
         >
-          <iconify-icon icon="material-symbols:palette" aria-label="Change theme"></iconify-icon>
+          <iconify-icon icon="material-symbols:palette"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-toggle-theme" offset="16">
           Change theme
