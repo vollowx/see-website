@@ -22,7 +22,7 @@
     "tsx": "^4.21.0"
   },
   "dependencies": {
-    "@vollowx/seele": "^0.8.7",
+    "@vollowx/seele": "^0.8.6",
     "glob": "^13.0.0",
     "lightningcss": "^1.30.2"
   }
