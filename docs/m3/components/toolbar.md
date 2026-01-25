@@ -15,19 +15,19 @@ Toolbars display frequently used actions relevant to the current page or context
 ```html
 <md-toolbar>
   <md-icon-button aria-label="Back">
-    <md-icon>arrow_back</md-icon>
+    <iconify-icon icon="material-symbols:arrow-back"></iconify-icon>
   </md-icon-button>
   <md-icon-button aria-label="Forward">
-    <md-icon>arrow_forward</md-icon>
+    <iconify-icon icon="material-symbols:arrow-forward"></iconify-icon>
   </md-icon-button>
   <md-icon-button variant="filled" shape="square" aria-label="New tab">
-    <md-icon>add</md-icon>
+    <iconify-icon icon="material-symbols:add"></iconify-icon>
   </md-icon-button>
   <md-icon-button aria-label="Tabs">
-    <md-icon>tab</md-icon>
+    <iconify-icon icon="material-symbols:tab"></iconify-icon>
   </md-icon-button>
   <md-icon-button aria-label="More options">
-    <md-icon>more_vert</md-icon>
+    <iconify-icon icon="material-symbols:more-vert"></iconify-icon>
   </md-icon-button>
 </md-toolbar>
 ```
@@ -39,16 +39,16 @@ Toolbars display frequently used actions relevant to the current page or context
 ```html
 <md-toolbar type="floating">
   <md-icon-button-toggle variant="tonal" checked>
-    <md-icon aria-label="Unchecked">format_bold</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_bold</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-bold"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-bold"></iconify-icon>
   </md-icon-button-toggle>
   <md-icon-button-toggle variant="tonal">
-    <md-icon aria-label="Unchecked">format_italic</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_italic</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-italic"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-italic"></iconify-icon>
   </md-icon-button-toggle>
   <md-icon-button-toggle variant="tonal">
-    <md-icon aria-label="Unchecked">format_underlined</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_underlined</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-underlined"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-underlined"></iconify-icon>
   </md-icon-button-toggle>
   <md-button>Share</md-button>
 </md-toolbar>
@@ -61,16 +61,16 @@ Toolbars display frequently used actions relevant to the current page or context
 ```html
 <md-toolbar type="floating" orientation="vertical">
   <md-icon-button-toggle variant="tonal">
-    <md-icon aria-label="Unchecked">format_bold</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_bold</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-bold"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-bold"></iconify-icon>
   </md-icon-button-toggle>
   <md-icon-button-toggle variant="tonal">
-    <md-icon aria-label="Unchecked">format_italic</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_italic</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-italic"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-italic"></iconify-icon>
   </md-icon-button-toggle>
   <md-icon-button-toggle variant="tonal">
-    <md-icon aria-label="Unchecked">format_underlined</md-icon>
-    <md-icon slot="checked" aria-label="Checked">format_underlined</md-icon>
+    <iconify-icon aria-label="Unchecked" icon="material-symbols:format-underlined"></iconify-icon>
+    <iconify-icon slot="checked" aria-label="Checked" icon="material-symbols:format-underlined"></iconify-icon>
   </md-icon-button-toggle>
 </md-toolbar>
 ```
@@ -82,19 +82,19 @@ Toolbars display frequently used actions relevant to the current page or context
 ```html
 <md-toolbar type="floating">
   <md-icon-button id="toolbar-archive">
-    <md-icon>archive</md-icon>
+    <iconify-icon icon="material-symbols:archive"></iconify-icon>
   </md-icon-button>
   <md-icon-button id="toolbar-delete">
-    <md-icon>delete</md-icon>
+    <iconify-icon icon="material-symbols:delete"></iconify-icon>
   </md-icon-button>
   <md-icon-button id="toolbar-mail">
-    <md-icon>mail</md-icon>
+    <iconify-icon icon="material-symbols:mail"></iconify-icon>
   </md-icon-button>
   <md-icon-button id="toolbar-snooze">
-    <md-icon>snooze</md-icon>
+    <iconify-icon icon="material-symbols:snooze"></iconify-icon>
   </md-icon-button>
   <md-icon-button id="toolbar-more-mailboxes">
-    <md-icon>more_vert</md-icon>
+    <iconify-icon icon="material-symbols:more-vert"></iconify-icon>
   </md-icon-button>
 
   <md-tooltip offset="16" for="toolbar-archive">Archive</md-tooltip>
@@ -106,7 +106,7 @@ Toolbars display frequently used actions relevant to the current page or context
   >
 
   <md-fab slot="fab" color="tertiary" id="toolbar-reply">
-    <md-icon>reply</md-icon>
+    <iconify-icon icon="material-symbols:reply"></iconify-icon>
   </md-fab>
 
   <md-tooltip offset="8" for="toolbar-reply">Reply</md-tooltip>

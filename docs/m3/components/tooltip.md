@@ -13,16 +13,16 @@ Tooltips display informative text when users hover over, focus on, or tap an ele
 
 ```html
 <md-icon-button id="tooltip-anchor">
-  <md-icon>search</md-icon>
+  <iconify-icon icon="material-symbols:search"></iconify-icon>
 </md-icon-button>
 <md-tooltip for="tooltip-anchor">Search for contact</md-tooltip>
 <md-icon-button id="tooltip-anchor-2">
-  <md-icon>settings</md-icon>
+  <iconify-icon icon="material-symbols:settings"></iconify-icon>
 </md-icon-button>
 <md-tooltip for="tooltip-anchor-2">Settings</md-tooltip>
 <md-button id="tooltip-anchor-3">
   Max Width
-  <md-icon slot="icon">width</md-icon>
+  <iconify-icon slot="icon" icon="material-symbols:width"></iconify-icon>
 </md-button>
 <md-tooltip for="tooltip-anchor-3"
   >Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel

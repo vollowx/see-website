@@ -15,13 +15,13 @@ Floating action buttons (FABs) help people take primary actions.
 
 ```html
 <md-fab color="primary" aria-label="Accessibility">
-  <md-icon>accessible_forward</md-icon>
+  <iconify-icon icon="material-symbols:accessible-forward"></iconify-icon>
 </md-fab>
 <md-fab size="small" color="tertiary" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 <md-fab size="large" aria-label="Color palette">
-  <md-icon>palette</md-icon>
+  <iconify-icon icon="material-symbols:palette"></iconify-icon>
 </md-fab>
 ```
 
@@ -31,7 +31,7 @@ Floating action buttons (FABs) help people take primary actions.
 
 ```html
 <md-fab>
-  <md-icon>navigation</md-icon>
+  <iconify-icon icon="material-symbols:navigation"></iconify-icon>
   <span slot="label">Navigation</span>
 </md-fab>
 <md-fab><span slot="label">Reroute</span></md-fab>
@@ -39,13 +39,13 @@ Floating action buttons (FABs) help people take primary actions.
 
 ## Usage
 
-FABs should have an icon, such as a font `md-icon`, an `svg`, or an `img`.
+FABs should have an icon, such as a font `iconify-icon`, an `svg`, or an `img`.
 
 <!-- @docs-demo-code-block -->
 
 ```html
 <md-fab aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 ```
 
@@ -57,7 +57,7 @@ FABs can be set to a lower elevation with the `lowered` attribute.
 
 ```html
 <md-fab lowered aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 ```
 
@@ -69,13 +69,13 @@ FAB colors may be changed with the `color` attribute. It can be set to "surface"
 
 ```html
 <md-fab color="primary" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 <md-fab color="secondary" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 <md-fab color="tertiary" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 ```
 
@@ -87,13 +87,13 @@ FABs may be small, medium (default), or large by setting the `size` attribute.
 
 ```html
 <md-fab size="small" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 <md-fab aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 <md-fab size="large" aria-label="Edit">
-  <md-icon>edit</md-icon>
+  <iconify-icon icon="material-symbols:edit"></iconify-icon>
 </md-fab>
 ```
 

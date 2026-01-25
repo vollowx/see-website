@@ -1,3 +1,4 @@
+import 'iconify-icon';
 import '@vollowx/seele';
 import './components/demo.ts';
 import './components/toolbar.ts';
