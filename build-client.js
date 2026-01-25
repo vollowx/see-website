@@ -5,16 +5,19 @@
 
 import esbuild from 'esbuild';
 import { glob } from 'glob';
+import { transform } from 'lightningcss';
+import fs from 'fs';
+import path from 'path';
 
 const DEV = process.env.NODE_ENV === 'DEV';
-const outdir = DEV ? 'docs-externals/build' : 'docs-externals/build';
+const outdir = DEV ? '_middle/docs-web/build' : '_middle/docs-web/build';
 
 // Entry points for client-side bundles
-const entryPoints = await glob('./docs-externals/**/*.ts', {
-  ignore: ['**/node_modules/**']
+const entryPoints = await glob('./docs-web/**/*.ts', {
+  ignore: ['**/node_modules/**', '**/lit-hydrate-support.ts']
 });
 
-// Shared esbuild config
+// Shared esbuild config for main bundles
 const config = {
   bundle: true,
   outdir,
@@ -24,13 +27,43 @@ const config = {
   sourcemap: DEV,
   minify: !DEV,
   splitting: true,
-  external: ['@vollowx/seele'],
+  // Don't mark anything as external - bundle everything
+  // This way we don't need import maps for lit, tslib, etc.
 };
+
+// Build the hydration support separately (must be loaded first, no splitting)
+await esbuild.build({
+  entryPoints: ['./docs-web/lit-hydrate-support.ts'],
+  bundle: true,
+  outdir,
+  format: 'esm',
+  target: 'es2020',
+  treeShaking: true,
+  minify: !DEV,
+  splitting: false, // Don't split - this must be standalone
+  sourcemap: DEV,
+}).catch(() => process.exit(1));
 
 // Build client-side bundles
 await esbuild.build({
   ...config,
   entryPoints,
 }).catch(() => process.exit(1));
+
+// Minify CSS (no prefixing)
+const cssInput = fs.readFileSync('./docs-web/shared.css');
+const { code } = transform({
+  filename: 'shared.css',
+  code: cssInput,
+  minify: true,
+});
+
+// Ensure output directory exists
+if (!fs.existsSync(outdir)) {
+  fs.mkdirSync(outdir, { recursive: true });
+}
+
+// Write minified CSS
+fs.writeFileSync(path.join(outdir, 'shared.css'), code);
 
 console.log('Client build completed successfully');

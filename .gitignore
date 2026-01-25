@@ -6,6 +6,9 @@ out
 dist
 dist-ssr
 docs-externals/build
+docs-web/build
+_middle
+_site
 *.tgz
 
 # code coverage
@@ -35,9 +38,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # Finder (MacOS) folder config
 .DS_Store
 
-# Generated HTML files (built from markdown)
-index.html
-/base/
-/m3/
-/externals/
-/_lit-labs/
+# Generated HTML files (built from markdown) - no longer needed, now in _site
+# index.html
+# /base/
+# /m3/
+# /externals/
+# /_lit-labs/

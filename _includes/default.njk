@@ -6,13 +6,13 @@
     <title>{{ title or page.fileSlug }}</title>
     <meta name="description" content="Documentation of SEELE the web components library." />
 
-    <link rel="stylesheet" href="/docs-externals/shared.css" />
+    <link rel="stylesheet" href="/docs-web/build/shared.css" />
     
     <!-- MUST be loaded before any lit components to enable hydration -->
-    <script type="module" src="/_lit-labs/ssr-client/lit-element-hydrate-support.js"></script>
+    <script type="module" src="/docs-web/build/lit-hydrate-support.js"></script>
     
     <!-- Load components and interactive logic -->
-    <script type="module" src="/docs-externals/build/shared.js"></script>
+    <script type="module" src="/docs-web/build/shared.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

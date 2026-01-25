@@ -3,12 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "node build-ssr.js && npx @11ty/eleventy",
-    "build:client": "node build-client.js",
-    "build": "npm run prebuild && npm run build:client",
+    "prebuild": "node build-ssr.js && node build-client.js && npx @11ty/eleventy",
+    "build": "npm run prebuild",
     "dev": "npx @11ty/eleventy && npm run serve",
-    "serve": "wds --watch --root-dir . --open",
-    "preview": "wds --root-dir ."
+    "serve": "wds --watch --root-dir _site --open",
+    "preview": "wds --root-dir _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -23,7 +22,7 @@
     "tsx": "^4.21.0"
   },
   "dependencies": {
-    "@vollowx/seele": "^0.8.2",
+    "@vollowx/seele": "^0.8.8",
     "glob": "^13.0.0",
     "lightningcss": "^1.30.2"
   }

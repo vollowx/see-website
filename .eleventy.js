@@ -9,19 +9,16 @@ import { markdownPreprocessor } from './eleventy-helpers/plugins/markdown-prepro
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default function(eleventyConfig) {
-  // Pass through docs-externals directory for CSS/JS/components
-  eleventyConfig.addPassthroughCopy('docs-externals');
-  
-  // Pass through node_modules for client-side hydration support
+  // Pass through built docs-web directory for JS/components and minified CSS
   eleventyConfig.addPassthroughCopy({
-    'node_modules/@lit-labs/ssr-client': '_lit-labs/ssr-client'
+    '_middle/docs-web': 'docs-web'
   });
   
-  // Add Lit SSR plugin for server-side rendering and hydration
-  // Components are rendered on the server and then hydrated on the client
+  // Add Lit SSR plugin for server-side rendering
+  // Components are rendered on the server; client-side JS will upgrade them
   eleventyConfig.addPlugin(litPlugin, {
     mode: 'worker',
-    componentModules: ['./dist-ssr/ssr.js']
+    componentModules: ['./_middle/ssr/ssr.js']
   });
   
   // Apply markdown preprocessor plugin
@@ -35,7 +32,7 @@ export default function(eleventyConfig) {
   return {
     dir: {
       input: 'docs',
-      output: '.',
+      output: '_site',
       includes: '../_includes'
     },
     templateFormats: ['md'],
