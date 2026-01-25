@@ -39,7 +39,10 @@ export function markdownPreprocessor(eleventyConfig) {
       
       // Pre-processing: Transform .md links to HTML paths
       // Get source file from env if available
+      console.log('DEBUG docsRoot:', docsRoot);
+      console.log('DEBUG inputPath:', env?.page?.inputPath);
       const sourceMdFile = env?.page?.inputPath ? path.relative(docsRoot, env.page.inputPath) : '';
+      console.log('DEBUG sourceMdFile:', sourceMdFile);
       
       content = content.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
         // Skip external links (http, https, mailto, etc.)
@@ -56,6 +59,8 @@ export function markdownPreprocessor(eleventyConfig) {
             const sourceDir = path.dirname(sourceMdFile).replace(/\\/g, '/');
             const normalizedHtmlPath = htmlPath.replace(/\\/g, '/');
             const resolvedPath = path.posix.normalize(path.posix.join(sourceDir, normalizedHtmlPath));
+            
+            console.log('DEBUG:', { sourceMdFile, sourceDir, url, normalizedHtmlPath, resolvedPath });
             
             const baseName = path.posix.basename(resolvedPath);
             if (baseName === 'index' || resolvedPath === '.' || resolvedPath === '') {
