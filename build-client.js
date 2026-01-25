@@ -50,15 +50,12 @@ await esbuild.build({
   entryPoints,
 }).catch(() => process.exit(1));
 
-// Minify and copy CSS
+// Minify CSS (no prefixing)
 const cssInput = fs.readFileSync('./docs-web/shared.css');
 const { code } = transform({
   filename: 'shared.css',
   code: cssInput,
   minify: true,
-  targets: {
-    chrome: 90,
-  }
 });
 
 // Ensure output directory exists
