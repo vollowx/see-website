@@ -317,3 +317,37 @@ label:has(md-outlined-text-field) {
 label:has(:disabled) {
   pointer-events: none;
 }
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 67ms linear both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 67ms linear both fade-in;
+}
+
+sw-toolbar {
+  view-transition-name: toolbar;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
