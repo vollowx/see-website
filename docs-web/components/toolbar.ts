@@ -20,17 +20,6 @@ export class SwToolbar extends LitElement {
     md-toolbar {
       pointer-events: auto;
     }
-    md-icon {
-      display: inline-block;
-      font-family: "Material Symbols Rounded";
-      font-style: normal;
-      font-weight: normal;
-      letter-spacing: normal;
-      line-height: 1;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
-    }
   `;
 
   @property({ type: String }) githubUrl = "https://github.com/vollowx/seele";
@@ -158,7 +147,7 @@ export class SwToolbar extends LitElement {
           aria-label="GitHub repository"
           @click=${this._handleGithubClick}
         >
-          <md-icon>code_blocks</md-icon>
+          <iconify-icon icon="material-symbols:code-blocks-rounded"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-open-repo" offset="16">View source code</md-tooltip>
 
@@ -168,12 +157,8 @@ export class SwToolbar extends LitElement {
           ?checked=${this.rtl}
           @change=${this._handleDir}
         >
-          <md-icon aria-label="Set direction to RTL">
-            format_textdirection_r_to_l
-          </md-icon>
-          <md-icon slot="checked" aria-label="Set direction to LTR">
-            format_textdirection_l_to_r
-          </md-icon>
+          <iconify-icon icon="material-symbols:format-textdirection-r-to-l-rounded" aria-label="Set direction to RTL"></iconify-icon>
+          <iconify-icon slot="checked" icon="material-symbols:format-textdirection-l-to-r-rounded" aria-label="Set direction to LTR"></iconify-icon>
         </md-icon-button-toggle>
         <md-tooltip for="action-toggle-direction" offset="16">
           ${this._getTooltipText("rtl", this.rtl)}
@@ -183,7 +168,7 @@ export class SwToolbar extends LitElement {
           id="action-toggle-theme"
           @click=${this._toggleThemeMenu}
         >
-          <md-icon aria-label="Change theme">palette</md-icon>
+          <iconify-icon icon="material-symbols:palette-rounded" aria-label="Change theme"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-toggle-theme" offset="16">
           Change theme
@@ -195,7 +180,7 @@ export class SwToolbar extends LitElement {
           id="scroll-to-top"
           @click=${this._handleScrollToTop}
         >
-          <md-icon>arrow_upward</md-icon>
+          <iconify-icon icon="material-symbols:arrow-upward-rounded"></iconify-icon>
         </md-fab>
         <md-tooltip for="scroll-to-top" offset="8">Scroll to top</md-tooltip>
       </md-toolbar>

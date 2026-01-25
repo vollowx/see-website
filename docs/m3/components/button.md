@@ -14,7 +14,7 @@ title: Button - M3 - SEELE
 
 <sw-demo hascontrols>
   <md-button id="button-interactive">
-    <md-icon slot="icon">search</md-icon>
+    <iconify-icon slot="icon" icon="material-symbols:search-rounded"></iconify-icon>
     <span>Controlled</span>
   </md-button>
 
@@ -86,7 +86,7 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 <md-button>Filled</md-button>
 <md-button variant="tonal">Tonal</md-button>
 <md-button variant="elevated">
-  <md-icon slot="icon">search</md-icon>
+  <iconify-icon slot="icon" icon="material-symbols:search-rounded"></iconify-icon>
   Elevated
 </md-button>
 <md-button variant="outlined">Outlined</md-button>
@@ -100,12 +100,12 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 ```html
 <md-button variant="tonal">
   Send
-  <md-icon slot="icon">send</md-icon>
+  <iconify-icon slot="icon" icon="material-symbols:send-rounded"></iconify-icon>
 </md-button>
 
 <md-button variant="text" trailingicon>
   Open
-  <md-icon slot="icon">open_in_new</md-icon>
+  <iconify-icon slot="icon" icon="material-symbols:open-in-new-rounded"></iconify-icon>
 </md-button>
 ```
 
@@ -134,8 +134,8 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
 <sw-demo hascontrols>
   <md-button-toggle id="button-toggle-interactive">
-    <md-icon slot="icon">bookmark</md-icon>
-    <md-icon slot="icon-checked" style="font-variation-settings: 'FILL' 1">bookmark</md-icon>
+    <iconify-icon slot="icon" icon="material-symbols:bookmark-outline-rounded"></iconify-icon>
+    <iconify-icon slot="icon-checked" icon="material-symbols:bookmark-rounded"></iconify-icon>
     <span>Bookmark</span>
     <span slot="checked">Bookmarked</span>
   </md-button-toggle>
@@ -194,14 +194,14 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
   style="display: flex; align-items: center; justify-content: center; gap: 8px;"
 >
   <md-icon-button variant="tonal" width="narrow" aria-label="Pause">
-    <md-icon>pause</md-icon>
+    <iconify-icon icon="material-symbols:pause-rounded"></iconify-icon>
   </md-icon-button>
   <md-button-toggle size="medium" checked>
     <span>Stop</span>
     <span slot="checked">Start</span>
   </md-button-toggle>
   <md-icon-button variant="outlined" width="narrow" aria-label="Restart">
-    <md-icon>replay</md-icon>
+    <iconify-icon icon="material-symbols:replay-rounded"></iconify-icon>
   </md-icon-button>
 </div>
 ```
