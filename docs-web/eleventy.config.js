@@ -7,18 +7,19 @@ import { minifyHtml } from './eleventy-helpers/transforms/minify-html.js';
 import { markdownPreprocessor } from './eleventy-helpers/plugins/markdown-preprocessor.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.resolve(__dirname, '..');
 
 export default function(eleventyConfig) {
   // Pass through built docs-web directory for JS/components and minified CSS
   eleventyConfig.addPassthroughCopy({
-    'docs-web/_middle/docs-web': 'docs-web'
+    [path.join(projectRoot, 'docs-web/_middle/docs-web')]: 'docs-web'
   });
   
   // Add Lit SSR plugin for server-side rendering
   // Components are rendered on the server; client-side JS will upgrade them
   eleventyConfig.addPlugin(litPlugin, {
     mode: 'worker',
-    componentModules: ['./docs-web/_middle/ssr/ssr.js']
+    componentModules: [path.join(projectRoot, 'docs-web/_middle/ssr/ssr.js')]
   });
   
   // Apply markdown preprocessor plugin
@@ -31,8 +32,8 @@ export default function(eleventyConfig) {
   
   return {
     dir: {
-      input: 'docs',
-      output: 'docs-web/_site',
+      input: path.join(projectRoot, 'docs'),
+      output: path.join(projectRoot, 'docs-web/_site'),
       includes: '../docs-web/_includes'
     },
     templateFormats: ['md'],
