@@ -4,8 +4,6 @@ title: Button - M3 - SEELE
 
 # Button
 
-<ul id="toc"></ul>
-
 ## Action Button
 
 - Follows: [Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
@@ -80,9 +78,10 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 ### Configurations
 
-#### Varients
+#### Variants
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-button>Filled</md-button>
 <md-button variant="tonal">Tonal</md-button>
@@ -94,9 +93,10 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 <md-button variant="text">Text</md-button>
 ```
 
-#### Icon
+#### Icons
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-button variant="tonal">
   Send
@@ -111,15 +111,15 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 ### Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`color`|`'primary' \| 'secondary' \| 'tertiary'`|`'primary'`|The color variant of the button.|
-|`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
-|`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
-|`trailingIcon`|Boolean|`false`|Whether the icon is displayed at the end of the button.|
-|`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'`|`'filled'`|The visual style variant of the button.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
-|`disabled`|Boolean|`false`|Whether the button is disabled (inherited from `FormAssociated`).|
+| Name           | Type                                                        | Default     | Description                                                       |
+| -------------- | ----------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                    | `'primary'` | The color variant of the button.                                  |
+| `shape`        | `'rounded' \| 'square'`                                     | `'rounded'` | The shape of the button.                                          |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`    | `'small'`   | The size of the button.                                           |
+| `trailingIcon` | Boolean                                                     | `false`     | Whether the icon is displayed at the end of the button.           |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'` | `'filled'`  | The visual style variant of the button.                           |
+| `type`         | `'button' \| 'submit' \| 'reset'`                           | `'button'`  | The button type (inherited from `Button`).                        |
+| `disabled`     | Boolean                                                     | `false`     | Whether the button is disabled (inherited from `FormAssociated`). |
 
 ### Methods
 
@@ -188,8 +188,11 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 ### Usage
 
 <!-- @docs-demo-code-block -->
+
 ```html
-<div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+<div
+  style="display: flex; align-items: center; justify-content: center; gap: 8px;"
+>
   <md-icon-button variant="tonal" width="narrow" aria-label="Pause">
     <md-icon>pause</md-icon>
   </md-icon-button>
@@ -205,19 +208,19 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
 ### Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`checked`|Boolean|`false`|Whether the button is in the checked state (inherited from `Switch`).|
-|`color`|`'primary' \| 'secondary' \| 'tertiary'`|`'primary'`|The color variant of the button.|
-|`shape`|`'rounded' \| 'square'`|`'rounded'`|The shape of the button.|
-|`size`|`'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`|`'small'`|The size of the button.|
-|`trailingIcon`|Boolean|`false`|Whether the icon is displayed at the end of the button.|
-|`variant`|`'filled' \| 'tonal' \| 'elevated' \| 'outlined'`|`'filled'`|The visual style variant of the button.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
-|`disabled`|Boolean|`false`|Whether the button is disabled (inherited from `FormAssociated`).|
+| Name           | Type                                                     | Default     | Description                                                           |
+| -------------- | -------------------------------------------------------- | ----------- | --------------------------------------------------------------------- |
+| `checked`      | Boolean                                                  | `false`     | Whether the button is in the checked state (inherited from `Switch`). |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                 | `'primary'` | The color variant of the button.                                      |
+| `shape`        | `'rounded' \| 'square'`                                  | `'rounded'` | The shape of the button.                                              |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`   | The size of the button.                                               |
+| `trailingIcon` | Boolean                                                  | `false`     | Whether the icon is displayed at the end of the button.               |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined'`        | `'filled'`  | The visual style variant of the button.                               |
+| `type`         | `'button' \| 'submit' \| 'reset'`                        | `'button'`  | The button type (inherited from `Button`).                            |
+| `disabled`     | Boolean                                                  | `false`     | Whether the button is disabled (inherited from `FormAssociated`).     |
 
 ### Events
 
-|Name|Type|Description|
-|---|---|---|
-|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|
+| Name     | Type                   | Description                                                                                      |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |

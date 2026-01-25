@@ -2,15 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
     <title>{{ title or page.fileSlug }}</title>
-    <meta name="description" content="Documentation of SEELE the web components library." />
+    <meta name="description" content="{{ desc or 'Documentation of SEELE the web components library.' }}" />
 
-    <link rel="stylesheet" href="/docs-web/build/shared.css" />
-    
+    <style>{% inlineCss "_middle/docs-web/build/shared.css" %}</style>
     <!-- MUST be loaded before any lit components to enable hydration -->
     <script type="module" src="/docs-web/build/lit-hydrate-support.js"></script>
-    
     <!-- Load components and interactive logic -->
     <script type="module" src="/docs-web/build/shared.js"></script>
 
@@ -24,24 +22,16 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=accessible_forward,add,archive,arrow_back,arrow_forward,arrow_upward,bookmark,close,code_blocks,dark_mode,delete,done,edit,favorite,format_bold,format_italic,format_textdirection_l_to_r,format_textdirection_r_to_l,format_underlined,light_mode,mail,more_vert,navigation,open_in_new,palette,pause,play_arrow,replay,reply,search,send,settings,snooze,stop,tab,videocam,width&display=block"
     />
-    
-    <!-- Hide body until DSD polyfill runs (for browsers that don't support DSD like Firefox) -->
-    <style>
-      body[dsd-pending] {
-        display: none;
-      }
-    </style>
+
+    <!-- Hide body until DSD polyfill runs -->
+    <style> body[dsd-pending] { display: none; } </style>
     <!-- If JS is disabled, show contents without polyfill -->
     <noscript>
-      <style>
-        body[dsd-pending] {
-          display: block !important;
-        }
-      </style>
+      <style> body[dsd-pending] { display: block !important; } </style>
     </noscript>
   </head>
   <body dsd-pending>
-    <!-- Declarative Shadow DOM polyfill for Firefox -->
+    <!-- Declarative Shadow DOM polyfill -->
     <script>
       (function() {
         if (!HTMLTemplateElement.prototype.hasOwnProperty('shadowRootMode')) {
@@ -58,10 +48,10 @@
         document.body.removeAttribute('dsd-pending');
       })();
     </script>
-    
+
     <main>
       <sw-toolbar></sw-toolbar>
-      {{ content | safe }}
+      {{ content | injectToc(toc) | safe }}
     </main>
   </body>
 </html>

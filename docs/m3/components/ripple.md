@@ -4,8 +4,6 @@ title: Ripple - M3 - SEELE
 
 # Ripple
 
-<ul id="toc"></ul>
-
 Ripples are state layers used to communicate the status of a component or interactive element.
 
 A state layer is a semi-transparent covering on an element that indicates its state. A layer can be applied to an entire element or in a circular shape.
@@ -13,10 +11,9 @@ A state layer is a semi-transparent covering on an element that indicates its st
 - Mixes: [`InternalsAttached`](../../base/mixins/internals-attached.md)
 - Mixes: [`Attachable`](../../base/mixins/attachable.md)
 
-<!-- @docs-uncomment
-## Interactive Demo
+<!-- @docs-demo-code-block -->
 
-
+```html
 <style>
   .row {
     align-items: center;
@@ -64,70 +61,78 @@ A state layer is a semi-transparent covering on an element that indicates its st
   }
 </style>
 
-<sw-demo>
-  <div class="row">
-    <div class="container">
-      <md-ripple></md-ripple>
-    </div>
+<div class="row">
+  <div class="container">
+    <md-ripple></md-ripple>
+  </div>
 
-    <div class="container" id="touch">
-      <div class="anchor">
-        <md-ripple for="touch" class="unbounded"></md-ripple>
-      </div>
+  <div class="container" id="touch">
+    <div class="anchor">
+      <md-ripple for="touch" class="unbounded"></md-ripple>
     </div>
   </div>
-</sw-demo>
-@docs-uncomment-end -->
+</div>
+```
 
-### Usage
+## Usage
 
 Ripples display on press pointer interactions. They may be attached to a control in one of three ways.
 
 1. Attached to the parent element
-   <!-- @docs-demo-code-block -->
-   ```html
-   <button style="position: relative">
-     <md-ripple></md-ripple>
-     Button
-   </button>
-   ```
+    <!-- @docs-demo-code-block -->
 
-2. Attached to a referenced element
-   <!-- @docs-demo-code-block -->
-   ```html
-   <div style="position: relative">
-     <md-ripple for="ripple-control-input" enterbehavior="none" spacebehavior="none"></md-ripple>
-     <input id="ripple-control-input" />
-   </div>
-   ```
+    ```html
+    <button style="position: relative">
+      <md-ripple></md-ripple>
+      Button
+    </button>
+    ```
 
-3. Attached imperatively
-   <!-- @docs-demo-code-block -->
-   ```html
-   <div style="position: relative; height: 100px">
-     <md-ripple id="ripple"></md-ripple>
-     <button id="ripple-control">Button</button>
-   </div>
-   <script>
-     const ripple = document.querySelector('#ripple');
-     const control = document.querySelector('#ripple-control');
-     onload = () => ripple.attach(control);
-   </script>
-   ```
+1. Attached to a referenced element
+    <!-- @docs-demo-code-block -->
+
+    ```html
+    <div style="position: relative">
+      <md-ripple
+        for="ripple-control-input"
+        enterbehavior="none"
+        spacebehavior="none"
+      ></md-ripple>
+      <input id="ripple-control-input" />
+    </div>
+    ```
+
+1. Attached imperatively
+    <!-- @docs-demo-code-block -->
+
+    ```html
+    <div style="position: relative">
+      <md-ripple id="ripple"></md-ripple>
+      <br />
+      <button id="ripple-control">Button</button>
+      <br />
+      <br />
+    </div>
+    <script>
+      const ripple = document.querySelector('#ripple');
+      const control = document.querySelector('#ripple-control');
+      onload = () => ripple.attach(control);
+    </script>
+    ```
 
 Note: ripples must be placed within a `position: relative` container.
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`clickBehavior`|`string`|`'always'`|Controls when ripple appears on click events.|
-|`enterBehavior`|`string`|`'always'`|Controls when ripple appears on pointer enter events.|
-|`spaceBehavior`|`string`|`'once'`|Controls when ripple appears on space key press.|
-|`for`|`string`|`''`|The ID of the element that the ripple is attached to.|
+| Name            | Type     | Default    | Description                                           |
+| --------------- | -------- | ---------- | ----------------------------------------------------- |
+| `clickBehavior` | `string` | `'always'` | Controls when ripple appears on click events.         |
+| `enterBehavior` | `string` | `'always'` | Controls when ripple appears on pointer enter events. |
+| `spaceBehavior` | `string` | `'once'`   | Controls when ripple appears on space key press.      |
+| `for`           | `string` | `''`       | The ID of the element that the ripple is attached to. |
 
 ## Methods
 
-|Name|Description|
-|---|---|
-|`attach(element)`|Attaches the ripple to a specific element programmatically.|
+| Name              | Description                                                 |
+| ----------------- | ----------------------------------------------------------- |
+| `attach(element)` | Attaches the ripple to a specific element programmatically. |

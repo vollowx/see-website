@@ -4,8 +4,6 @@ title: Menu - M3 - SEELE
 
 # Menu
 
-<ul id="toc"></ul>
-
 Menus display a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.
 
 - Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
@@ -67,6 +65,7 @@ Menus display a list of choices on a temporary surface. They appear when users i
 ### Usage
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <span style="position: relative; display: inline-block">
   <md-button id="some-menu-btn">Menu with Anchor Set</md-button>
@@ -83,7 +82,8 @@ Menus display a list of choices on a temporary surface. They appear when users i
   </md-menu>
 </span>
 
-<label style="display: block">event:
+<label style="display: block"
+  >event:
   <input type="text" readonly id="some-menu-fires" />
 </label>
 
@@ -104,26 +104,26 @@ Menus display a list of choices on a temporary surface. They appear when users i
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`open`|Boolean|`false`|Whether the menu is open (inherited from `Menu`).|
-|`quick`|Boolean|`false`|Whether to use quick mode for menu opening (inherited from `Menu`).|
-|`align`|[Placement](https://floating-ui.com/docs/computePosition#placement)|`'bottom-start'`|The alignment of the menu relative to the anchor (inherited from `Menu`).|
-|`alignStrategy`|[Strategy](https://floating-ui.com/docs/computePosition#strategy)|`'absolute'`|The positioning strategy for the menu (inherited from `Menu`).|
-|`offset`|Number|`0`|The offset distance for the menu (inherited from `Menu`).|
-|`keepOpenBlur`|Boolean|`false`|Whether to keep the menu open when focus is lost (inherited from `Menu`).|
-|`keepOpenClickItem`|Boolean|`false`|Whether to keep the menu open when an item is clicked (inherited from `Menu`).|
-|`keepOpenClickOutside`|Boolean|`false`|Whether to keep the menu open when clicking outside (inherited from `Menu`).|
+| Name                   | Type                                                                | Default          | Description                                                                    |
+| ---------------------- | ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------ |
+| `open`                 | Boolean                                                             | `false`          | Whether the menu is open (inherited from `Menu`).                              |
+| `quick`                | Boolean                                                             | `false`          | Whether to use quick mode for menu opening (inherited from `Menu`).            |
+| `align`                | [Placement](https://floating-ui.com/docs/computePosition#placement) | `'bottom-start'` | The alignment of the menu relative to the anchor (inherited from `Menu`).      |
+| `alignStrategy`        | [Strategy](https://floating-ui.com/docs/computePosition#strategy)   | `'absolute'`     | The positioning strategy for the menu (inherited from `Menu`).                 |
+| `offset`               | Number                                                              | `0`              | The offset distance for the menu (inherited from `Menu`).                      |
+| `keepOpenBlur`         | Boolean                                                             | `false`          | Whether to keep the menu open when focus is lost (inherited from `Menu`).      |
+| `keepOpenClickItem`    | Boolean                                                             | `false`          | Whether to keep the menu open when an item is clicked (inherited from `Menu`). |
+| `keepOpenClickOutside` | Boolean                                                             | `false`          | Whether to keep the menu open when clicking outside (inherited from `Menu`).   |
 
 ## Methods
 
-|Name|Description|
-|---|---|
-|`show()`|Opens the menu.|
-|`hide()`|Closes the menu.|
+| Name     | Description      |
+| -------- | ---------------- |
+| `show()` | Opens the menu.  |
+| `hide()` | Closes the menu. |
 
 ## Events
 
-|Name|Type|Description|
-|---|---|---|
-|`select`|`CustomEvent<{index: number, item: HTMLElement}>`|Dispatched when a menu item is selected. The `detail` property contains the selected item's index and element.|
+| Name     | Type                                              | Description                                                                                                    |
+| -------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `select` | `CustomEvent<{index: number, item: HTMLElement}>` | Dispatched when a menu item is selected. The `detail` property contains the selected item's index and element. |

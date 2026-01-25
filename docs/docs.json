@@ -1,3 +1,4 @@
 {
-  "layout": "default.njk"
+  "layout": "default.njk",
+  "toc": true
 }

@@ -4,8 +4,6 @@ title: Fab - M3 - SEELE
 
 # Floating action button (FAB)
 
-<ul id="toc"></ul>
-
 Floating action buttons (FABs) help people take primary actions.
 
 - Follows: [FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
@@ -14,6 +12,7 @@ Floating action buttons (FABs) help people take primary actions.
 ## Types
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab color="primary" aria-label="Accessibility">
   <md-icon>accessible_forward</md-icon>
@@ -29,6 +28,7 @@ Floating action buttons (FABs) help people take primary actions.
 ### Extended FAB
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab>
   <md-icon>navigation</md-icon>
@@ -42,6 +42,7 @@ Floating action buttons (FABs) help people take primary actions.
 FABs should have an icon, such as a font `md-icon`, an `svg`, or an `img`.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab aria-label="Edit">
   <md-icon>edit</md-icon>
@@ -53,6 +54,7 @@ FABs should have an icon, such as a font `md-icon`, an `svg`, or an `img`.
 FABs can be set to a lower elevation with the `lowered` attribute.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab lowered aria-label="Edit">
   <md-icon>edit</md-icon>
@@ -64,6 +66,7 @@ FABs can be set to a lower elevation with the `lowered` attribute.
 FAB colors may be changed with the `color` attribute. It can be set to "surface" (default), "primary", "secondary", or "tertiary".
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab color="primary" aria-label="Edit">
   <md-icon>edit</md-icon>
@@ -81,6 +84,7 @@ FAB colors may be changed with the `color` attribute. It can be set to "surface"
 FABs may be small, medium (default), or large by setting the `size` attribute.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-fab size="small" aria-label="Edit">
   <md-icon>edit</md-icon>
@@ -101,13 +105,13 @@ Extended FABs use their `label` for accessibility. Add an `aria-label` for addit
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`size`|`'small' \| 'medium' \| 'large'`|`'medium'`|The size of the FAB.|
-|`color`|`'surface' \| 'primary' \| 'secondary' \| 'tertiary'`|`'surface'`|The color variant of the FAB.|
-|`lowered`|Boolean|`false`|Whether the FAB has lowered elevation.|
-|`type`|`'button' \| 'submit' \| 'reset'`|`'button'`|The button type (inherited from `Button`).|
-|`disabled`|Boolean|`false`|Whether the FAB is disabled (inherited from `FormAssociated`).|
+| Name       | Type                                                  | Default     | Description                                                    |
+| ---------- | ----------------------------------------------------- | ----------- | -------------------------------------------------------------- |
+| `size`     | `'small' \| 'medium' \| 'large'`                      | `'medium'`  | The size of the FAB.                                           |
+| `color`    | `'surface' \| 'primary' \| 'secondary' \| 'tertiary'` | `'surface'` | The color variant of the FAB.                                  |
+| `lowered`  | Boolean                                               | `false`     | Whether the FAB has lowered elevation.                         |
+| `type`     | `'button' \| 'submit' \| 'reset'`                     | `'button'`  | The button type (inherited from `Button`).                     |
+| `disabled` | Boolean                                               | `false`     | Whether the FAB is disabled (inherited from `FormAssociated`). |
 
 ## Methods
 

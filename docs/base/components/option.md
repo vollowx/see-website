@@ -10,9 +10,9 @@ Option component for use within select dropdowns.
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`value`|String|`''`|The value of the option.|
+| Name    | Type   | Default | Description              |
+| ------- | ------ | ------- | ------------------------ |
+| `value` | String | `''`    | The value of the option. |
 
 Inherits all other properties from List Item.
 

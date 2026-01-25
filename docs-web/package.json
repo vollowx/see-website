@@ -3,10 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run build-ssr.js && bun run build-client.js && bunx @11ty/eleventy --config=eleventy.config.js",
-    "dev": "bunx @11ty/eleventy --config=eleventy.config.js && bun run serve",
-    "serve": "wds --watch --root-dir _site --open",
-    "preview": "wds --root-dir _site"
+    "build": "bun run build-ssr.js && bun run build-client.js && bunx @11ty/eleventy",
+    "preview": "wds --root-dir _site --open"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -15,12 +13,11 @@
     "@lit-labs/ssr-client": "^1.1.8",
     "@types/bun": "latest",
     "@web/dev-server": "^0.4.6",
-    "@webcomponents/template-shadowroot": "^0.2.1",
     "esbuild": "^0.27.2",
     "html-minifier": "^4.0.0",
-    "lightningcss": "^1.30.2"
+    "lightningcss": "^1.31.1"
   },
   "dependencies": {
-    "@vollowx/seele": "^0.8.8"
+    "@vollowx/seele": "^0.8.10"
   }
 }

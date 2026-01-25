@@ -4,8 +4,6 @@ title: Checkbox - M3 - SEELE
 
 # Checkbox
 
-<ul id="toc"></ul>
-
 Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
 
 - Follows: [Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
@@ -44,6 +42,7 @@ Checkboxes allow users to select one or more items from a set. Checkboxes can tu
 Checkboxes may be standalone, pre-checked, or indeterminate.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-checkbox></md-checkbox>
 <md-checkbox checked></md-checkbox>
@@ -51,6 +50,7 @@ Checkboxes may be standalone, pre-checked, or indeterminate.
 ```
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <div>
   <label>
@@ -60,19 +60,28 @@ Checkboxes may be standalone, pre-checked, or indeterminate.
   <ul style="margin: 0; list-style: none">
     <li>
       <label>
-        <md-checkbox class="child-checkbox" data-parent="parent-checkbox"></md-checkbox>
+        <md-checkbox
+          class="child-checkbox"
+          data-parent="parent-checkbox"
+        ></md-checkbox>
         Child Checkbox 1
       </label>
     </li>
     <li>
       <label>
-        <md-checkbox class="child-checkbox" data-parent="parent-checkbox"></md-checkbox>
+        <md-checkbox
+          class="child-checkbox"
+          data-parent="parent-checkbox"
+        ></md-checkbox>
         Child Checkbox 2
       </label>
     </li>
     <li>
       <label>
-        <md-checkbox class="child-checkbox" data-parent="parent-checkbox"></md-checkbox>
+        <md-checkbox
+          class="child-checkbox"
+          data-parent="parent-checkbox"
+        ></md-checkbox>
         Child Checkbox 3
       </label>
     </li>
@@ -105,6 +114,7 @@ Checkboxes may be standalone, pre-checked, or indeterminate.
 Associate a label with a checkbox using the `<label>` element.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <label>
   <md-checkbox></md-checkbox>
@@ -120,6 +130,7 @@ Associate a label with a checkbox using the `<label>` element.
 Add an `aria-label` attribute to checkboxes without labels or checkboxes whose labels need to be more descriptive.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-checkbox aria-label="Select all checkboxes"></md-checkbox>
 
@@ -133,15 +144,15 @@ Note: checkboxes are not automatically labelled by `<label>` elements and always
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`checked`|Boolean|`false`|Whether the checkbox is checked (inherited from `Checkbox`).|
-|`indeterminate`|Boolean|`false`|Whether the checkbox is in an indeterminate state (inherited from `Checkbox`).|
-|`error`|Boolean|`false`|Whether the checkbox is in an error state.|
-|`disabled`|Boolean|`false`|Whether the checkbox is disabled (inherited from `FormAssociated`).|
+| Name            | Type    | Default | Description                                                                    |
+| --------------- | ------- | ------- | ------------------------------------------------------------------------------ |
+| `checked`       | Boolean | `false` | Whether the checkbox is checked (inherited from `Checkbox`).                   |
+| `indeterminate` | Boolean | `false` | Whether the checkbox is in an indeterminate state (inherited from `Checkbox`). |
+| `error`         | Boolean | `false` | Whether the checkbox is in an error state.                                     |
+| `disabled`      | Boolean | `false` | Whether the checkbox is disabled (inherited from `FormAssociated`).            |
 
 ## Events
 
-|Name|Type|Description|
-|---|---|---|
-|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|
+| Name     | Type                   | Description                                                                                      |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |

@@ -4,8 +4,6 @@ title: Switch - M3 - SEELE
 
 # Switch
 
-<ul id="toc"></ul>
-
 Switches are the preferred way to adjust settings. They're used to control binary options – think On/Off or True/False.
 
 - Follows: [Switches - Material Design 3](https://m3.material.io/components/switch/overview)
@@ -44,6 +42,7 @@ Switches are the preferred way to adjust settings. They're used to control binar
 Switches may be standalone or pre-checked.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-switch aria-label="unchecked switch"></md-switch>
 <md-switch aria-label="pre-checked switch" checked></md-switch>
@@ -54,6 +53,7 @@ Switches may be standalone or pre-checked.
 Icons can be used to visually emphasize the switch's selected state. Switches can choose to display both icons or only selected icons.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-switch icons></md-switch>
 <md-switch icons checked></md-switch>
@@ -67,6 +67,7 @@ Icons can be used to visually emphasize the switch's selected state. Switches ca
 Associate a label with a checkbox using the `<label>` element.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <label>
   Wi-Fi
@@ -82,6 +83,7 @@ Associate a label with a checkbox using the `<label>` element.
 Add an `aria-label` attribute to switches without labels or switches whose labels need to be more descriptive.
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-switch aria-label="Lights"></md-switch>
 
@@ -95,15 +97,15 @@ Note: switches are not automatically labelled by `<label>` elements and always n
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`checked`|Boolean|`false`|Whether the switch is checked (inherited from `Switch`).|
-|`icons`|Boolean|`false`|Whether to display icons in the switch thumb.|
-|`checkedIconOnly`|Boolean|`false`|Whether to display the icon only when checked.|
-|`disabled`|Boolean|`false`|Whether the switch is disabled (inherited from `FormAssociated`).|
+| Name              | Type    | Default | Description                                                       |
+| ----------------- | ------- | ------- | ----------------------------------------------------------------- |
+| `checked`         | Boolean | `false` | Whether the switch is checked (inherited from `Switch`).          |
+| `icons`           | Boolean | `false` | Whether to display icons in the switch thumb.                     |
+| `checkedIconOnly` | Boolean | `false` | Whether to display the icon only when checked.                    |
+| `disabled`        | Boolean | `false` | Whether the switch is disabled (inherited from `FormAssociated`). |
 
 ## Events
 
-|Name|Type|Description|
-|---|---|---|
-|`change`|`CustomEvent<boolean>`|Dispatched when the checked state changes. The `detail` property contains the new checked state.|
+| Name     | Type                   | Description                                                                                      |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |

@@ -4,8 +4,6 @@ title: Toolbar - M3 - SEELE
 
 # Toolbar
 
-<ul id="toc"></ul>
-
 Toolbars display frequently used actions relevant to the current page or context and group controls into a compact surface.
 
 - Mixes: [`InternalsAttached`](../../base/mixins/internals-attached.md)
@@ -13,6 +11,7 @@ Toolbars display frequently used actions relevant to the current page or context
 ## Types
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-toolbar>
   <md-icon-button aria-label="Back">
@@ -36,6 +35,7 @@ Toolbars display frequently used actions relevant to the current page or context
 ### Floating
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-toolbar type="floating">
   <md-icon-button-toggle variant="tonal" checked>
@@ -57,6 +57,7 @@ Toolbars display frequently used actions relevant to the current page or context
 #### Vertical
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-toolbar type="floating" orientation="vertical">
   <md-icon-button-toggle variant="tonal">
@@ -77,39 +78,45 @@ Toolbars display frequently used actions relevant to the current page or context
 #### With FAB
 
 <!-- @docs-demo-code-block -->
+
 ```html
 <md-toolbar type="floating">
   <md-icon-button id="toolbar-archive">
     <md-icon>archive</md-icon>
   </md-icon-button>
-  <md-tooltip for="toolbar-archive">Archive</md-tooltip>
   <md-icon-button id="toolbar-delete">
     <md-icon>delete</md-icon>
   </md-icon-button>
-  <md-tooltip for="toolbar-delete">Delete</md-tooltip>
   <md-icon-button id="toolbar-mail">
     <md-icon>mail</md-icon>
   </md-icon-button>
-  <md-tooltip for="toolbar-mail">Mail</md-tooltip>
   <md-icon-button id="toolbar-snooze">
     <md-icon>snooze</md-icon>
   </md-icon-button>
-  <md-tooltip for="toolbar-snooze">Snooze</md-tooltip>
   <md-icon-button id="toolbar-more-mailboxes">
     <md-icon>more_vert</md-icon>
   </md-icon-button>
-  <md-tooltip for="toolbar-more-mailboxes">More mailboxes</md-tooltip>
+
+  <md-tooltip offset="16" for="toolbar-archive">Archive</md-tooltip>
+  <md-tooltip offset="16" for="toolbar-delete">Delete</md-tooltip>
+  <md-tooltip offset="16" for="toolbar-mail">Mail</md-tooltip>
+  <md-tooltip offset="16" for="toolbar-snooze">Snooze</md-tooltip>
+  <md-tooltip offset="16" for="toolbar-more-mailboxes"
+    >More mailboxes</md-tooltip
+  >
+
   <md-fab slot="fab" color="tertiary" id="toolbar-reply">
     <md-icon>reply</md-icon>
   </md-fab>
-  <md-tooltip for="toolbar-reply">Reply</md-tooltip>
+
+  <md-tooltip offset="8" for="toolbar-reply">Reply</md-tooltip>
 </md-toolbar>
 ```
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`type`|`'docked' \| 'floating'`|`'docked'`|The visual style type of the toolbar.|
-|`color`|`'standard' \| 'vibrant'`|`'standard'`|The color variant of the toolbar.|
-|`orientation`|`'horizontal' \| 'vertical'`|`'horizontal'`|The orientation of the toolbar (only for floating type).|
+| Name          | Type                         | Default        | Description                                              |
+| ------------- | ---------------------------- | -------------- | -------------------------------------------------------- |
+| `type`        | `'docked' \| 'floating'`     | `'docked'`     | The visual style type of the toolbar.                    |
+| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | The color variant of the toolbar.                        |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | The orientation of the toolbar (only for floating type). |

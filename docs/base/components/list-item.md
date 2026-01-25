@@ -14,15 +14,15 @@ use `:state(focused)` in CSS or handle custom behaviors by overriding `changed()
 
 ## Properties
 
-|Name|Type|Default|Description|
-|---|---|---|---|
-|`selected`|Boolean|`false`|Whether the list item is selected.|
-|`focused`|Boolean|`false`|Whether the list item has focus.|
-|`disabled`|Boolean|`false`|Whether the list item is disabled (inherited from `FormAssociated`).|
+| Name       | Type    | Default | Description                                                          |
+| ---------- | ------- | ------- | -------------------------------------------------------------------- |
+| `selected` | Boolean | `false` | Whether the list item is selected.                                   |
+| `focused`  | Boolean | `false` | Whether the list item has focus.                                     |
+| `disabled` | Boolean | `false` | Whether the list item is disabled (inherited from `FormAssociated`). |
 
 ## Methods
 
-|Name|Description|
-|---|---|
-|`focus()`|Visually sets the focused state to true.|
-|`blur()`|Visually sets the focused state to false.|
+| Name      | Description                               |
+| --------- | ----------------------------------------- |
+| `focus()` | Visually sets the focused state to true.  |
+| `blur()`  | Visually sets the focused state to false. |
