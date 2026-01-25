@@ -179,9 +179,9 @@ export class Select extends Base {
       // During SSR, we can access children via different means
       let displayTextFromOption: string | undefined;
       
-      // Attempt 1: Try using querySelectorAll on this element
+      // Attempt to find the matching option element using querySelectorAll
       try {
-        if (typeof this.querySelectorAll === 'function' && valueAttr) {
+        if (typeof this.querySelectorAll === 'function' && valueAttr && this._possibleItemTags.length > 0) {
           const selector = this._possibleItemTags.join(',');
           const options = this.querySelectorAll(selector);
           if (options && options.length > 0) {
@@ -196,7 +196,7 @@ export class Select extends Base {
           }
         }
       } catch (e) {
-        // querySelectorAll might not be available, fall through to fallback
+        // querySelectorAll might not be available during SSR, fall through to fallback
       }
       
       // Set displayText: prefer option textContent, fallback to value
