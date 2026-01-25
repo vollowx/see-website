@@ -14,7 +14,7 @@ title: Icon Button - M3 - SEELE
 
 <sw-demo hascontrols>
   <md-icon-button id="icon-button-interactive">
-    <iconify-icon icon="material-symbols:settings-rounded"></iconify-icon>
+    <iconify-icon icon="material-symbols:settings"></iconify-icon>
   </md-icon-button>
 
   <label slot="controls" for="icon-button-properties-size">
@@ -73,10 +73,10 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 <!-- @docs-demo-code-block -->
 
 ```html
-<md-icon-button variant="filled"><iconify-icon icon="material-symbols:settings-rounded"></iconify-icon></md-icon-button>
-<md-icon-button variant="tonal"><iconify-icon icon="material-symbols:settings-rounded"></iconify-icon></md-icon-button>
-<md-icon-button variant="outlined"><iconify-icon icon="material-symbols:settings-rounded"></iconify-icon></md-icon-button>
-<md-icon-button variant="text"><iconify-icon icon="material-symbols:settings-rounded"></iconify-icon></md-icon-button>
+<md-icon-button variant="filled"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
+<md-icon-button variant="tonal"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
+<md-icon-button variant="outlined"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
+<md-icon-button variant="text"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
 ```
 
 ## Toggle Button
@@ -90,8 +90,8 @@ Icon buttons can be used to select between two states.
 
 <sw-demo hascontrols>
   <md-icon-button-toggle id="icon-button-toggle-interactive">
-    <iconify-icon icon="material-symbols:favorite-outline-rounded"></iconify-icon>
-    <iconify-icon slot="checked" icon="material-symbols:favorite-rounded"></iconify-icon>
+    <iconify-icon icon="material-symbols:favorite-outline"></iconify-icon>
+    <iconify-icon slot="checked" icon="material-symbols:favorite"></iconify-icon>
   </md-icon-button-toggle>
 
   <label slot="controls" for="icon-button-toggle-properties-variant">
@@ -153,19 +153,19 @@ Icon buttons can be used to select between two states.
 
 ```html
 <md-icon-button-toggle variant="filled">
-  <iconify-icon icon="material-symbols:favorite-outline-rounded"></iconify-icon>
-  <iconify-icon slot="checked" icon="material-symbols:favorite-rounded"></iconify-icon>
+  <iconify-icon icon="material-symbols:favorite-outline"></iconify-icon>
+  <iconify-icon slot="checked" icon="material-symbols:favorite"></iconify-icon>
 </md-icon-button-toggle>
 <md-icon-button-toggle variant="tonal">
-  <iconify-icon icon="material-symbols:favorite-outline-rounded"></iconify-icon>
-  <iconify-icon slot="checked" icon="material-symbols:favorite-rounded"></iconify-icon>
+  <iconify-icon icon="material-symbols:favorite-outline"></iconify-icon>
+  <iconify-icon slot="checked" icon="material-symbols:favorite"></iconify-icon>
 </md-icon-button-toggle>
 <md-icon-button-toggle variant="outlined">
-  <iconify-icon icon="material-symbols:favorite-outline-rounded"></iconify-icon>
-  <iconify-icon slot="checked" icon="material-symbols:favorite-rounded"></iconify-icon>
+  <iconify-icon icon="material-symbols:favorite-outline"></iconify-icon>
+  <iconify-icon slot="checked" icon="material-symbols:favorite"></iconify-icon>
 </md-icon-button-toggle>
 <md-icon-button-toggle variant="text">
-  <iconify-icon icon="material-symbols:favorite-outline-rounded"></iconify-icon>
-  <iconify-icon slot="checked" icon="material-symbols:favorite-rounded"></iconify-icon>
+  <iconify-icon icon="material-symbols:favorite-outline"></iconify-icon>
+  <iconify-icon slot="checked" icon="material-symbols:favorite"></iconify-icon>
 </md-icon-button-toggle>
 ```

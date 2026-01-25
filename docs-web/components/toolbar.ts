@@ -147,7 +147,7 @@ export class SwToolbar extends LitElement {
           aria-label="GitHub repository"
           @click=${this._handleGithubClick}
         >
-          <iconify-icon icon="material-symbols:code-blocks-rounded"></iconify-icon>
+          <iconify-icon icon="mdi:github"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-open-repo" offset="16">View source code</md-tooltip>
 
@@ -157,8 +157,8 @@ export class SwToolbar extends LitElement {
           ?checked=${this.rtl}
           @change=${this._handleDir}
         >
-          <iconify-icon icon="material-symbols:format-textdirection-r-to-l-rounded" aria-label="Set direction to RTL"></iconify-icon>
-          <iconify-icon slot="checked" icon="material-symbols:format-textdirection-l-to-r-rounded" aria-label="Set direction to LTR"></iconify-icon>
+          <iconify-icon icon="material-symbols:format-textdirection-r-to-l" aria-label="Set direction to RTL"></iconify-icon>
+          <iconify-icon slot="checked" icon="material-symbols:format-textdirection-l-to-r" aria-label="Set direction to LTR"></iconify-icon>
         </md-icon-button-toggle>
         <md-tooltip for="action-toggle-direction" offset="16">
           ${this._getTooltipText("rtl", this.rtl)}
@@ -168,7 +168,7 @@ export class SwToolbar extends LitElement {
           id="action-toggle-theme"
           @click=${this._toggleThemeMenu}
         >
-          <iconify-icon icon="material-symbols:palette-rounded" aria-label="Change theme"></iconify-icon>
+          <iconify-icon icon="material-symbols:palette" aria-label="Change theme"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-toggle-theme" offset="16">
           Change theme
@@ -180,7 +180,7 @@ export class SwToolbar extends LitElement {
           id="scroll-to-top"
           @click=${this._handleScrollToTop}
         >
-          <iconify-icon icon="material-symbols:arrow-upward-rounded"></iconify-icon>
+          <iconify-icon icon="material-symbols:arrow-upward"></iconify-icon>
         </md-fab>
         <md-tooltip for="scroll-to-top" offset="8">Scroll to top</md-tooltip>
       </md-toolbar>
