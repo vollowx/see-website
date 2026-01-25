@@ -5,7 +5,7 @@
     "": {
       "name": "see-website",
       "dependencies": {
-        "@vollowx/seele": "^0.8.10",
+        "@vollowx/seele": "^0.8.12",
       },
       "devDependencies": {
         "@11ty/eleventy": "^3.1.2",
@@ -213,7 +213,7 @@
 
     "@types/ws": ["@types/ws@7.4.7", "", { "dependencies": { "@types/node": "*" } }, "sha512-JQbbmxZTZehdc2iszGKs5oC3NFnjeay7mtAWrdt7qNtAVK0g19muApzAy4bm9byz79xa2ZnO/BOBC2R8RC5Lww=="],
 
-    "@vollowx/seele": ["@vollowx/seele@0.8.10", "", { "dependencies": { "@floating-ui/dom": "^1.7.4", "lit": "^3.3.2", "tslib": "^2.8.1" } }, "sha512-AA4PwGBFUfzM2qpR0Ko+q/dx1At8ymMBA3lPeOb5eU8OwyZ79XVWfAObPU54joQdS7WVKaGZlwoOIyoBuYbiig=="],
+    "@vollowx/seele": ["@vollowx/seele@0.8.12", "", { "dependencies": { "@floating-ui/dom": "^1.7.4", "lit": "^3.3.2", "tslib": "^2.8.1" } }, "sha512-ZdbthMpDqQ25DO7EBucHAChnmp/P0clm6dsuwY7hNzEahHfysirFW7nvXHQtGsLu7oQg++2wydbgbF5IglOs7w=="],
 
     "@web/config-loader": ["@web/config-loader@0.3.3", "", {}, "sha512-ilzeQzrPpPLWZhzFCV+4doxKDGm7oKVfdKpW9wiUNVgive34NSzCw+WzXTvjE4Jgr5CkyTDIObEmMrqQEjhT0g=="],
 
