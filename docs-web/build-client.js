@@ -4,7 +4,6 @@
  */
 
 import esbuild from 'esbuild';
-import { glob } from 'glob';
 import { transform } from 'lightningcss';
 import fs from 'fs';
 import path from 'path';
@@ -14,10 +13,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEV = process.env.NODE_ENV === 'DEV';
 const outdir = path.join(__dirname, '_middle/docs-web/build');
 
-// Entry points for client-side bundles
-const entryPoints = await glob(path.join(__dirname, '**/*.ts'), {
-  ignore: ['**/node_modules/**', '**/lit-hydrate-support.ts', '**/build-*.js', '**/ssr.ts', '**/eleventy-helpers/**']
-});
+// Explicit entry points for client-side bundles
+// This ensures all client files are built reliably across platforms
+const entryPoints = [
+  path.join(__dirname, 'shared.ts'),
+  path.join(__dirname, 'components/demo.ts'),
+  path.join(__dirname, 'components/toolbar.ts'),
+];
 
 // Shared esbuild config for main bundles
 const config = {
