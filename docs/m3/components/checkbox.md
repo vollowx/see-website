@@ -144,15 +144,12 @@ Note: checkboxes are not automatically labelled by `<label>` elements and always
 
 ## Properties
 
-| Name            | Type    | Default | Description                                                                    |
-| --------------- | ------- | ------- | ------------------------------------------------------------------------------ |
-| `checked`       | Boolean | `false` | Whether the checkbox is checked (inherited from `Checkbox`).                   |
-| `indeterminate` | Boolean | `false` | Whether the checkbox is in an indeterminate state (inherited from `Checkbox`). |
-| `error`         | Boolean | `false` | Whether the checkbox is in an error state.                                     |
-| `disabled`      | Boolean | `false` | Whether the checkbox is disabled (inherited from `FormAssociated`).            |
+| Name    | Type    | Default | Description                              |
+| ------- | ------- | ------- | ---------------------------------------- |
+| `error` | Boolean | `false` | Whether the checkbox is in an error state. |
+
+Note: Inherits `checked`, `indeterminate`, `required` from [`Checkbox`](../../base/components/checkbox.md), and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
 
 ## Events
 
-| Name     | Type                   | Description                                                                                      |
-| -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |
+Note: Inherits `change` event from [`Checkbox`](../../base/components/checkbox.md).

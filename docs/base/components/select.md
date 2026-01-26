@@ -14,10 +14,11 @@ Base select component for dropdown selection controls.
 | Name           | Type    | Default | Description                                                       |
 | -------------- | ------- | ------- | ----------------------------------------------------------------- |
 | `value`        | String  | `''`    | The selected value.                                               |
-| `displayText`  | String  | `''`    | The default display text, should only be set when doing SSR. |
+| `displayText`  | String  | `''`    | The default display text, should only be set when doing SSR.      |
 | `open`         | Boolean | `false` | Whether the dropdown menu is open.                                |
 | `required`     | Boolean | `false` | Whether a selection is required for form submission.              |
-| `disabled`     | Boolean | `false` | Whether the select is disabled (inherited from `FormAssociated`). |
+
+Note: Also inherits `disabled` property from [`FormAssociated`](../mixins/form-associated.md) mixin.
 
 ## Events
 

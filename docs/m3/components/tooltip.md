@@ -33,11 +33,11 @@ Tooltips display informative text when users hover over, focus on, or tap an ele
 
 ## Properties
 
-| Name     | Type                                                                | Default | Description                                                                             |
-| -------- | ------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
-| `align`  | [Placement](https://floating-ui.com/docs/computePosition#placement) | `'top'` | The alignment of the tooltip relative to the anchor element (inherited from `Tooltip`). |
-| `offset` | Number                                                              | `4`     | The offset distance from the anchor element (inherited from `Tooltip`).                 |
-| `for`    | String                                                              | `''`    | The ID of the element that the tooltip is attached to.                                  |
+| Name  | Type   | Default | Description                                      |
+| ----- | ------ | ------- | ------------------------------------------------ |
+| `for` | String | `''`    | The ID of the element that the tooltip is attached to. |
+
+Note: Inherits `align`, `offset`, `visible` from [`Tooltip`](../../base/components/tooltip.md).
 
 ## Methods
 

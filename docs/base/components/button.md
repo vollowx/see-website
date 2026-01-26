@@ -9,4 +9,10 @@ title: Button - Base - SEELE
 
 ## Properties
 
-Placeholder.
+| Name   | Type                              | Default    | Description                       |
+| ------ | --------------------------------- | ---------- | --------------------------------- |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | The type of the button.           |
+
+## Methods
+
+Inherits all standard HTMLElement methods.

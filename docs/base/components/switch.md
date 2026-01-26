@@ -9,10 +9,11 @@ title: Switch - Base - SEELE
 
 ## Properties
 
-| Name       | Type    | Default | Description                                                       |
-| ---------- | ------- | ------- | ----------------------------------------------------------------- |
-| `checked`  | Boolean | `false` | Whether the switch is in the checked/on state.                    |
-| `disabled` | Boolean | `false` | Whether the switch is disabled (inherited from `FormAssociated`). |
+| Name      | Type    | Default | Description                                |
+| --------- | ------- | ------- | ------------------------------------------ |
+| `checked` | Boolean | `false` | Whether the switch is in the checked/on state. |
+
+Note: Also inherits `disabled` property from [`FormAssociated`](../mixins/form-associated.md) mixin.
 
 ## Events
 

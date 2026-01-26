@@ -97,15 +97,13 @@ Note: switches are not automatically labelled by `<label>` elements and always n
 
 ## Properties
 
-| Name              | Type    | Default | Description                                                       |
-| ----------------- | ------- | ------- | ----------------------------------------------------------------- |
-| `checked`         | Boolean | `false` | Whether the switch is checked (inherited from `Switch`).          |
-| `icons`           | Boolean | `false` | Whether to display icons in the switch thumb.                     |
-| `checkedIconOnly` | Boolean | `false` | Whether to display the icon only when checked.                    |
-| `disabled`        | Boolean | `false` | Whether the switch is disabled (inherited from `FormAssociated`). |
+| Name              | Type    | Default | Description                                       |
+| ----------------- | ------- | ------- | ------------------------------------------------- |
+| `icons`           | Boolean | `false` | Whether to display icons in the switch thumb.     |
+| `checkedIconOnly` | Boolean | `false` | Whether to display the icon only when checked.    |
+
+Note: Inherits `checked` from [`Switch`](../../base/components/switch.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
 
 ## Events
 
-| Name     | Type                   | Description                                                                                      |
-| -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |
+Note: Inherits `change` event from [`Switch`](../../base/components/switch.md).

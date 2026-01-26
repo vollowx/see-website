@@ -105,13 +105,13 @@ Extended FABs use their `label` for accessibility. Add an `aria-label` for addit
 
 ## Properties
 
-| Name       | Type                                                  | Default     | Description                                                    |
-| ---------- | ----------------------------------------------------- | ----------- | -------------------------------------------------------------- |
-| `size`     | `'small' \| 'medium' \| 'large'`                      | `'medium'`  | The size of the FAB.                                           |
-| `color`    | `'surface' \| 'primary' \| 'secondary' \| 'tertiary'` | `'surface'` | The color variant of the FAB.                                  |
-| `lowered`  | Boolean                                               | `false`     | Whether the FAB has lowered elevation.                         |
-| `type`     | `'button' \| 'submit' \| 'reset'`                     | `'button'`  | The button type (inherited from `Button`).                     |
-| `disabled` | Boolean                                               | `false`     | Whether the FAB is disabled (inherited from `FormAssociated`). |
+| Name      | Type                                                  | Default     | Description                            |
+| --------- | ----------------------------------------------------- | ----------- | -------------------------------------- |
+| `size`    | `'small' \| 'medium' \| 'large'`                      | `'medium'`  | The size of the FAB.                   |
+| `color`   | `'surface' \| 'primary' \| 'secondary' \| 'tertiary'` | `'surface'` | The color variant of the FAB.          |
+| `lowered` | Boolean                                               | `false`     | Whether the FAB has lowered elevation. |
+
+Note: Inherits `type` from [`Button`](../../base/components/button.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
 
 ## Methods
 

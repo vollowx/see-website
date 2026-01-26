@@ -104,16 +104,7 @@ Menus display a list of choices on a temporary surface. They appear when users i
 
 ## Properties
 
-| Name                   | Type                                                                | Default          | Description                                                                    |
-| ---------------------- | ------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------ |
-| `open`                 | Boolean                                                             | `false`          | Whether the menu is open (inherited from `Menu`).                              |
-| `quick`                | Boolean                                                             | `false`          | Whether to use quick mode for menu opening (inherited from `Menu`).            |
-| `align`                | [Placement](https://floating-ui.com/docs/computePosition#placement) | `'bottom-start'` | The alignment of the menu relative to the anchor (inherited from `Menu`).      |
-| `alignStrategy`        | [Strategy](https://floating-ui.com/docs/computePosition#strategy)   | `'absolute'`     | The positioning strategy for the menu (inherited from `Menu`).                 |
-| `offset`               | Number                                                              | `0`              | The offset distance for the menu (inherited from `Menu`).                      |
-| `keepOpenBlur`         | Boolean                                                             | `false`          | Whether to keep the menu open when focus is lost (inherited from `Menu`).      |
-| `keepOpenClickItem`    | Boolean                                                             | `false`          | Whether to keep the menu open when an item is clicked (inherited from `Menu`). |
-| `keepOpenClickOutside` | Boolean                                                             | `false`          | Whether to keep the menu open when clicking outside (inherited from `Menu`).   |
+Note: Inherits all properties from [`Menu`](../../base/components/menu.md): `open`, `quick`, `align`, `alignStrategy`, `offset`, `keepOpenBlur`, `keepOpenClickItem`, `keepOpenClickOutside`.
 
 ## Methods
 
@@ -124,6 +115,4 @@ Menus display a list of choices on a temporary surface. They appear when users i
 
 ## Events
 
-| Name     | Type                                              | Description                                                                                                    |
-| -------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `select` | `CustomEvent<{index: number, item: HTMLElement}>` | Dispatched when a menu item is selected. The `detail` property contains the selected item's index and element. |
+Note: Inherits `select` event from [`Menu`](../../base/components/menu.md).

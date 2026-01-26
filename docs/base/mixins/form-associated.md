@@ -10,4 +10,4 @@ title: FormAssociated - Base - SEELE
 
 |Name|Type|Description|
 |---|---|---|
-|`disabled`|Boolean| |
+|`disabled`|Boolean|Whether the element is disabled. When true, the element cannot be interacted with and is excluded from form submission.|
