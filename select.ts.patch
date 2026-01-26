@@ -165,13 +165,14 @@ export class Select extends Base {
       }, 0);
     }
 
-    // After SSR hydration, we need to ensure displayText is updated from the selected option
-    // This is necessary because during hydration, the displayText may not be set yet
-    if (!isServer) {
-      const oldDisplayText = this.displayText;
-      if (this.updateValueAndDisplayText()) {
-        // Force a re-render if displayText changed
-        this.requestUpdate('displayText', oldDisplayText);
+    // After SSR hydration, manually update the displayText in the shadow DOM
+    // because Lit's DSD hydration doesn't update template parts when properties change
+    if (!isServer && this.displayText) {
+      // Manual DOM update needed for DSD hydration
+      const valueSpan = this.shadowRoot?.querySelector('[part="value"]');
+      if (valueSpan) {
+        // Update the text content directly, bypassing Lit's template system
+        valueSpan.textContent = this.displayText;
       }
     }
 
