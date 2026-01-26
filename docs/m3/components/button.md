@@ -25,7 +25,7 @@ title: Button - M3 - SEELE
 
   <label slot="controls" for="button-properties-size">
     Size
-    <md-outlined-select name="size" id="button-properties-size" value="small">
+    <md-outlined-select name="size" id="button-properties-size" value="small" display-text="small">
       <md-option value="xsmall">xsmall</md-option>
       <md-option value="small">small</md-option>
       <md-option value="medium">medium</md-option>
@@ -36,7 +36,7 @@ title: Button - M3 - SEELE
 
   <label slot="controls" for="button-properties-shape">
     Shape
-    <md-outlined-select name="shape" id="button-properties-shape" value="rounded">
+    <md-outlined-select name="shape" id="button-properties-shape" value="rounded" display-text="rounded">
       <md-option value="rounded">rounded</md-option>
       <md-option value="square">square</md-option>
     </md-outlined-select>
@@ -44,7 +44,7 @@ title: Button - M3 - SEELE
 
   <label slot="controls" for="button-properties-variant">
     Variant
-    <md-outlined-select name="variant" id="button-properties-variant" value="filled">
+    <md-outlined-select name="variant" id="button-properties-variant" value="filled" display-text="filled">
       <md-option value="filled">filled</md-option>
       <md-option value="tonal">tonal</md-option>
       <md-option value="elevated">elevated</md-option>
@@ -55,7 +55,7 @@ title: Button - M3 - SEELE
 
   <label slot="controls" for="button-properties-color">
     Color
-    <md-outlined-select name="color" id="button-properties-color" value="primary">
+    <md-outlined-select name="color" id="button-properties-color" value="primary" display-text="primary">
       <md-option value="primary">primary</md-option>
       <md-option value="secondary">secondary</md-option>
       <md-option value="tertiary">tertiary</md-option>
@@ -142,7 +142,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
   <label slot="controls" for="button-toggle-properties-variant">
     Variant
-    <md-outlined-select name="variant" id="button-toggle-properties-variant" value="filled">
+    <md-outlined-select name="variant" id="button-toggle-properties-variant" value="filled" display-text="filled">
       <md-option value="filled">filled</md-option>
       <md-option value="tonal">tonal</md-option>
       <md-option value="elevated">elevated</md-option>
@@ -152,7 +152,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
   <label slot="controls" for="button-toggle-properties-shape">
     Shape
-    <md-outlined-select name="shape" id="button-toggle-properties-shape" value="rounded">
+    <md-outlined-select name="shape" id="button-toggle-properties-shape" value="rounded" display-text="rounded">
       <md-option value="rounded">rounded</md-option>
       <md-option value="square">square</md-option>
     </md-outlined-select>
@@ -160,7 +160,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
   <label slot="controls" for="button-toggle-properties-size">
     Size
-    <md-outlined-select name="size" id="button-toggle-properties-size" value="small">
+    <md-outlined-select name="size" id="button-toggle-properties-size" value="small" display-text="small">
       <md-option value="xsmall">xsmall</md-option>
       <md-option value="small">small</md-option>
       <md-option value="medium">medium</md-option>
@@ -171,7 +171,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 
   <label slot="controls" for="button-toggle-properties-color">
     Color
-    <md-outlined-select name="color" id="button-toggle-properties-color" value="primary">
+    <md-outlined-select name="color" id="button-toggle-properties-color" value="primary" display-text="primary">
       <md-option value="primary">primary</md-option>
       <md-option value="secondary">secondary</md-option>
       <md-option value="tertiary">tertiary</md-option>

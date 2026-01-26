@@ -19,7 +19,7 @@ title: Icon Button - M3 - SEELE
 
   <label slot="controls" for="icon-button-properties-size">
     Size
-    <md-outlined-select name="size" id="icon-button-properties-size" value="small">
+    <md-outlined-select name="size" id="icon-button-properties-size" value="small" display-text="small">
       <md-option value="xsmall">xsmall</md-option>
       <md-option value="small">small</md-option>
       <md-option value="medium">medium</md-option>
@@ -30,7 +30,7 @@ title: Icon Button - M3 - SEELE
 
   <label slot="controls" for="icon-button-properties-variant">
     Variant
-    <md-outlined-select name="variant" id="icon-button-properties-variant" value="text">
+    <md-outlined-select name="variant" id="icon-button-properties-variant" value="text" display-text="text">
       <md-option value="filled">filled</md-option>
       <md-option value="tonal">tonal</md-option>
       <md-option value="outlined">outlined</md-option>
@@ -40,7 +40,7 @@ title: Icon Button - M3 - SEELE
 
   <label slot="controls" for="icon-button-properties-width">
     Width
-    <md-outlined-select name="width" id="icon-button-properties-width" value="standard">
+    <md-outlined-select name="width" id="icon-button-properties-width" value="standard" display-text="standard">
       <md-option value="standard">standard</md-option>
       <md-option value="narrow">narrow</md-option>
       <md-option value="wide">wide</md-option>
@@ -96,7 +96,7 @@ Icon buttons can be used to select between two states.
 
   <label slot="controls" for="icon-button-toggle-properties-variant">
     Variant
-    <md-outlined-select name="variant" id="icon-button-toggle-properties-variant" value="text">
+    <md-outlined-select name="variant" id="icon-button-toggle-properties-variant" value="text" display-text="text">
       <md-option value="filled">filled</md-option>
       <md-option value="tonal">tonal</md-option>
       <md-option value="outlined">outlined</md-option>
@@ -106,7 +106,7 @@ Icon buttons can be used to select between two states.
 
   <label slot="controls" for="icon-button-toggle-properties-size">
     Size
-    <md-outlined-select name="size" id="icon-button-toggle-properties-size" value="small">
+    <md-outlined-select name="size" id="icon-button-toggle-properties-size" value="small" display-text="small">
       <md-option value="xsmall">xsmall</md-option>
       <md-option value="small">small</md-option>
       <md-option value="medium">medium</md-option>
@@ -117,7 +117,7 @@ Icon buttons can be used to select between two states.
 
   <label slot="controls" for="icon-button-toggle-properties-width">
     Width
-    <md-outlined-select name="width" id="icon-button-toggle-properties-width" value="standard">
+    <md-outlined-select name="width" id="icon-button-toggle-properties-width" value="standard" display-text="standard">
       <md-option value="standard">standard</md-option>
       <md-option value="narrow">narrow</md-option>
       <md-option value="wide">wide</md-option>
