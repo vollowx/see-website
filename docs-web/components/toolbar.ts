@@ -34,12 +34,12 @@ export class SwToolbar extends LitElement {
 
   override connectedCallback() {
     super.connectedCallback();
-    this._initializeDir();
     this._setupThemeListener();
   }
 
   override firstUpdated() {
     this._loadThemePreference();
+    this._loadDirectionPreference();
     this._applyTheme();
   }
 
@@ -48,10 +48,6 @@ export class SwToolbar extends LitElement {
     if (this._prefersDarkQuery) {
       this._prefersDarkQuery.removeEventListener("change", this._handleSystemThemeChange);
     }
-  }
-
-  private _initializeDir() {
-    document.documentElement.dir = this.rtl ? "rtl" : "ltr";
   }
 
   private _loadThemePreference() {
@@ -63,6 +59,22 @@ export class SwToolbar extends LitElement {
 
   private _saveThemePreference() {
     localStorage.setItem("sw-theme-preference", this.themeMode);
+  }
+
+  private _loadDirectionPreference() {
+    const stored = localStorage.getItem("sw-direction-preference");
+    if (stored === "rtl") {
+      this.rtl = true;
+      document.documentElement.dir = "rtl";
+    } else {
+      // Default to ltr if stored value is "ltr" or anything else (including null)
+      this.rtl = false;
+      document.documentElement.dir = "ltr";
+    }
+  }
+
+  private _saveDirectionPreference() {
+    localStorage.setItem("sw-direction-preference", this.rtl ? "rtl" : "ltr");
   }
 
   private _setupThemeListener() {
@@ -110,6 +122,7 @@ export class SwToolbar extends LitElement {
   private _handleDir(e: CustomEvent) {
     this.rtl = e.detail;
     document.documentElement.dir = this.rtl ? "rtl" : "ltr";
+    this._saveDirectionPreference();
   }
 
   private _handleScrollToTop() {
