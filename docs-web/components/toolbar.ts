@@ -66,7 +66,8 @@ export class SwToolbar extends LitElement {
     if (stored === "rtl") {
       this.rtl = true;
       document.documentElement.dir = "rtl";
-    } else if (stored === "ltr") {
+    } else {
+      // Default to ltr if stored value is "ltr" or anything else (including null)
       this.rtl = false;
       document.documentElement.dir = "ltr";
     }
