@@ -20,6 +20,13 @@
           document.documentElement.dataset["mdTheme"] = themeMode;
         }
       } catch (e) {}
+
+      try {
+        const storedDir = localStorage.getItem("sw-direction-preference");
+        if (storedDir === "rtl" || storedDir === "ltr") {
+          document.documentElement.dir = storedDir;
+        }
+      } catch (e) {}
     </script>
     <!-- MUST be loaded before any lit components to enable hydration -->
     <script type="module" src="/docs-web/build/lit-hydrate-support.js"></script>
