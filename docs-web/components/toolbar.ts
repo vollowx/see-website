@@ -34,7 +34,6 @@ export class SwToolbar extends LitElement {
 
   override connectedCallback() {
     super.connectedCallback();
-    this._initializeDir();
     this._setupThemeListener();
   }
 
@@ -49,10 +48,6 @@ export class SwToolbar extends LitElement {
     if (this._prefersDarkQuery) {
       this._prefersDarkQuery.removeEventListener("change", this._handleSystemThemeChange);
     }
-  }
-
-  private _initializeDir() {
-    document.documentElement.dir = this.rtl ? "rtl" : "ltr";
   }
 
   private _loadThemePreference() {

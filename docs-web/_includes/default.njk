@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
@@ -23,10 +23,10 @@
 
       try {
         const storedDir = localStorage.getItem("sw-direction-preference");
-        if (storedDir === "rtl" || storedDir === "ltr") {
-          document.documentElement.dir = storedDir;
-        }
-      } catch (e) {}
+        document.documentElement.dir = (storedDir === "rtl" || storedDir === "ltr") ? storedDir : "ltr";
+      } catch (e) {
+        document.documentElement.dir = "ltr";
+      }
     </script>
     <!-- MUST be loaded before any lit components to enable hydration -->
     <script type="module" src="/docs-web/build/lit-hydrate-support.js"></script>
