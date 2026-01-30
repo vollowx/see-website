@@ -1,0 +1,118 @@
+---
+title: Menu - M3 - SEELE
+---
+
+# 菜单
+
+菜单在临时表面上显示一组选项。当用户与按钮、操作或其他控件交互时，它们会出现。
+
+- 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
+- 继承自：[`Menu`](../../base/components/menu.md)
+
+<!-- @docs-uncomment
+## Interactive Demo
+
+<sw-demo hascontrols>
+  <span style="position: relative; display: inline-block">
+    <md-button id="menu-interactive-btn">Open Controlled Menu</md-button>
+    <md-menu id="menu-interactive" for="menu-interactive-btn">
+      <md-menu-item>Item 1</md-menu-item>
+      <md-menu-item>Item 2</md-menu-item>
+      <md-menu-item>Item 3</md-menu-item>
+    </md-menu>
+  </span>
+
+  <label slot="controls" for="menu-properties-keepOpenBlur">
+    Keep Open (Focus Lost)
+    <md-switch id="menu-properties-keepOpenBlur"></md-switch>
+  </label>
+
+  <label slot="controls" for="menu-properties-keepOpenClickItem">
+    Keep Open (Click Item)
+    <md-switch id="menu-properties-keepOpenClickItem"></md-switch>
+  </label>
+
+  <label slot="controls" for="menu-properties-keepOpenClickOutside">
+    Keep Open (Click Outside)
+    <md-switch id="menu-properties-keepOpenClickOutside"></md-switch>
+  </label>
+
+  <label slot="controls" for="menu-properties-quick">
+    Quick
+    <md-switch id="menu-properties-quick"></md-switch>
+  </label>
+
+  <label slot="controls" for="menu-properties-align">
+    Align
+    <md-outlined-select name="align" id="menu-properties-align" value="bottom-start">
+      <md-option value="top">top</md-option>
+      <md-option value="top-start">top-start</md-option>
+      <md-option value="top-end">top-end</md-option>
+      <md-option value="bottom">bottom</md-option>
+      <md-option value="bottom-start">bottom-start</md-option>
+      <md-option value="bottom-end">bottom-end</md-option>
+      <md-option value="right">right</md-option>
+      <md-option value="right-start">right-start</md-option>
+      <md-option value="right-end">right-end</md-option>
+      <md-option value="left">left</md-option>
+      <md-option value="left-start">left-start</md-option>
+      <md-option value="left-end">left-end</md-option>
+    </md-outlined-select>
+  </label>
+</sw-demo>
+@docs-uncomment-end -->
+
+### 用法
+
+<!-- @docs-demo-code-block -->
+
+```html
+<span style="position: relative; display: inline-block">
+  <md-button id="some-menu-btn">Menu with Anchor Set</md-button>
+  <md-menu id="some-menu" for="some-menu-btn">
+    <md-menu-item id="item-new-text-file">New Text File</md-menu-item>
+    <md-menu-item id="item-new-file">New File...</md-menu-item>
+    <md-menu-item id="item-new-window">New Window</md-menu-item>
+    <md-divider></md-divider>
+    <md-menu-item id="item-open-file">Open File...</md-menu-item>
+    <md-menu-item id="item-open-folder">Open Folder...</md-menu-item>
+    <md-divider></md-divider>
+    <md-menu-item id="item-save">Save</md-menu-item>
+    <md-menu-item id="item-save-as">Save As...</md-menu-item>
+  </md-menu>
+</span>
+
+<label style="display: block"
+  >event:
+  <input type="text" readonly id="some-menu-fires" />
+</label>
+
+<script>
+  const menuButton = document.getElementById('some-menu-btn');
+  const menuOutput = document.getElementById('some-menu-fires');
+  const menu = document.getElementById('some-menu');
+
+  menuButton.addEventListener('click', () => {
+    menu.open = !menu.open;
+  });
+
+  menu.addEventListener('select', (e) => {
+    menuOutput.value = `select: { index: ${e.detail.index}, item: #${e.detail.item.id}\n}`;
+  });
+</script>
+```
+
+## 属性
+
+注意：继承 [`Menu`](../../base/components/menu.md) 的所有属性：`open`、`quick`、`align`、`alignStrategy`、`offset`、`keepOpenBlur`、`keepOpenClickItem`、`keepOpenClickOutside`。
+
+## 方法
+
+| 名称     | 描述      |
+| -------- | ---------------- |
+| `show()` | 打开菜单。  |
+| `hide()` | 关闭菜单。 |
+
+## 事件
+
+注意：继承 [`Menu`](../../base/components/menu.md) 的 `select` 事件。

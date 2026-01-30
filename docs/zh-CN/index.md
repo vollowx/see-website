@@ -3,19 +3,15 @@ title: SEELE
 toc: false
 ---
 
-# Standard Extensible Elements
+# 标准可扩展元素
 
-Presenting: `@vollowx/seele@0.8.12`.
+呈现：`@vollowx/seele@0.8.12`。
 
-**[中文文档 (Chinese Documentation)](zh-CN/index.md)**
+SEELE 是一个现代、轻量级的 Web Components 库。它提供了一套高度可定制的 UI 组件，开箱即用地遵循 Material Design 3 指南，同时设计为易于扩展和重新设计样式。
 
-SEELE is a modern, lightweight Web Components library. It provides a set of highly
-customizable UI components that follow the Material Design 3 guidelines out of the
-box, while being designed for easy extension and restyling.
+## 基础组件
 
-## Base
-
-### Components
+### 组件
 
 - [`Button`](base/components/button.md)
 - [`Checkbox`](base/components/checkbox.md)
@@ -30,7 +26,7 @@ box, while being designed for easy extension and restyling.
 - [`Switch`](base/components/switch.md)
 - [`Tooltip`](base/components/tooltip.md)
 
-### Mixins
+### 混合类
 
 - [`Attachable`](base/mixins/attachable.md)
 - [`FormAssociated`](base/mixins/form-associated.md)
@@ -38,7 +34,7 @@ box, while being designed for easy extension and restyling.
 
 ## Material Design 3
 
-### Components
+### 组件
 
 - [Button](m3/components/button.md)
 - [Checkbox](m3/components/checkbox.md)
