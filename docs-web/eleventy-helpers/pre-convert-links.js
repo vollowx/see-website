@@ -1,10 +1,24 @@
 import path from 'path';
 
 /**
- * @param {string} content
- * @param {object} env
- * @param {string} docsRoot
- * @returns {string}
+ * Converts relative Markdown links to absolute HTML directory URLs.
+ * 
+ * This helper is necessary because:
+ * - Markdown source files use .md extensions in links (e.g., "./page.md")
+ * - Eleventy builds to directory URLs (e.g., "/page/")
+ * - Eleventy does NOT automatically convert .md links to directory URLs
+ * 
+ * Conversion rules:
+ * - External links (http, https, mailto, #anchors) are preserved as-is
+ * - Relative .md links are resolved and converted to absolute directory URLs
+ * - index.md at root (/) → "/"
+ * - index.md in subdirectory (e.g., zh-CN/index.md) → "/zh-CN/"
+ * - Regular pages (e.g., button.md) → "/path/to/button/"
+ * 
+ * @param {string} content - Markdown content to process
+ * @param {object} env - Eleventy environment with page metadata
+ * @param {string} docsRoot - Absolute path to the docs directory
+ * @returns {string} - Content with converted links
  */
 export function convertLinks(content, env, docsRoot) {
   // Get source file from env if available
