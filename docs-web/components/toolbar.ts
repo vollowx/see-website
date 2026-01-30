@@ -1,8 +1,21 @@
 import { LitElement, html, css } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
+import { customElement, property, state, query } from "lit/decorators.js";
+
+type LanguageCode = "en" | "zh-Hans";
+
+interface LanguageConfig {
+  code: LanguageCode;
+  pathPrefix: string;
+}
 
 @customElement("sw-toolbar")
 export class SwToolbar extends LitElement {
+  // Supported languages configuration
+  private static readonly LANGUAGES: LanguageConfig[] = [
+    { code: "en", pathPrefix: "/en" },
+    { code: "zh-Hans", pathPrefix: "/zh-Hans" },
+  ];
+
   static override styles = css`
     :host {
       position: fixed;
@@ -38,11 +51,14 @@ export class SwToolbar extends LitElement {
   @property({ type: Boolean }) rtl = false;
 
   @state() private themeMode: "light" | "dark" | "auto" = "auto";
-  @state() private language: "en" | "zh-Hans" = "en";
+  @state() private language: LanguageCode = "en";
   @state() private showScrollToTop = false;
   @state() private tooltipTexts = {
     rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
   };
+
+  @query("#theme-menu") private _themeMenu?: any;
+  @query("#language-menu") private _languageMenu?: any;
 
   private _prefersDarkQuery?: MediaQueryList;
   private _scrollListener?: () => void;
@@ -94,16 +110,18 @@ export class SwToolbar extends LitElement {
   }
 
   private _loadLanguagePreference() {
-    // Detect language from URL path (e.g., /zh-Hans/ or /en/)
+    // Detect language from URL path by iterating through supported languages
     const path = window.location.pathname;
-    if (path.startsWith("/zh-Hans/") || path === "/zh-Hans") {
-      this.language = "zh-Hans";
-    } else if (path.startsWith("/en/") || path === "/en") {
-      this.language = "en";
-    } else {
-      // Fallback to en for root or unknown paths
-      this.language = "en";
+    
+    for (const lang of SwToolbar.LANGUAGES) {
+      if (path.startsWith(lang.pathPrefix + "/") || path === lang.pathPrefix) {
+        this.language = lang.code;
+        return;
+      }
     }
+    
+    // Fallback to default language (first in the list)
+    this.language = SwToolbar.LANGUAGES[0].code;
   }
 
   private _saveDirectionPreference() {
@@ -148,16 +166,14 @@ export class SwToolbar extends LitElement {
   }
 
   private _toggleThemeMenu() {
-    const menu = this.shadowRoot?.querySelector("#theme-menu") as any;
-    if (menu) {
-      menu.open = !menu.open;
+    if (this._themeMenu) {
+      this._themeMenu.open = !this._themeMenu.open;
     }
   }
 
   private _toggleLanguageMenu() {
-    const menu = this.shadowRoot?.querySelector("#language-menu") as any;
-    if (menu) {
-      menu.open = !menu.open;
+    if (this._languageMenu) {
+      this._languageMenu.open = !this._languageMenu.open;
     }
   }
 
@@ -173,30 +189,31 @@ export class SwToolbar extends LitElement {
 
   private _handleLanguageSelect(e: CustomEvent) {
     const selectedItem = e.detail.item as HTMLElement;
-    const langValue = selectedItem.dataset.language as "en" | "zh-Hans";
+    const langValue = selectedItem.dataset.language as LanguageCode;
     if (langValue && langValue !== this.language) {
       this._switchLanguage(langValue);
     }
   }
 
-  private _switchLanguage(lang: "en" | "zh-Hans") {
+  private _switchLanguage(lang: LanguageCode) {
     const currentPath = window.location.pathname;
-    let newPath: string;
     
-    // Extract the path after the language prefix
+    // Extract the path after the language prefix by iterating through languages
     let pathWithoutLang = currentPath;
-    if (currentPath.startsWith("/en/")) {
-      pathWithoutLang = currentPath.substring(3); // Remove "/en"
-    } else if (currentPath.startsWith("/zh-Hans/")) {
-      pathWithoutLang = currentPath.substring(8); // Remove "/zh-Hans"
+    for (const langConfig of SwToolbar.LANGUAGES) {
+      if (currentPath.startsWith(langConfig.pathPrefix + "/")) {
+        pathWithoutLang = currentPath.substring(langConfig.pathPrefix.length);
+        break;
+      } else if (currentPath === langConfig.pathPrefix) {
+        pathWithoutLang = "/";
+        break;
+      }
     }
     
     // Build new path with target language
-    if (pathWithoutLang === "" || pathWithoutLang === "/") {
-      newPath = `/${lang}/`;
-    } else {
-      newPath = `/${lang}${pathWithoutLang}`;
-    }
+    const newPath = pathWithoutLang === "" || pathWithoutLang === "/"
+      ? `/${lang}/`
+      : `/${lang}${pathWithoutLang}`;
     
     // Update state before redirecting for consistency
     this.language = lang;
