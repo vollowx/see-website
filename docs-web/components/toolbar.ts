@@ -121,6 +121,8 @@ export class SwToolbar extends LitElement {
       }
     };
     window.addEventListener("scroll", this._scrollListener, { passive: true });
+    // Initialize scroll state immediately
+    this._scrollListener();
   }
 
   private _handleSystemThemeChange = () => {
@@ -199,6 +201,8 @@ export class SwToolbar extends LitElement {
       }
     }
     
+    // Update state before redirecting for consistency
+    this.language = lang;
     window.location.href = newPath;
   }
 
