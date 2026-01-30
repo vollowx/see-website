@@ -8,7 +8,7 @@ lang: en
 
 Presenting: `@vollowx/seele@0.8.12`.
 
-**[中文文档 (Chinese Documentation)](zh-CN/)**
+**[中文文档 (Chinese Documentation)](../zh-Hans/)**
 
 SEELE is a modern, lightweight Web Components library. It provides a set of highly
 customizable UI components that follow the Material Design 3 guidelines out of the
