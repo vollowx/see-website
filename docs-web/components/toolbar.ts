@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property, state, query } from "lit/decorators.js";
+import { M3Menu } from "@vollowx/seele";
 
 type LanguageCode = "en" | "zh-Hans";
 
@@ -49,8 +50,8 @@ export class SwToolbar extends LitElement {
     rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
   };
 
-  @query("#theme-menu") private _themeMenu!: HTMLElement & { open: boolean };
-  @query("#language-menu") private _languageMenu!: HTMLElement & { open: boolean };
+  @query("#theme-menu") private _themeMenu!: M3Menu;
+  @query("#language-menu") private _languageMenu!: M3Menu;
 
   private _prefersDarkQuery?: MediaQueryList;
   private _scrollListener?: () => void;
@@ -200,7 +201,7 @@ export class SwToolbar extends LitElement {
     }
     
     // Build new path with target language (code and prefix are the same)
-    const newPath = pathWithoutLang === "" || pathWithoutLang === "/"
+    const newPath = pathWithoutLang === "/"
       ? `/${lang}/`
       : `/${lang}${pathWithoutLang}`;
     
