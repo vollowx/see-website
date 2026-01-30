@@ -2,12 +2,12 @@
 title: Select - M3 - SEELE
 ---
 
-# Select
+# 选择框
 
-Selects allow users to choose one or more items from a list of values.
+选择框允许用户从一组值中选择一个或多个项目。
 
-- Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- Inherits: [`Select`](../../base/components/select.md)
+- 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
+- 继承自：[`Select`](../../base/components/select.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -26,19 +26,19 @@ Selects allow users to choose one or more items from a list of values.
 </md-outlined-select>
 ```
 
-## Properties
+## 属性
 
-| Name             | Type    | Default | Description                                        |
+| 名称             | 类型    | 默认值 | 描述                                        |
 | ---------------- | ------- | ------- | -------------------------------------------------- |
-| `label`          | String  | `''`    | The label text for the select field.               |
-| `supportingText` | String  | `''`    | Helper text displayed below the select field.      |
-| `error`          | Boolean | `false` | Whether the select is in an error state.           |
+| `label`          | String  | `''`    | 选择框的标签文本。               |
+| `supportingText` | String  | `''`    | 显示在选择框下方的辅助文本。      |
+| `error`          | Boolean | `false` | 选择框是否处于错误状态。           |
 
-Note: Inherits `value`, `displayText`, `open`, `required`, `quick`, `align`, `alignStrategy`, `offset` from [`Select`](../../base/components/select.md), and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Select`](../../base/components/select.md) 的 `value`、`displayText`、`open`、`required`、`quick`、`align`、`alignStrategy`、`offset` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-## Methods
+## 方法
 
-| Name      | Description                            |
+| 名称      | 描述                            |
 | --------- | -------------------------------------- |
-| `focus()` | Focuses the select element.            |
-| `blur()`  | Removes focus from the select element. |
+| `focus()` | 聚焦选择框元素。            |
+| `blur()`  | 移除选择框元素的焦点。 |

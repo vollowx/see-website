@@ -2,12 +2,12 @@
 title: Checkbox - M3 - SEELE
 ---
 
-# Checkbox
+# 复选框
 
-Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
+复选框允许用户从一组项目中选择一个或多个项目。复选框可以打开或关闭选项。
 
-- Follows: [Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
-- Inherits: [`Checkbox`](../../base/components/checkbox.md)
+- 遵循：[Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
+- 继承自：[`Checkbox`](../../base/components/checkbox.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -37,9 +37,9 @@ Checkboxes allow users to select one or more items from a set. Checkboxes can tu
 </sw-demo>
 @docs-uncomment-end -->
 
-### Usage
+### 用法
 
-Checkboxes may be standalone, pre-checked, or indeterminate.
+复选框可以是独立的、预选中的或不确定状态的。
 
 <!-- @docs-demo-code-block -->
 
@@ -109,9 +109,9 @@ Checkboxes may be standalone, pre-checked, or indeterminate.
 </script>
 ```
 
-#### Label
+#### 标签
 
-Associate a label with a checkbox using the `<label>` element.
+使用 `<label>` 元素将标签与复选框关联。
 
 <!-- @docs-demo-code-block -->
 
@@ -125,9 +125,9 @@ Associate a label with a checkbox using the `<label>` element.
 <label for="checkbox-two">Checkbox two</label>
 ```
 
-### Accessibility
+### 无障碍
 
-Add an `aria-label` attribute to checkboxes without labels or checkboxes whose labels need to be more descriptive.
+为没有标签的复选框或需要更具描述性的标签的复选框添加 `aria-label` 属性。
 
 <!-- @docs-demo-code-block -->
 
@@ -140,16 +140,16 @@ Add an `aria-label` attribute to checkboxes without labels or checkboxes whose l
 </label>
 ```
 
-Note: checkboxes are not automatically labelled by `<label>` elements and always need an `aria-label`.
+注意：复选框不会自动由 `<label>` 元素标记，始终需要 `aria-label`。
 
-## Properties
+## 属性
 
-| Name    | Type    | Default | Description                              |
+| 名称    | 类型    | 默认值 | 描述                              |
 | ------- | ------- | ------- | ---------------------------------------- |
-| `error` | Boolean | `false` | Whether the checkbox is in an error state. |
+| `error` | Boolean | `false` | 复选框是否处于错误状态。 |
 
-Note: Inherits `checked`, `indeterminate`, `required` from [`Checkbox`](../../base/components/checkbox.md), and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Checkbox`](../../base/components/checkbox.md) 的 `checked`、`indeterminate`、`required` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-## Events
+## 事件
 
-Note: Inherits `change` event from [`Checkbox`](../../base/components/checkbox.md).
+注意：继承 [`Checkbox`](../../base/components/checkbox.md) 的 `change` 事件。

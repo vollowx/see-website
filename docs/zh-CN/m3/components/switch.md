@@ -2,12 +2,12 @@
 title: Switch - M3 - SEELE
 ---
 
-# Switch
+# 开关
 
-Switches are the preferred way to adjust settings. They're used to control binary options – think On/Off or True/False.
+开关是调整设置的首选方式。它们用于控制二进制选项——比如开/关或真/假。
 
-- Follows: [Switches - Material Design 3](https://m3.material.io/components/switch/overview)
-- Inherits: [`Switch`](../../base/components/switch.md)
+- 遵循：[Switches - Material Design 3](https://m3.material.io/components/switch/overview)
+- 继承自：[`Switch`](../../base/components/switch.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -37,9 +37,9 @@ Switches are the preferred way to adjust settings. They're used to control binar
 </sw-demo>
 @docs-uncomment-end -->
 
-### Usage
+### 用法
 
-Switches may be standalone or pre-checked.
+开关可以是独立的或预选中的。
 
 <!-- @docs-demo-code-block -->
 
@@ -48,9 +48,9 @@ Switches may be standalone or pre-checked.
 <md-switch aria-label="pre-checked switch" checked></md-switch>
 ```
 
-#### Icons
+#### 图标
 
-Icons can be used to visually emphasize the switch's selected state. Switches can choose to display both icons or only selected icons.
+图标可用于在视觉上强调开关的选中状态。开关可以选择显示两个图标或仅显示选中的图标。
 
 <!-- @docs-demo-code-block -->
 
@@ -62,9 +62,9 @@ Icons can be used to visually emphasize the switch's selected state. Switches ca
 <md-switch icons checkedicononly checked></md-switch>
 ```
 
-#### Label
+#### 标签
 
-Associate a label with a checkbox using the `<label>` element.
+使用 `<label>` 元素将标签与复选框关联。
 
 <!-- @docs-demo-code-block -->
 
@@ -78,9 +78,9 @@ Associate a label with a checkbox using the `<label>` element.
 <md-switch id="switch-bluetooth"></md-switch>
 ```
 
-### Accessibility
+### 无障碍
 
-Add an `aria-label` attribute to switches without labels or switches whose labels need to be more descriptive.
+为没有标签的开关或需要更具描述性的标签的开关添加 `aria-label` 属性。
 
 <!-- @docs-demo-code-block -->
 
@@ -93,17 +93,17 @@ Add an `aria-label` attribute to switches without labels or switches whose label
 </label>
 ```
 
-Note: switches are not automatically labelled by `<label>` elements and always need an `aria-label`.
+注意：开关不会自动由 `<label>` 元素标记，始终需要 `aria-label`。
 
-## Properties
+## 属性
 
-| Name              | Type    | Default | Description                                       |
+| 名称              | 类型    | 默认值 | 描述                                       |
 | ----------------- | ------- | ------- | ------------------------------------------------- |
-| `icons`           | Boolean | `false` | Whether to display icons in the switch thumb.     |
-| `checkedIconOnly` | Boolean | `false` | Whether to display the icon only when checked.    |
+| `icons`           | Boolean | `false` | 是否在开关滑块中显示图标。     |
+| `checkedIconOnly` | Boolean | `false` | 是否仅在选中时显示图标。    |
 
-Note: Inherits `checked` from [`Switch`](../../base/components/switch.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-## Events
+## 事件
 
-Note: Inherits `change` event from [`Switch`](../../base/components/switch.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。

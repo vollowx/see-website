@@ -2,14 +2,14 @@
 title: Fab - M3 - SEELE
 ---
 
-# Floating action button (FAB)
+# 浮动操作按钮 (FAB)
 
-Floating action buttons (FABs) help people take primary actions.
+浮动操作按钮（FAB）帮助用户执行主要操作。
 
-- Follows: [FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
-- Inherits: [`Button`](../../base/components/button.md)
+- 遵循：[FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
+- 继承自：[`Button`](../../base/components/button.md)
 
-## Types
+## 类型
 
 <!-- @docs-demo-code-block -->
 
@@ -25,7 +25,7 @@ Floating action buttons (FABs) help people take primary actions.
 </md-fab>
 ```
 
-### Extended FAB
+### 扩展 FAB
 
 <!-- @docs-demo-code-block -->
 
@@ -37,9 +37,9 @@ Floating action buttons (FABs) help people take primary actions.
 <md-fab><span slot="label">Reroute</span></md-fab>
 ```
 
-## Usage
+## 用法
 
-FABs should have an icon, such as a font `iconify-icon`, an `svg`, or an `img`.
+FAB 应该包含一个图标，例如字体 `iconify-icon`、`svg` 或 `img`。
 
 <!-- @docs-demo-code-block -->
 
@@ -49,9 +49,9 @@ FABs should have an icon, such as a font `iconify-icon`, an `svg`, or an `img`.
 </md-fab>
 ```
 
-### Lowered
+### 降低高度
 
-FABs can be set to a lower elevation with the `lowered` attribute.
+可以使用 `lowered` 属性将 FAB 设置为较低的高度。
 
 <!-- @docs-demo-code-block -->
 
@@ -61,9 +61,9 @@ FABs can be set to a lower elevation with the `lowered` attribute.
 </md-fab>
 ```
 
-### Colors
+### 颜色
 
-FAB colors may be changed with the `color` attribute. It can be set to "surface" (default), "primary", "secondary", or "tertiary".
+可以使用 `color` 属性更改 FAB 的颜色。可以设置为 "surface"（默认）、"primary"、"secondary" 或 "tertiary"。
 
 <!-- @docs-demo-code-block -->
 
@@ -79,9 +79,9 @@ FAB colors may be changed with the `color` attribute. It can be set to "surface"
 </md-fab>
 ```
 
-### Sizes
+### 尺寸
 
-FABs may be small, medium (default), or large by setting the `size` attribute.
+通过设置 `size` 属性，FAB 可以是小、中（默认）或大。
 
 <!-- @docs-demo-code-block -->
 
@@ -97,22 +97,22 @@ FABs may be small, medium (default), or large by setting the `size` attribute.
 </md-fab>
 ```
 
-## Accessibility
+## 无障碍
 
-Icon-only FABs must include an `aria-label` that describes its action. Otherwise if `aria-label` is not provided, the FAB will default to announcing its visible contents.
+仅包含图标的 FAB 必须包含描述其操作的 `aria-label`。否则，如果未提供 `aria-label`，FAB 将默认宣布其可见内容。
 
-Extended FABs use their `label` for accessibility. Add an `aria-label` for additional context if needed. By supplying the `label` attribute, the extended FAB will make sure that the icon is not announced.
+扩展 FAB 使用它们的 `label` 来提供无障碍支持。如果需要额外的上下文，请添加 `aria-label`。通过提供 `label` 属性，扩展 FAB 将确保不宣布图标。
 
-## Properties
+## 属性
 
-| Name      | Type                                                  | Default     | Description                            |
+| 名称      | 类型                                                  | 默认值     | 描述                            |
 | --------- | ----------------------------------------------------- | ----------- | -------------------------------------- |
-| `size`    | `'small' \| 'medium' \| 'large'`                      | `'medium'`  | The size of the FAB.                   |
-| `color`   | `'surface' \| 'primary' \| 'secondary' \| 'tertiary'` | `'surface'` | The color variant of the FAB.          |
-| `lowered` | Boolean                                               | `false`     | Whether the FAB has lowered elevation. |
+| `size`    | `'small' \| 'medium' \| 'large'`                      | `'medium'`  | FAB 的尺寸。                   |
+| `color`   | `'surface' \| 'primary' \| 'secondary' \| 'tertiary'` | `'surface'` | FAB 的颜色变体。          |
+| `lowered` | Boolean                                               | `false`     | FAB 是否具有降低的高度。 |
 
-Note: Inherits `type` from [`Button`](../../base/components/button.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-## Methods
+## 方法
 
-Inherits all standard HTMLElement methods. Use `click()` to programmatically trigger the FAB.
+继承所有标准的 HTMLElement 方法。使用 `click()` 以编程方式触发 FAB。

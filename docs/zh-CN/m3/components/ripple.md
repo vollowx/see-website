@@ -2,14 +2,14 @@
 title: Ripple - M3 - SEELE
 ---
 
-# Ripple
+# 涟漪
 
-Ripples are state layers used to communicate the status of a component or interactive element.
+涟漪是用于传达组件或交互元素状态的状态层。
 
-A state layer is a semi-transparent covering on an element that indicates its state. A layer can be applied to an entire element or in a circular shape.
+状态层是元素上的半透明覆盖层，用于指示其状态。层可以应用于整个元素或圆形形状。
 
-- Mixes: [`InternalsAttached`](../../base/mixins/internals-attached.md)
-- Mixes: [`Attachable`](../../base/mixins/attachable.md)
+- 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
+- 混入：[`Attachable`](../../base/mixins/attachable.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -74,11 +74,11 @@ A state layer is a semi-transparent covering on an element that indicates its st
 </div>
 ```
 
-## Usage
+## 用法
 
-Ripples display on press pointer interactions. They may be attached to a control in one of three ways.
+涟漪在按压指针交互时显示。它们可以通过以下三种方式之一附加到控件。
 
-1. Attached to the parent element
+1. 附加到父元素
     <!-- @docs-demo-code-block -->
 
     ```html
@@ -88,7 +88,7 @@ Ripples display on press pointer interactions. They may be attached to a control
     </button>
     ```
 
-1. Attached to a referenced element
+1. 附加到引用的元素
     <!-- @docs-demo-code-block -->
 
     ```html
@@ -102,7 +102,7 @@ Ripples display on press pointer interactions. They may be attached to a control
     </div>
     ```
 
-1. Attached imperatively
+1. 命令式附加
     <!-- @docs-demo-code-block -->
 
     ```html
@@ -120,19 +120,19 @@ Ripples display on press pointer interactions. They may be attached to a control
     </script>
     ```
 
-Note: ripples must be placed within a `position: relative` container.
+注意：涟漪必须放置在 `position: relative` 容器内。
 
-## Properties
+## 属性
 
-| Name            | Type     | Default    | Description                                           |
+| 名称            | 类型     | 默认值    | 描述                                           |
 | --------------- | -------- | ---------- | ----------------------------------------------------- |
-| `clickBehavior` | `string` | `'always'` | Controls when ripple appears on click events.         |
-| `enterBehavior` | `string` | `'always'` | Controls when ripple appears on pointer enter events. |
-| `spaceBehavior` | `string` | `'once'`   | Controls when ripple appears on space key press.      |
-| `for`           | `string` | `''`       | The ID of the element that the ripple is attached to. |
+| `clickBehavior` | `string` | `'always'` | 控制涟漪在点击事件时的显示时机。         |
+| `enterBehavior` | `string` | `'always'` | 控制涟漪在指针进入事件时的显示时机。 |
+| `spaceBehavior` | `string` | `'once'`   | 控制涟漪在空格键按下时的显示时机。      |
+| `for`           | `string` | `''`       | 涟漪附加到的元素的 ID。 |
 
-## Methods
+## 方法
 
-| Name              | Description                                                 |
+| 名称              | 描述                                                 |
 | ----------------- | ----------------------------------------------------------- |
-| `attach(element)` | Attaches the ripple to a specific element programmatically. |
+| `attach(element)` | 以编程方式将涟漪附加到特定元素。 |

@@ -2,12 +2,12 @@
 title: Menu - M3 - SEELE
 ---
 
-# Menu
+# 菜单
 
-Menus display a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.
+菜单在临时表面上显示一组选项。当用户与按钮、操作或其他控件交互时，它们会出现。
 
-- Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- Inherits: [`Menu`](../../base/components/menu.md)
+- 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
+- 继承自：[`Menu`](../../base/components/menu.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -62,7 +62,7 @@ Menus display a list of choices on a temporary surface. They appear when users i
 </sw-demo>
 @docs-uncomment-end -->
 
-### Usage
+### 用法
 
 <!-- @docs-demo-code-block -->
 
@@ -102,17 +102,17 @@ Menus display a list of choices on a temporary surface. They appear when users i
 </script>
 ```
 
-## Properties
+## 属性
 
-Note: Inherits all properties from [`Menu`](../../base/components/menu.md): `open`, `quick`, `align`, `alignStrategy`, `offset`, `keepOpenBlur`, `keepOpenClickItem`, `keepOpenClickOutside`.
+注意：继承 [`Menu`](../../base/components/menu.md) 的所有属性：`open`、`quick`、`align`、`alignStrategy`、`offset`、`keepOpenBlur`、`keepOpenClickItem`、`keepOpenClickOutside`。
 
-## Methods
+## 方法
 
-| Name     | Description      |
+| 名称     | 描述      |
 | -------- | ---------------- |
-| `show()` | Opens the menu.  |
-| `hide()` | Closes the menu. |
+| `show()` | 打开菜单。  |
+| `hide()` | 关闭菜单。 |
 
-## Events
+## 事件
 
-Note: Inherits `select` event from [`Menu`](../../base/components/menu.md).
+注意：继承 [`Menu`](../../base/components/menu.md) 的 `select` 事件。

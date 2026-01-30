@@ -2,12 +2,12 @@
 title: Button - M3 - SEELE
 ---
 
-# Button
+# 按钮
 
-## Action Button
+## 操作按钮
 
-- Follows: [Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
-- Inherits: [`Button`](../../base/components/button.md)
+- 遵循：[Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
+- 继承自：[`Button`](../../base/components/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -74,11 +74,11 @@ title: Button - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-Note: `color` is not part of the official Material Design 3. Color of tonal buttons is always secondary container. Color of outlined buttons is always on outline variant.
+注意：`color` 不是官方 Material Design 3 的一部分。填充色调按钮的颜色始终为次要容器。轮廓按钮的颜色始终为轮廓变体。
 
-### Configurations
+### 配置
 
-#### Variants
+#### 变体
 
 <!-- @docs-demo-code-block -->
 
@@ -93,7 +93,7 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 <md-button variant="text">Text</md-button>
 ```
 
-#### Icons
+#### 图标
 
 <!-- @docs-demo-code-block -->
 
@@ -109,25 +109,25 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 </md-button>
 ```
 
-### Properties
+### 属性
 
-| Name           | Type                                                        | Default     | Description                                                       |
+| 名称           | 类型                                                        | 默认值     | 描述                                                       |
 | -------------- | ----------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
-| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                    | `'primary'` | The color variant of the button.                                  |
-| `shape`        | `'rounded' \| 'square'`                                     | `'rounded'` | The shape of the button.                                          |
-| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`    | `'small'`   | The size of the button.                                           |
-| `trailingIcon` | Boolean                                                     | `false`     | Whether the icon is displayed at the end of the button.           |
-| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'` | `'filled'`  | The visual style variant of the button.                           |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                    | `'primary'` | 按钮的颜色变体。                                  |
+| `shape`        | `'rounded' \| 'square'`                                     | `'rounded'` | 按钮的形状。                                          |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`    | `'small'`   | 按钮的尺寸。                                           |
+| `trailingIcon` | Boolean                                                     | `false`     | 图标是否显示在按钮末尾。           |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'` | `'filled'`  | 按钮的视觉样式变体。                           |
 
-Note: Inherits `type` from [`Button`](../../base/components/button.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-### Methods
+### 方法
 
-Inherits all standard HTMLElement methods. Use `click()` to programmatically trigger the button.
+继承所有标准的 HTMLElement 方法。使用 `click()` 以编程方式触发按钮。
 
-## Toggle Button
+## 切换按钮
 
-- Inherits: [`Switch`](../../base/components/switch.md)
+- 继承自：[`Switch`](../../base/components/switch.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -185,7 +185,7 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 </sw-demo>
 @docs-uncomment-end -->
 
-### Usage
+### 用法
 
 <!-- @docs-demo-code-block -->
 
@@ -206,18 +206,18 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 </div>
 ```
 
-### Properties
+### 属性
 
-| Name           | Type                                                     | Default     | Description                                                           |
+| 名称           | 类型                                                     | 默认值     | 描述                                                           |
 | -------------- | -------------------------------------------------------- | ----------- | --------------------------------------------------------------------- |
-| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                 | `'primary'` | The color variant of the button.                                      |
-| `shape`        | `'rounded' \| 'square'`                                  | `'rounded'` | The shape of the button.                                              |
-| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`   | The size of the button.                                               |
-| `trailingIcon` | Boolean                                                  | `false`     | Whether the icon is displayed at the end of the button.               |
-| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined'`        | `'filled'`  | The visual style variant of the button.                               |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                 | `'primary'` | 按钮的颜色变体。                                      |
+| `shape`        | `'rounded' \| 'square'`                                  | `'rounded'` | 按钮的形状。                                              |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`   | 按钮的尺寸。                                               |
+| `trailingIcon` | Boolean                                                  | `false`     | 图标是否显示在按钮末尾。               |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined'`        | `'filled'`  | 按钮的视觉样式变体。                               |
 
-Note: Inherits `checked` from [`Switch`](../../base/components/switch.md), `type` from [`Button`](../../base/components/button.md), and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked`、[`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-### Events
+### 事件
 
-Note: Inherits `change` event from [`Switch`](../../base/components/switch.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。

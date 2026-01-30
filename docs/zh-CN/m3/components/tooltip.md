@@ -2,12 +2,12 @@
 title: Tooltip - M3 - SEELE
 ---
 
-# Tooltip
+# 工具提示
 
-Tooltips display informative text when users hover over, focus on, or tap an element.
+工具提示在用户悬停、聚焦或点击元素时显示信息性文本。
 
-- Follows: [Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
-- Inherits: [`Tooltip`](../../base/components/tooltip.md)
+- 遵循：[Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
+- 继承自：[`Tooltip`](../../base/components/tooltip.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -31,17 +31,17 @@ Tooltips display informative text when users hover over, focus on, or tap an ele
 >
 ```
 
-## Properties
+## 属性
 
-| Name  | Type   | Default | Description                                      |
+| 名称  | 类型   | 默认值 | 描述                                      |
 | ----- | ------ | ------- | ------------------------------------------------ |
-| `for` | String | `''`    | The ID of the element that the tooltip is attached to. |
+| `for` | String | `''`    | 工具提示附加到的元素的 ID。 |
 
-Note: Inherits `align`, `offset`, `visible` from [`Tooltip`](../../base/components/tooltip.md).
+注意：继承 [`Tooltip`](../../base/components/tooltip.md) 的 `align`、`offset`、`visible`。
 
-## Methods
+## 方法
 
-| Name     | Description        |
+| 名称     | 描述        |
 | -------- | ------------------ |
-| `show()` | Shows the tooltip. |
-| `hide()` | Hides the tooltip. |
+| `show()` | 显示工具提示。 |
+| `hide()` | 隐藏工具提示。 |

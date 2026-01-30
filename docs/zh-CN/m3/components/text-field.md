@@ -2,12 +2,12 @@
 title: Text Field - M3 - SEELE
 ---
 
-# Text Field
+# 文本字段
 
-Text fields let users enter text into a UI.
+文本字段允许用户在 UI 中输入文本。
 
-- Follows: [Text Fields - Material Design 3](https://m3.material.io/components/text-fields/overview)
-- Inherits: [`Input`](../../base/components/input.md)
+- 遵循：[Text Fields - Material Design 3](https://m3.material.io/components/text-fields/overview)
+- 继承自：[`Input`](../../base/components/input.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -22,20 +22,20 @@ Text fields let users enter text into a UI.
 ></md-filled-text-field>
 ```
 
-## Properties
+## 属性
 
-| Name             | Type    | Default | Description                                    |
+| 名称             | 类型    | 默认值 | 描述                                    |
 | ---------------- | ------- | ------- | ---------------------------------------------- |
-| `label`          | String  | `''`    | The label text for the text field.             |
-| `supportingText` | String  | `''`    | Helper text displayed below the text field.    |
-| `focused`        | Boolean | `false` | Whether the text field is focused.             |
+| `label`          | String  | `''`    | 文本字段的标签文本。             |
+| `supportingText` | String  | `''`    | 显示在文本字段下方的辅助文本。    |
+| `focused`        | Boolean | `false` | 文本字段是否处于焦点状态。             |
 
-Note: Inherits `type`, `value`, `placeholder`, `required`, `readOnly`, `multiple`, `min`, `max`, `step`, `minLength`, `maxLength`, `pattern`, `autocomplete` from [`Input`](../../base/components/input.md), and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Input`](../../base/components/input.md) 的 `type`、`value`、`placeholder`、`required`、`readOnly`、`multiple`、`min`、`max`、`step`、`minLength`、`maxLength`、`pattern`、`autocomplete` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-## Methods
+## 方法
 
-| Name       | Description                            |
+| 名称       | 描述                            |
 | ---------- | -------------------------------------- |
-| `focus()`  | Focuses the text field.                |
-| `blur()`   | Removes focus from the text field.     |
-| `select()` | Selects the text content of the field. |
+| `focus()`  | 聚焦文本字段。                |
+| `blur()`   | 移除文本字段的焦点。     |
+| `select()` | 选择字段的文本内容。 |

@@ -2,13 +2,13 @@
 title: Toolbar - M3 - SEELE
 ---
 
-# Toolbar
+# 工具栏
 
-Toolbars display frequently used actions relevant to the current page or context and group controls into a compact surface.
+工具栏显示与当前页面或上下文相关的常用操作，并将控件组合到一个紧凑的表面中。
 
-- Mixes: [`InternalsAttached`](../../base/mixins/internals-attached.md)
+- 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
 
-## Types
+## 类型
 
 <!-- @docs-demo-code-block -->
 
@@ -32,7 +32,7 @@ Toolbars display frequently used actions relevant to the current page or context
 </md-toolbar>
 ```
 
-### Floating
+### 浮动
 
 <!-- @docs-demo-code-block -->
 
@@ -54,7 +54,7 @@ Toolbars display frequently used actions relevant to the current page or context
 </md-toolbar>
 ```
 
-#### Vertical
+#### 垂直
 
 <!-- @docs-demo-code-block -->
 
@@ -75,7 +75,7 @@ Toolbars display frequently used actions relevant to the current page or context
 </md-toolbar>
 ```
 
-#### With FAB
+#### 带 FAB
 
 <!-- @docs-demo-code-block -->
 
@@ -113,10 +113,10 @@ Toolbars display frequently used actions relevant to the current page or context
 </md-toolbar>
 ```
 
-## Properties
+## 属性
 
-| Name          | Type                         | Default        | Description                                              |
+| 名称          | 类型                         | 默认值        | 描述                                              |
 | ------------- | ---------------------------- | -------------- | -------------------------------------------------------- |
-| `type`        | `'docked' \| 'floating'`     | `'docked'`     | The visual style type of the toolbar.                    |
-| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | The color variant of the toolbar.                        |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | The orientation of the toolbar (only for floating type). |
+| `type`        | `'docked' \| 'floating'`     | `'docked'`     | 工具栏的视觉样式类型。                    |
+| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | 工具栏的颜色变体。                        |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | 工具栏的方向（仅适用于浮动类型）。 |

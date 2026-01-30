@@ -2,12 +2,12 @@
 title: Icon Button - M3 - SEELE
 ---
 
-# Icon button
+# 图标按钮
 
-## Action Button
+## 操作按钮
 
-- Follows: [Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
-- Inherits: [`Button`](../../base/components/button.md)
+- 遵循：[Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
+- 继承自：[`Button`](../../base/components/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -54,21 +54,21 @@ title: Icon Button - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-### Properties
+### 属性
 
-| Name      | Type                                                     | Default      | Description                                  |
+| 名称      | 类型                                                     | 默认值      | 描述                                  |
 | --------- | -------------------------------------------------------- | ------------ | -------------------------------------------- |
-| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | The size of the icon button.                 |
-| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | The visual style variant of the icon button. |
-| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | The width variant of the icon button.        |
+| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 图标按钮的尺寸。                 |
+| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 图标按钮的视觉样式变体。 |
+| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 图标按钮的宽度变体。        |
 
-Note: Inherits `type` from [`Button`](../../base/components/button.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-### Methods
+### 方法
 
-Inherits all standard HTMLElement methods. Use `click()` to programmatically trigger the button.
+继承所有标准的 HTMLElement 方法。使用 `click()` 以编程方式触发按钮。
 
-### Types
+### 类型
 
 <!-- @docs-demo-code-block -->
 
@@ -79,11 +79,11 @@ Inherits all standard HTMLElement methods. Use `click()` to programmatically tri
 <md-icon-button variant="text"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
 ```
 
-## Toggle Button
+## 切换按钮
 
-- Inherits: [`Switch`](../../base/components/switch.md)
+- 继承自：[`Switch`](../../base/components/switch.md)
 
-Icon buttons can be used to select between two states.
+图标按钮可用于在两种状态之间进行选择。
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -131,21 +131,21 @@ Icon buttons can be used to select between two states.
 </sw-demo>
 @docs-uncomment-end -->
 
-### Properties
+### 属性
 
-| Name      | Type                                                     | Default      | Description                                         |
+| 名称      | 类型                                                     | 默认值      | 描述                                         |
 | --------- | -------------------------------------------------------- | ------------ | --------------------------------------------------- |
-| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | The size of the icon button toggle.                 |
-| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | The visual style variant of the icon button toggle. |
-| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | The width variant of the icon button toggle.        |
+| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 图标按钮切换的尺寸。                 |
+| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 图标按钮切换的视觉样式变体。 |
+| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 图标按钮切换的宽度变体。        |
 
-Note: Inherits `checked` from [`Switch`](../../base/components/switch.md) and `disabled` from [`FormAssociated`](../../base/mixins/form-associated.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
-### Events
+### 事件
 
-Note: Inherits `change` event from [`Switch`](../../base/components/switch.md).
+注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。
 
-### Types
+### 类型
 
 <!-- @docs-demo-code-block -->
 
