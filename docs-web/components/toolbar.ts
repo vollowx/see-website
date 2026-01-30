@@ -20,26 +20,38 @@ export class SwToolbar extends LitElement {
     md-toolbar {
       pointer-events: auto;
     }
+    #scroll-to-top {
+      transition: 
+        transform var(--md-sys-motion-std-effects-default-duration) var(--md-sys-motion-std-effects-default),
+        margin-inline-start var(--md-sys-motion-std-effects-default-duration) var(--md-sys-motion-std-effects-default),
+        opacity var(--md-sys-motion-std-effects-default-duration) var(--md-sys-motion-std-effects-default);
+    }
+    #scroll-to-top.hidden {
+      transform: scale(0);
+      margin-inline-start: -56px;
+      opacity: 0;
+      pointer-events: none;
+    }
   `;
 
   @property({ type: String }) githubUrl = "https://github.com/vollowx/seele";
   @property({ type: Boolean }) rtl = false;
 
   @state() private themeMode: "light" | "dark" | "auto" = "auto";
+  @state() private language: "en" | "zh-CN" = "en";
+  @state() private showScrollToTop = false;
   @state() private tooltipTexts = {
     rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
   };
 
   private _prefersDarkQuery?: MediaQueryList;
+  private _scrollListener?: () => void;
 
   override connectedCallback() {
     super.connectedCallback();
     this._setupThemeListener();
-  }
-
-  override firstUpdated() {
-    this._loadThemePreference();
-    this._loadDirectionPreference();
+    this._setupScrollListener();
+    this._loadPreferences();
     this._applyTheme();
   }
 
@@ -48,6 +60,15 @@ export class SwToolbar extends LitElement {
     if (this._prefersDarkQuery) {
       this._prefersDarkQuery.removeEventListener("change", this._handleSystemThemeChange);
     }
+    if (this._scrollListener) {
+      window.removeEventListener("scroll", this._scrollListener);
+    }
+  }
+
+  private _loadPreferences() {
+    this._loadThemePreference();
+    this._loadDirectionPreference();
+    this._loadLanguagePreference();
   }
 
   private _loadThemePreference() {
@@ -73,6 +94,16 @@ export class SwToolbar extends LitElement {
     }
   }
 
+  private _loadLanguagePreference() {
+    // Detect language from URL path (e.g., /zh-CN/ or /en/)
+    const path = window.location.pathname;
+    if (path.startsWith("/zh-CN/") || path === "/zh-CN") {
+      this.language = "zh-CN";
+    } else {
+      this.language = "en";
+    }
+  }
+
   private _saveDirectionPreference() {
     localStorage.setItem("sw-direction-preference", this.rtl ? "rtl" : "ltr");
   }
@@ -80,6 +111,16 @@ export class SwToolbar extends LitElement {
   private _setupThemeListener() {
     this._prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
     this._prefersDarkQuery.addEventListener("change", this._handleSystemThemeChange);
+  }
+
+  private _setupScrollListener() {
+    this._scrollListener = () => {
+      const shouldShow = window.scrollY > 100;
+      if (this.showScrollToTop !== shouldShow) {
+        this.showScrollToTop = shouldShow;
+      }
+    };
+    window.addEventListener("scroll", this._scrollListener, { passive: true });
   }
 
   private _handleSystemThemeChange = () => {
@@ -109,6 +150,13 @@ export class SwToolbar extends LitElement {
     }
   }
 
+  private _toggleLanguageMenu() {
+    const menu = this.shadowRoot?.querySelector("#language-menu") as any;
+    if (menu) {
+      menu.open = !menu.open;
+    }
+  }
+
   private _handleThemeSelect(e: CustomEvent) {
     const selectedItem = e.detail.item as HTMLElement;
     const themeValue = selectedItem.dataset.theme as "light" | "dark" | "auto";
@@ -117,6 +165,41 @@ export class SwToolbar extends LitElement {
       this._applyTheme();
       this._saveThemePreference();
     }
+  }
+
+  private _handleLanguageSelect(e: CustomEvent) {
+    const selectedItem = e.detail.item as HTMLElement;
+    const langValue = selectedItem.dataset.language as "en" | "zh-CN";
+    if (langValue && langValue !== this.language) {
+      this._switchLanguage(langValue);
+    }
+  }
+
+  private _switchLanguage(lang: "en" | "zh-CN") {
+    const currentPath = window.location.pathname;
+    let newPath: string;
+    
+    if (lang === "zh-CN") {
+      // Switch to Chinese
+      if (currentPath.startsWith("/zh-CN/")) {
+        return; // Already in Chinese
+      } else if (currentPath === "/" || currentPath === "/index.html") {
+        newPath = "/zh-CN/";
+      } else {
+        newPath = "/zh-CN" + currentPath;
+      }
+    } else {
+      // Switch to English
+      if (!currentPath.startsWith("/zh-CN/")) {
+        return; // Already in English
+      }
+      newPath = currentPath.replace(/^\/zh-CN/, "");
+      if (!newPath || newPath === "/") {
+        newPath = "/";
+      }
+    }
+    
+    window.location.href = newPath;
   }
 
   private _handleDir(e: CustomEvent) {
@@ -154,6 +237,22 @@ export class SwToolbar extends LitElement {
         </md-menu-item>
       </md-menu>
 
+      <md-menu
+        id="language-menu"
+        for="action-toggle-language"
+        offset="16"
+        align="top"
+        alignStrategy="fixed"
+        @select=${this._handleLanguageSelect}
+      >
+        <md-menu-item data-language="en" ?selected=${this.language === "en"}>
+          English
+        </md-menu-item>
+        <md-menu-item data-language="zh-CN" ?selected=${this.language === "zh-CN"}>
+          简体中文
+        </md-menu-item>
+      </md-menu>
+
       <md-toolbar type="floating" color="vibrant">
         <md-icon-button
           id="action-open-repo"
@@ -178,6 +277,16 @@ export class SwToolbar extends LitElement {
         </md-tooltip>
 
         <md-icon-button
+          id="action-toggle-language"
+          @click=${this._toggleLanguageMenu}
+        >
+          <iconify-icon icon="material-symbols:translate"></iconify-icon>
+        </md-icon-button>
+        <md-tooltip for="action-toggle-language" offset="16">
+          Change language
+        </md-tooltip>
+
+        <md-icon-button
           id="action-toggle-theme"
           @click=${this._toggleThemeMenu}
         >
@@ -191,6 +300,7 @@ export class SwToolbar extends LitElement {
           slot="fab"
           color="tertiary"
           id="scroll-to-top"
+          class=${this.showScrollToTop ? "" : "hidden"}
           @click=${this._handleScrollToTop}
         >
           <iconify-icon icon="material-symbols:arrow-upward"></iconify-icon>
