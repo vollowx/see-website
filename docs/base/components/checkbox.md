@@ -22,7 +22,3 @@ Note: Also inherits `disabled` property from [`FormAssociated`](../mixins/form-a
 | Name     | Type                   | Description                                                                                      |
 | -------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
 | `change` | `CustomEvent<boolean>` | Dispatched when the checked state changes. The `detail` property contains the new checked state. |
-
-## Methods
-
-N/A

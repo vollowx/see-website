@@ -27,7 +27,3 @@ Base menu component for dropdown and popup menus.
 | Name     | Type  | Description                               |
 | -------- | ----- | ----------------------------------------- |
 | `select` | Event | Fired when a menu item has been selected. |
-
-## Methods
-
-N/A

@@ -16,7 +16,3 @@ title: Tooltip - Base - SEELE
 | `align`   | [Placement](https://floating-ui.com/docs/computePosition#placement) | `'top'` | 相对于控件的工具提示对齐方式（例如，'top'、'bottom'、'left'、'right'）。 |
 | `offset`  | Number                                                              | `4`     | 相对于控件元素的偏移量（像素）。                                       |
 | `visible` | Boolean                                                             | `false` | 工具提示当前是否可见。                                                 |
-
-## 方法
-
-N/A

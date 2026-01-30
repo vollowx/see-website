@@ -28,7 +28,3 @@ Base input component for text-based form inputs.
 | `autocomplete` | String  | `''`     | Autocomplete hint for the browser.                               |
 
 Note: Also inherits `disabled` property from [`FormAssociated`](../mixins/form-associated.md) mixin.
-
-## Methods
-
-N/A

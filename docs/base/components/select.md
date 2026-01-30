@@ -26,7 +26,3 @@ Note: Also inherits `disabled` property from [`FormAssociated`](../mixins/form-a
 | -------- | ----- | ------------------------------------------ |
 | `change` | Event | Fired when the selected value has changed. |
 | `input`  | Event | Fired when the selected value has changed. |
-
-## Methods
-
-N/A

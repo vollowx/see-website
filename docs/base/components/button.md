@@ -12,7 +12,3 @@ title: Button - Base - SEELE
 | Name   | Type                              | Default    | Description                       |
 | ------ | --------------------------------- | ---------- | --------------------------------- |
 | `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | The type of the button.           |
-
-## Methods
-
-N/A
