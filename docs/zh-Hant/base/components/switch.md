@@ -2,21 +2,21 @@
 title: Switch - Base - SEELE
 ---
 
-# Switch（开关）
+# Switch（開關）
 
 - 混合：[`InternalsAttached`](../mixins/internals-attached.md)
 - 混合：[`FormAssociated`](../mixins/form-associated.md)
 
-## 属性
+## 屬性
 
-| 名称      | 类型    | 默认值  | 描述                             |
+| 名稱      | 類型    | 默認值  | 描述                             |
 | --------- | ------- | ------- | -------------------------------- |
-| `checked` | Boolean | `false` | 开关是否处于选中/打开状态。      |
+| `checked` | Boolean | `false` | 開關是否處於選中/打開狀態。      |
 
-注意：还从 [`FormAssociated`](../mixins/form-associated.md) 混合类继承 `disabled` 属性。
+注意：還從 [`FormAssociated`](../mixins/form-associated.md) 混合類繼承 `disabled` 屬性。
 
 ## 事件
 
-| 名称     | 类型                   | 描述                                                                 |
+| 名稱     | 類型                   | 描述                                                                 |
 | -------- | ---------------------- | -------------------------------------------------------------------- |
-| `change` | `CustomEvent<boolean>` | 当选中状态改变时触发。`detail` 属性包含新的选中状态。                |
+| `change` | `CustomEvent<boolean>` | 當選中狀態改變時觸發。`detail` 屬性包含新的選中狀態。                |

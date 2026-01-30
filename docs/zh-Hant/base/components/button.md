@@ -2,13 +2,13 @@
 title: Button - Base - SEELE
 ---
 
-# Button（按钮）
+# Button（按鈕）
 
 - 混合：[`InternalsAttached`](../mixins/internals-attached.md)
 - 混合：[`FormAssociated`](../mixins/form-associated.md)
 
-## 属性
+## 屬性
 
-| 名称   | 类型                              | 默认值     | 描述                       |
+| 名稱   | 類型                              | 默認值     | 描述                       |
 | ------ | --------------------------------- | ---------- | -------------------------- |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | 按钮的类型。               |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | 按鈕的類型。               |

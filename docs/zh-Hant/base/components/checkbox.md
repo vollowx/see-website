@@ -2,19 +2,19 @@
 title: Checkbox - Base - SEELE
 ---
 
-# Checkbox（复选框）
+# Checkbox（複選框）
 
 - 混合：[`InternalsAttached`](../mixins/internals-attached.md)
 - 混合：[`FormAssociated`](../mixins/form-associated.md)
 
-## 属性
+## 屬性
 
-| 名称      | 类型    | 默认值  | 描述                   |
+| 名稱      | 類型    | 默認值  | 描述                   |
 | --------- | ------- | ------- | ---------------------- |
-| `checked` | Boolean | `false` | 复选框是否被选中。     |
+| `checked` | Boolean | `false` | 複選框是否被選中。     |
 
 ## 事件
 
-| 名称     | 描述                     |
+| 名稱     | 描述                     |
 | -------- | ------------------------ |
-| `change` | 当复选框状态改变时触发。 |
+| `change` | 當複選框狀態改變時觸發。 |

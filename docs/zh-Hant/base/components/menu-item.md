@@ -2,16 +2,16 @@
 title: MenuItem - Base - SEELE
 ---
 
-# MenuItem（菜单项）
+# MenuItem（菜單項）
 
-- 继承：[`ListItem`](list-item.md)
+- 繼承：[`ListItem`](list-item.md)
 
-用于菜单内的菜单项组件。
+用於菜單內的菜單項組件。
 
-## 属性
+## 屬性
 
-继承列表项的所有属性。
+繼承列表項的所有屬性。
 
 ## 方法
 
-继承列表项的所有方法。
+繼承列表項的所有方法。

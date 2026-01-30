@@ -2,12 +2,12 @@
 title: Menu - M3 - SEELE
 ---
 
-# 菜单
+# 菜單
 
-菜单在临时表面上显示一组选项。当用户与按钮、操作或其他控件交互时，它们会出现。
+菜單在臨時表面上顯示一組選項。當用戶與按鈕、操作或其他控件交互時，它們會出現。
 
 - 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- 继承自：[`Menu`](../../base/components/menu.md)
+- 繼承自：[`Menu`](../../base/components/menu.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -102,17 +102,17 @@ title: Menu - M3 - SEELE
 </script>
 ```
 
-## 属性
+## 屬性
 
-注意：继承 [`Menu`](../../base/components/menu.md) 的所有属性：`open`、`quick`、`align`、`alignStrategy`、`offset`、`keepOpenBlur`、`keepOpenClickItem`、`keepOpenClickOutside`。
+注意：繼承 [`Menu`](../../base/components/menu.md) 的所有屬性：`open`、`quick`、`align`、`alignStrategy`、`offset`、`keepOpenBlur`、`keepOpenClickItem`、`keepOpenClickOutside`。
 
 ## 方法
 
-| 名称     | 描述      |
+| 名稱     | 描述      |
 | -------- | ---------------- |
-| `show()` | 打开菜单。  |
-| `hide()` | 关闭菜单。 |
+| `show()` | 打開菜單。  |
+| `hide()` | 關閉菜單。 |
 
 ## 事件
 
-注意：继承 [`Menu`](../../base/components/menu.md) 的 `select` 事件。
+注意：繼承 [`Menu`](../../base/components/menu.md) 的 `select` 事件。

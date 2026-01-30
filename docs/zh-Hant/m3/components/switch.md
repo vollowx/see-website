@@ -2,12 +2,12 @@
 title: Switch - M3 - SEELE
 ---
 
-# 开关
+# 開關
 
-开关是调整设置的首选方式。它们用于控制二进制选项——比如开/关或真/假。
+開關是調整設置的首選方式。它們用於控制二進制選項——比如開/關或真/假。
 
 - 遵循：[Switches - Material Design 3](https://m3.material.io/components/switch/overview)
-- 继承自：[`Switch`](../../base/components/switch.md)
+- 繼承自：[`Switch`](../../base/components/switch.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -39,7 +39,7 @@ title: Switch - M3 - SEELE
 
 ### 用法
 
-开关可以是独立的或预选中的。
+開關可以是獨立的或預選中的。
 
 <!-- @docs-demo-code-block -->
 
@@ -48,9 +48,9 @@ title: Switch - M3 - SEELE
 <md-switch aria-label="pre-checked switch" checked></md-switch>
 ```
 
-#### 图标
+#### 圖標
 
-图标可用于在视觉上强调开关的选中状态。开关可以选择显示两个图标或仅显示选中的图标。
+圖標可用於在視覺上強調開關的選中狀態。開關可以選擇顯示兩個圖標或僅顯示選中的圖標。
 
 <!-- @docs-demo-code-block -->
 
@@ -62,9 +62,9 @@ title: Switch - M3 - SEELE
 <md-switch icons checkedicononly checked></md-switch>
 ```
 
-#### 标签
+#### 標籤
 
-使用 `<label>` 元素将标签与复选框关联。
+使用 `<label>` 元素將標籤與複選框關聯。
 
 <!-- @docs-demo-code-block -->
 
@@ -78,9 +78,9 @@ title: Switch - M3 - SEELE
 <md-switch id="switch-bluetooth"></md-switch>
 ```
 
-### 无障碍
+### 無障礙
 
-为没有标签的开关或需要更具描述性的标签的开关添加 `aria-label` 属性。
+爲沒有標籤的開關或需要更具描述性的標籤的開關添加 `aria-label` 屬性。
 
 <!-- @docs-demo-code-block -->
 
@@ -93,17 +93,17 @@ title: Switch - M3 - SEELE
 </label>
 ```
 
-注意：开关不会自动由 `<label>` 元素标记，始终需要 `aria-label`。
+注意：開關不會自動由 `<label>` 元素標記，始終需要 `aria-label`。
 
-## 属性
+## 屬性
 
-| 名称              | 类型    | 默认值 | 描述                                       |
+| 名稱              | 類型    | 默認值 | 描述                                       |
 | ----------------- | ------- | ------- | ------------------------------------------------- |
-| `icons`           | Boolean | `false` | 是否在开关滑块中显示图标。     |
-| `checkedIconOnly` | Boolean | `false` | 是否仅在选中时显示图标。    |
+| `icons`           | Boolean | `false` | 是否在開關滑塊中顯示圖標。     |
+| `checkedIconOnly` | Boolean | `false` | 是否僅在選中時顯示圖標。    |
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ## 事件
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。

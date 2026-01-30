@@ -4,10 +4,10 @@ title: Tooltip - M3 - SEELE
 
 # 工具提示
 
-工具提示在用户悬停、聚焦或点击元素时显示信息性文本。
+工具提示在用戶懸停、聚焦或點擊元素時顯示信息性文本。
 
 - 遵循：[Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
-- 继承自：[`Tooltip`](../../base/components/tooltip.md)
+- 繼承自：[`Tooltip`](../../base/components/tooltip.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -31,17 +31,17 @@ title: Tooltip - M3 - SEELE
 >
 ```
 
-## 属性
+## 屬性
 
-| 名称  | 类型   | 默认值 | 描述                                      |
+| 名稱  | 類型   | 默認值 | 描述                                      |
 | ----- | ------ | ------- | ------------------------------------------------ |
 | `for` | String | `''`    | 工具提示附加到的元素的 ID。 |
 
-注意：继承 [`Tooltip`](../../base/components/tooltip.md) 的 `align`、`offset`、`visible`。
+注意：繼承 [`Tooltip`](../../base/components/tooltip.md) 的 `align`、`offset`、`visible`。
 
 ## 方法
 
-| 名称     | 描述        |
+| 名稱     | 描述        |
 | -------- | ------------------ |
-| `show()` | 显示工具提示。 |
-| `hide()` | 隐藏工具提示。 |
+| `show()` | 顯示工具提示。 |
+| `hide()` | 隱藏工具提示。 |

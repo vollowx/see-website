@@ -2,12 +2,12 @@
 title: Icon Button - M3 - SEELE
 ---
 
-# 图标按钮
+# 圖標按鈕
 
-## 操作按钮
+## 操作按鈕
 
 - 遵循：[Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
-- 继承自：[`Button`](../../base/components/button.md)
+- 繼承自：[`Button`](../../base/components/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -54,21 +54,21 @@ title: Icon Button - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-### 属性
+### 屬性
 
-| 名称      | 类型                                                     | 默认值      | 描述                                  |
+| 名稱      | 類型                                                     | 默認值      | 描述                                  |
 | --------- | -------------------------------------------------------- | ------------ | -------------------------------------------- |
-| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 图标按钮的尺寸。                 |
-| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 图标按钮的视觉样式变体。 |
-| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 图标按钮的宽度变体。        |
+| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 圖標按鈕的尺寸。                 |
+| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 圖標按鈕的視覺樣式變體。 |
+| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 圖標按鈕的寬度變體。        |
 
-注意：继承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ### 方法
 
-使用 `click()` 以编程方式触发按钮。
+使用 `click()` 以編程方式觸發按鈕。
 
-### 类型
+### 類型
 
 <!-- @docs-demo-code-block -->
 
@@ -79,11 +79,11 @@ title: Icon Button - M3 - SEELE
 <md-icon-button variant="text"><iconify-icon icon="material-symbols:settings"></iconify-icon></md-icon-button>
 ```
 
-## 切换按钮
+## 切換按鈕
 
-- 继承自：[`Switch`](../../base/components/switch.md)
+- 繼承自：[`Switch`](../../base/components/switch.md)
 
-图标按钮可用于在两种状态之间进行选择。
+圖標按鈕可用於在兩種狀態之間進行選擇。
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -131,21 +131,21 @@ title: Icon Button - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-### 属性
+### 屬性
 
-| 名称      | 类型                                                     | 默认值      | 描述                                         |
+| 名稱      | 類型                                                     | 默認值      | 描述                                         |
 | --------- | -------------------------------------------------------- | ------------ | --------------------------------------------------- |
-| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 图标按钮切换的尺寸。                 |
-| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 图标按钮切换的视觉样式变体。 |
-| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 图标按钮切换的宽度变体。        |
+| `size`    | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`    | 圖標按鈕切換的尺寸。                 |
+| `variant` | `'filled' \| 'tonal' \| 'outlined' \| 'text'`            | `'text'`     | 圖標按鈕切換的視覺樣式變體。 |
+| `width`   | `'standard' \| 'narrow' \| 'wide'`                       | `'standard'` | 圖標按鈕切換的寬度變體。        |
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `checked` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ### 事件
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。
 
-### 类型
+### 類型
 
 <!-- @docs-demo-code-block -->
 

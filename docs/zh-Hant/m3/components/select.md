@@ -2,12 +2,12 @@
 title: Select - M3 - SEELE
 ---
 
-# 选择框
+# 選擇框
 
-选择框允许用户从一组值中选择一个或多个项目。
+選擇框允許用戶從一組值中選擇一個或多個項目。
 
 - 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- 继承自：[`Select`](../../base/components/select.md)
+- 繼承自：[`Select`](../../base/components/select.md)
 
 <!-- @docs-demo-code-block -->
 
@@ -26,19 +26,19 @@ title: Select - M3 - SEELE
 </md-outlined-select>
 ```
 
-## 属性
+## 屬性
 
-| 名称             | 类型    | 默认值 | 描述                                        |
+| 名稱             | 類型    | 默認值 | 描述                                        |
 | ---------------- | ------- | ------- | -------------------------------------------------- |
-| `label`          | String  | `''`    | 选择框的标签文本。               |
-| `supportingText` | String  | `''`    | 显示在选择框下方的辅助文本。      |
-| `error`          | Boolean | `false` | 选择框是否处于错误状态。           |
+| `label`          | String  | `''`    | 選擇框的標籤文本。               |
+| `supportingText` | String  | `''`    | 顯示在選擇框下方的輔助文本。      |
+| `error`          | Boolean | `false` | 選擇框是否處於錯誤狀態。           |
 
-注意：继承 [`Select`](../../base/components/select.md) 的 `value`、`displayText`、`open`、`required`、`quick`、`align`、`alignStrategy`、`offset` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Select`](../../base/components/select.md) 的 `value`、`displayText`、`open`、`required`、`quick`、`align`、`alignStrategy`、`offset` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ## 方法
 
-| 名称      | 描述                            |
+| 名稱      | 描述                            |
 | --------- | -------------------------------------- |
-| `focus()` | 聚焦选择框元素。            |
-| `blur()`  | 移除选择框元素的焦点。 |
+| `focus()` | 聚焦選擇框元素。            |
+| `blur()`  | 移除選擇框元素的焦點。 |

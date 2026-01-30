@@ -2,12 +2,12 @@
 title: Button - M3 - SEELE
 ---
 
-# 按钮
+# 按鈕
 
-## 操作按钮
+## 操作按鈕
 
 - 遵循：[Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
-- 继承自：[`Button`](../../base/components/button.md)
+- 繼承自：[`Button`](../../base/components/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -74,11 +74,11 @@ title: Button - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-注意：`color` 不是官方 Material Design 3 的一部分。填充色调按钮的颜色始终为次要容器。轮廓按钮的颜色始终为轮廓变体。
+注意：`color` 不是官方 Material Design 3 的一部分。填充色調按鈕的顏色始終爲次要容器。輪廓按鈕的顏色始終爲輪廓變體。
 
 ### 配置
 
-#### 变体
+#### 變體
 
 <!-- @docs-demo-code-block -->
 
@@ -93,7 +93,7 @@ title: Button - M3 - SEELE
 <md-button variant="text">Text</md-button>
 ```
 
-#### 图标
+#### 圖標
 
 <!-- @docs-demo-code-block -->
 
@@ -109,25 +109,25 @@ title: Button - M3 - SEELE
 </md-button>
 ```
 
-### 属性
+### 屬性
 
-| 名称           | 类型                                                        | 默认值     | 描述                                                       |
+| 名稱           | 類型                                                        | 默認值     | 描述                                                       |
 | -------------- | ----------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
-| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                    | `'primary'` | 按钮的颜色变体。                                  |
-| `shape`        | `'rounded' \| 'square'`                                     | `'rounded'` | 按钮的形状。                                          |
-| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`    | `'small'`   | 按钮的尺寸。                                           |
-| `trailingIcon` | Boolean                                                     | `false`     | 图标是否显示在按钮末尾。           |
-| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'` | `'filled'`  | 按钮的视觉样式变体。                           |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                    | `'primary'` | 按鈕的顏色變體。                                  |
+| `shape`        | `'rounded' \| 'square'`                                     | `'rounded'` | 按鈕的形狀。                                          |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'`    | `'small'`   | 按鈕的尺寸。                                           |
+| `trailingIcon` | Boolean                                                     | `false`     | 圖標是否顯示在按鈕末尾。           |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined' \| 'text'` | `'filled'`  | 按鈕的視覺樣式變體。                           |
 
-注意：继承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ### 方法
 
-使用 `click()` 以编程方式触发按钮。
+使用 `click()` 以編程方式觸發按鈕。
 
-## 切换按钮
+## 切換按鈕
 
-- 继承自：[`Switch`](../../base/components/switch.md)
+- 繼承自：[`Switch`](../../base/components/switch.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -206,18 +206,18 @@ title: Button - M3 - SEELE
 </div>
 ```
 
-### 属性
+### 屬性
 
-| 名称           | 类型                                                     | 默认值     | 描述                                                           |
+| 名稱           | 類型                                                     | 默認值     | 描述                                                           |
 | -------------- | -------------------------------------------------------- | ----------- | --------------------------------------------------------------------- |
-| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                 | `'primary'` | 按钮的颜色变体。                                      |
-| `shape`        | `'rounded' \| 'square'`                                  | `'rounded'` | 按钮的形状。                                              |
-| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`   | 按钮的尺寸。                                               |
-| `trailingIcon` | Boolean                                                  | `false`     | 图标是否显示在按钮末尾。               |
-| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined'`        | `'filled'`  | 按钮的视觉样式变体。                               |
+| `color`        | `'primary' \| 'secondary' \| 'tertiary'`                 | `'primary'` | 按鈕的顏色變體。                                      |
+| `shape`        | `'rounded' \| 'square'`                                  | `'rounded'` | 按鈕的形狀。                                              |
+| `size`         | `'xsmall' \| 'small' \| 'medium' \| 'large' \| 'xlarge'` | `'small'`   | 按鈕的尺寸。                                               |
+| `trailingIcon` | Boolean                                                  | `false`     | 圖標是否顯示在按鈕末尾。               |
+| `variant`      | `'filled' \| 'tonal' \| 'elevated' \| 'outlined'`        | `'filled'`  | 按鈕的視覺樣式變體。                               |
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `checked`、[`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `checked`、[`Button`](../../base/components/button.md) 的 `type` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ### 事件
 
-注意：继承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。
+注意：繼承 [`Switch`](../../base/components/switch.md) 的 `change` 事件。

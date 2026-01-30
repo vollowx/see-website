@@ -2,12 +2,12 @@
 title: Checkbox - M3 - SEELE
 ---
 
-# 复选框
+# 複選框
 
-复选框允许用户从一组项目中选择一个或多个项目。复选框可以打开或关闭选项。
+複選框允許用戶從一組項目中選擇一個或多個項目。複選框可以打開或關閉選項。
 
 - 遵循：[Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
-- 继承自：[`Checkbox`](../../base/components/checkbox.md)
+- 繼承自：[`Checkbox`](../../base/components/checkbox.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
@@ -39,7 +39,7 @@ title: Checkbox - M3 - SEELE
 
 ### 用法
 
-复选框可以是独立的、预选中的或不确定状态的。
+複選框可以是獨立的、預選中的或不確定狀態的。
 
 <!-- @docs-demo-code-block -->
 
@@ -109,9 +109,9 @@ title: Checkbox - M3 - SEELE
 </script>
 ```
 
-#### 标签
+#### 標籤
 
-使用 `<label>` 元素将标签与复选框关联。
+使用 `<label>` 元素將標籤與複選框關聯。
 
 <!-- @docs-demo-code-block -->
 
@@ -125,9 +125,9 @@ title: Checkbox - M3 - SEELE
 <label for="checkbox-two">Checkbox two</label>
 ```
 
-### 无障碍
+### 無障礙
 
-为没有标签的复选框或需要更具描述性的标签的复选框添加 `aria-label` 属性。
+爲沒有標籤的複選框或需要更具描述性的標籤的複選框添加 `aria-label` 屬性。
 
 <!-- @docs-demo-code-block -->
 
@@ -140,16 +140,16 @@ title: Checkbox - M3 - SEELE
 </label>
 ```
 
-注意：复选框不会自动由 `<label>` 元素标记，始终需要 `aria-label`。
+注意：複選框不會自動由 `<label>` 元素標記，始終需要 `aria-label`。
 
-## 属性
+## 屬性
 
-| 名称    | 类型    | 默认值 | 描述                              |
+| 名稱    | 類型    | 默認值 | 描述                              |
 | ------- | ------- | ------- | ---------------------------------------- |
-| `error` | Boolean | `false` | 复选框是否处于错误状态。 |
+| `error` | Boolean | `false` | 複選框是否處於錯誤狀態。 |
 
-注意：继承 [`Checkbox`](../../base/components/checkbox.md) 的 `checked`、`indeterminate`、`required` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
+注意：繼承 [`Checkbox`](../../base/components/checkbox.md) 的 `checked`、`indeterminate`、`required` 和 [`FormAssociated`](../../base/mixins/form-associated.md) 的 `disabled`。
 
 ## 事件
 
-注意：继承 [`Checkbox`](../../base/components/checkbox.md) 的 `change` 事件。
+注意：繼承 [`Checkbox`](../../base/components/checkbox.md) 的 `change` 事件。

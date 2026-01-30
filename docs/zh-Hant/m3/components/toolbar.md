@@ -2,13 +2,13 @@
 title: Toolbar - M3 - SEELE
 ---
 
-# 工具栏
+# 工具欄
 
-工具栏显示与当前页面或上下文相关的常用操作，并将控件组合到一个紧凑的表面中。
+工具欄顯示與當前頁面或上下文相關的常用操作，並將控件組合到一個緊湊的表面中。
 
 - 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
 
-## 类型
+## 類型
 
 <!-- @docs-demo-code-block -->
 
@@ -32,7 +32,7 @@ title: Toolbar - M3 - SEELE
 </md-toolbar>
 ```
 
-### 浮动
+### 浮動
 
 <!-- @docs-demo-code-block -->
 
@@ -75,7 +75,7 @@ title: Toolbar - M3 - SEELE
 </md-toolbar>
 ```
 
-#### 带 FAB
+#### 帶 FAB
 
 <!-- @docs-demo-code-block -->
 
@@ -113,10 +113,10 @@ title: Toolbar - M3 - SEELE
 </md-toolbar>
 ```
 
-## 属性
+## 屬性
 
-| 名称          | 类型                         | 默认值        | 描述                                              |
+| 名稱          | 類型                         | 默認值        | 描述                                              |
 | ------------- | ---------------------------- | -------------- | -------------------------------------------------------- |
-| `type`        | `'docked' \| 'floating'`     | `'docked'`     | 工具栏的视觉样式类型。                    |
-| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | 工具栏的颜色变体。                        |
-| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | 工具栏的方向（仅适用于浮动类型）。 |
+| `type`        | `'docked' \| 'floating'`     | `'docked'`     | 工具欄的視覺樣式類型。                    |
+| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | 工具欄的顏色變體。                        |
+| `orientation` | `'horizontal' \| 'vertical'` | `'horizontal'` | 工具欄的方向（僅適用於浮動類型）。 |

@@ -2,11 +2,11 @@
 title: Ripple - M3 - SEELE
 ---
 
-# 涟漪
+# 漣漪
 
-涟漪是用于传达组件或交互元素状态的状态层。
+漣漪是用於傳達組件或交互元素狀態的狀態層。
 
-状态层是元素上的半透明覆盖层，用于指示其状态。层可以应用于整个元素或圆形形状。
+狀態層是元素上的半透明覆蓋層，用於指示其狀態。層可以應用於整個元素或圓形形狀。
 
 - 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
 - 混入：[`Attachable`](../../base/mixins/attachable.md)
@@ -76,7 +76,7 @@ title: Ripple - M3 - SEELE
 
 ## 用法
 
-涟漪在按压指针交互时显示。它们可以通过以下三种方式之一附加到控件。
+漣漪在按壓指針交互時顯示。它們可以通過以下三種方式之一附加到控件。
 
 1. 附加到父元素
     <!-- @docs-demo-code-block -->
@@ -120,19 +120,19 @@ title: Ripple - M3 - SEELE
     </script>
     ```
 
-注意：涟漪必须放置在 `position: relative` 容器内。
+注意：漣漪必須放置在 `position: relative` 容器內。
 
-## 属性
+## 屬性
 
-| 名称            | 类型     | 默认值    | 描述                                           |
+| 名稱            | 類型     | 默認值    | 描述                                           |
 | --------------- | -------- | ---------- | ----------------------------------------------------- |
-| `clickBehavior` | `string` | `'always'` | 控制涟漪在点击事件时的显示时机。         |
-| `enterBehavior` | `string` | `'always'` | 控制涟漪在指针进入事件时的显示时机。 |
-| `spaceBehavior` | `string` | `'once'`   | 控制涟漪在空格键按下时的显示时机。      |
-| `for`           | `string` | `''`       | 涟漪附加到的元素的 ID。 |
+| `clickBehavior` | `string` | `'always'` | 控制漣漪在點擊事件時的顯示時機。         |
+| `enterBehavior` | `string` | `'always'` | 控制漣漪在指針進入事件時的顯示時機。 |
+| `spaceBehavior` | `string` | `'once'`   | 控制漣漪在空格鍵按下時的顯示時機。      |
+| `for`           | `string` | `''`       | 漣漪附加到的元素的 ID。 |
 
 ## 方法
 
-| 名称              | 描述                                                 |
+| 名稱              | 描述                                                 |
 | ----------------- | ----------------------------------------------------------- |
-| `attach(element)` | 以编程方式将涟漪附加到特定元素。 |
+| `attach(element)` | 以編程方式將漣漪附加到特定元素。 |

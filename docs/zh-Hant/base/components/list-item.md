@@ -2,27 +2,27 @@
 title: ListItem - Base - SEELE
 ---
 
-# ListItem（列表项）
+# ListItem（列表項）
 
 - 混合：[`InternalsAttached`](../mixins/internals-attached.md)
 - 混合：[`FormAssociated`](../mixins/form-associated.md)
 
-用于菜单和选择框中的交互式列表项的基础组件。
+用於菜單和選擇框中的交互式列表項的基礎組件。
 
-由于使用了 `ariaActiveDescendant`，列表项实际上并不会被聚焦，而是在 CSS 中使用 `:state(focused)`，或通过重写 `changed()` 来处理自定义行为。
+由於使用了 `ariaActiveDescendant`，列表項實際上並不會被聚焦，而是在 CSS 中使用 `:state(focused)`，或通過重寫 `changed()` 來處理自定義行爲。
 
-## 属性
+## 屬性
 
-| 名称       | 类型    | 默认值  | 描述                       |
+| 名稱       | 類型    | 默認值  | 描述                       |
 | ---------- | ------- | ------- | -------------------------- |
-| `selected` | Boolean | `false` | 列表项是否被选中。         |
-| `focused`  | Boolean | `false` | 列表项是否有焦点。         |
+| `selected` | Boolean | `false` | 列表項是否被選中。         |
+| `focused`  | Boolean | `false` | 列表項是否有焦點。         |
 
-注意：还从 [`FormAssociated`](../mixins/form-associated.md) 混合类继承 `disabled` 属性。
+注意：還從 [`FormAssociated`](../mixins/form-associated.md) 混合類繼承 `disabled` 屬性。
 
 ## 方法
 
-| 名称      | 描述                       |
+| 名稱      | 描述                       |
 | --------- | -------------------------- |
-| `focus()` | 在视觉上将焦点状态设置为真。 |
-| `blur()`  | 在视觉上将焦点状态设置为假。 |
+| `focus()` | 在視覺上將焦點狀態設置爲真。 |
+| `blur()`  | 在視覺上將焦點狀態設置爲假。 |
