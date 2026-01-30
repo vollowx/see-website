@@ -38,7 +38,7 @@ export class SwToolbar extends LitElement {
   @property({ type: Boolean }) rtl = false;
 
   @state() private themeMode: "light" | "dark" | "auto" = "auto";
-  @state() private language: "en" | "zh-CN" = "en";
+  @state() private language: "en" | "zh-Hans" = "en";
   @state() private showScrollToTop = false;
   @state() private tooltipTexts = {
     rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
@@ -94,11 +94,14 @@ export class SwToolbar extends LitElement {
   }
 
   private _loadLanguagePreference() {
-    // Detect language from URL path (e.g., /zh-CN/ or /en/)
+    // Detect language from URL path (e.g., /zh-Hans/ or /en/)
     const path = window.location.pathname;
-    if (path.startsWith("/zh-CN/") || path === "/zh-CN") {
-      this.language = "zh-CN";
+    if (path.startsWith("/zh-Hans/") || path === "/zh-Hans") {
+      this.language = "zh-Hans";
+    } else if (path.startsWith("/en/") || path === "/en") {
+      this.language = "en";
     } else {
+      // Fallback to en for root or unknown paths
       this.language = "en";
     }
   }
@@ -170,34 +173,29 @@ export class SwToolbar extends LitElement {
 
   private _handleLanguageSelect(e: CustomEvent) {
     const selectedItem = e.detail.item as HTMLElement;
-    const langValue = selectedItem.dataset.language as "en" | "zh-CN";
+    const langValue = selectedItem.dataset.language as "en" | "zh-Hans";
     if (langValue && langValue !== this.language) {
       this._switchLanguage(langValue);
     }
   }
 
-  private _switchLanguage(lang: "en" | "zh-CN") {
+  private _switchLanguage(lang: "en" | "zh-Hans") {
     const currentPath = window.location.pathname;
     let newPath: string;
     
-    if (lang === "zh-CN") {
-      // Switch to Chinese
-      if (currentPath.startsWith("/zh-CN/")) {
-        return; // Already in Chinese
-      } else if (currentPath === "/" || currentPath === "/index.html") {
-        newPath = "/zh-CN/";
-      } else {
-        newPath = "/zh-CN" + currentPath;
-      }
+    // Extract the path after the language prefix
+    let pathWithoutLang = currentPath;
+    if (currentPath.startsWith("/en/")) {
+      pathWithoutLang = currentPath.substring(3); // Remove "/en"
+    } else if (currentPath.startsWith("/zh-Hans/")) {
+      pathWithoutLang = currentPath.substring(8); // Remove "/zh-Hans"
+    }
+    
+    // Build new path with target language
+    if (pathWithoutLang === "" || pathWithoutLang === "/") {
+      newPath = `/${lang}/`;
     } else {
-      // Switch to English
-      if (!currentPath.startsWith("/zh-CN/")) {
-        return; // Already in English
-      }
-      newPath = currentPath.replace(/^\/zh-CN/, "");
-      if (!newPath || newPath === "/") {
-        newPath = "/";
-      }
+      newPath = `/${lang}${pathWithoutLang}`;
     }
     
     // Update state before redirecting for consistency
@@ -251,7 +249,7 @@ export class SwToolbar extends LitElement {
         <md-menu-item data-language="en" ?selected=${this.language === "en"}>
           English
         </md-menu-item>
-        <md-menu-item data-language="zh-CN" ?selected=${this.language === "zh-CN"}>
+        <md-menu-item data-language="zh-Hans" ?selected=${this.language === "zh-Hans"}>
           简体中文
         </md-menu-item>
       </md-menu>
