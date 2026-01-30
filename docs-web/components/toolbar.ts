@@ -33,8 +33,26 @@ export class SwToolbar extends LitElement {
 
   @state() private themeMode: "light" | "dark" | "auto" = "auto";
   @state() private language: LanguageCode = "en";
-  @state() private tooltipTexts = {
-    rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
+
+  private readonly _tooltipTexts = {
+    en: {
+      rtl: ["Set direction to right-to-left", "Set direction to left-to-right"],
+      language: "Change language",
+      theme: "Change theme",
+      github: "View source code",
+    },
+    "zh-Hans": {
+      rtl: ["设置文本方向为从右到左", "设置文本方向为从左到右"],
+      language: "更改语言",
+      theme: "更改主题",
+      github: "查看源代码",
+    },
+    "zh-Hant": {
+      rtl: ["設定文字方向為從右到左", "設定文字方向為從左到右"],
+      language: "更改語言",
+      theme: "更改主題",
+      github: "檢視原始碼",
+    },
   };
 
   @query("#theme-menu") private _themeMenu!: M3Menu;
@@ -124,8 +142,12 @@ export class SwToolbar extends LitElement {
     }
   }
 
-  private _getTooltipText(type: "rtl", checked: boolean): string {
-    return this.tooltipTexts[type][checked ? 1 : 0];
+  private _getTooltipText(type: "rtl" | "language" | "theme" | "github", checked?: boolean): string {
+    const texts = this._tooltipTexts[this.language];
+    if (type === "rtl" && checked !== undefined) {
+      return texts.rtl[checked ? 1 : 0];
+    }
+    return texts[type];
   }
 
   private _toggleThemeMenu() {
@@ -251,7 +273,7 @@ export class SwToolbar extends LitElement {
           <iconify-icon icon="material-symbols:translate"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-toggle-language" offset="16">
-          Change language
+          ${this._getTooltipText("language")}
         </md-tooltip>
 
         <md-icon-button
@@ -261,7 +283,7 @@ export class SwToolbar extends LitElement {
           <iconify-icon icon="material-symbols:palette"></iconify-icon>
         </md-icon-button>
         <md-tooltip for="action-toggle-theme" offset="16">
-          Change theme
+          ${this._getTooltipText("theme")}
         </md-tooltip>
 
         <md-fab
@@ -273,7 +295,7 @@ export class SwToolbar extends LitElement {
         >
           <iconify-icon icon="mdi:github"></iconify-icon>
         </md-fab>
-        <md-tooltip for="action-open-repo" offset="8">View source code</md-tooltip>
+        <md-tooltip for="action-open-repo" offset="8">${this._getTooltipText("github")}</md-tooltip>
       </md-toolbar>
     `;
   }
