@@ -40,18 +40,27 @@ export class SwToolbar extends LitElement {
       language: "Change language",
       theme: "Change theme",
       github: "View source code",
+      themeLight: "Light",
+      themeDark: "Dark",
+      themeAuto: "Device Default",
     },
     "zh-Hans": {
       rtl: ["设置文本方向为从右到左", "设置文本方向为从左到右"],
       language: "更改语言",
       theme: "更改主题",
       github: "查看源代码",
+      themeLight: "浅色",
+      themeDark: "深色",
+      themeAuto: "跟随系统",
     },
     "zh-Hant": {
       rtl: ["設定文字方向為從右到左", "設定文字方向為從左到右"],
       language: "更改語言",
       theme: "更改主題",
       github: "檢視原始碼",
+      themeLight: "淺色",
+      themeDark: "深色",
+      themeAuto: "跟隨系統",
     },
   };
 
@@ -142,7 +151,7 @@ export class SwToolbar extends LitElement {
     }
   }
 
-  private _getTooltipText(type: "rtl" | "language" | "theme" | "github", checked?: boolean): string {
+  private _getTooltipText(type: "rtl" | "language" | "theme" | "github" | "themeLight" | "themeDark" | "themeAuto", checked?: boolean): string {
     const texts = this._tooltipTexts[this.language];
     if (type === "rtl" && checked !== undefined) {
       return texts.rtl[checked ? 1 : 0];
@@ -223,13 +232,13 @@ export class SwToolbar extends LitElement {
         @select=${this._handleThemeSelect}
       >
         <md-menu-item data-theme="light" ?selected=${this.themeMode === "light"}>
-          Light
+          ${this._getTooltipText("themeLight")}
         </md-menu-item>
         <md-menu-item data-theme="dark" ?selected=${this.themeMode === "dark"}>
-          Dark
+          ${this._getTooltipText("themeDark")}
         </md-menu-item>
         <md-menu-item data-theme="auto" ?selected=${this.themeMode === "auto"}>
-          Device Default
+          ${this._getTooltipText("themeAuto")}
         </md-menu-item>
       </md-menu>
 
