@@ -35,11 +35,12 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData('siteUrl', 'https://vollowx.github.io/seele-docs');
+  eleventyConfig.addGlobalData('basePath', '/seele-docs');
 
   // Add stripLang filter to remove language prefix from URLs
-  eleventyConfig.addFilter('stripLang', (url) => {
+  eleventyConfig.addFilter('stripLang', function(url) {
     // Get language codes from the global languages object
-    const languageCodes = Object.keys(eleventyConfig.globalData.languages || { 'en': {}, 'zh-Hans': {}, 'zh-Hant': {} });
+    const languageCodes = Object.keys(this.ctx.languages);
     const langPattern = languageCodes.join('|');
     // Remove language prefixes from URL
     return url

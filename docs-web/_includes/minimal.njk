@@ -22,7 +22,7 @@
         // Auto-redirect based on browser language
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.toLowerCase();
-        const basePath = '{{ siteUrl | replace("https://vollowx.github.io", "") }}';
+        const basePath = '{{ basePath }}';
         
         // Map browser language codes to our supported languages
         if (langCode.startsWith('zh-hant') || langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) {
