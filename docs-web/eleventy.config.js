@@ -28,17 +28,14 @@ export default function (eleventyConfig) {
   });
 
   // Add global data for languages
-  eleventyConfig.addGlobalData('languages', {
-    'en': { name: 'English', nativeName: 'English' },
-    'zh-Hans': { name: 'Simplified Chinese', nativeName: '简体中文' },
-    'zh-Hant': { name: 'Traditional Chinese', nativeName: '繁體中文' }
-  });
-
   eleventyConfig.addGlobalData('siteUrl', 'https://seele.v9.nz');
+  eleventyConfig.addGlobalData('languages', {
+    'en-US': { name: 'English', nativeName: 'English' },
+    'zh-CN': { name: 'Simplified Chinese', nativeName: '中文（简体）' }
+  });
 
   // Add stripLang filter to remove language prefix from URLs
   eleventyConfig.addFilter('stripLang', function(url) {
-    // Get language codes from the global languages object
     const languageCodes = Object.keys(this.ctx.languages);
     const langPattern = languageCodes.join('|');
     // Remove language prefixes from URL
