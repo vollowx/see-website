@@ -10,6 +10,7 @@
 
     <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
 
+    <!-- This template is specifically for the root index page only -->
     <!-- hreflang alternate links for multi-language support -->
     {% for langCode, langData in languages %}
     <link rel="alternate" hreflang="{{ langCode }}" href="{{ siteUrl }}/{{ langCode }}/" />
@@ -21,15 +22,16 @@
         // Auto-redirect based on browser language
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.toLowerCase();
+        const basePath = '{{ siteUrl | replace("https://vollowx.github.io", "") }}';
         
         // Map browser language codes to our supported languages
         if (langCode.startsWith('zh-hant') || langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) {
-          window.location.href = '/seele-docs/zh-Hant/';
+          window.location.href = basePath + '/zh-Hant/';
         } else if (langCode.startsWith('zh')) {
-          window.location.href = '/seele-docs/zh-Hans/';
+          window.location.href = basePath + '/zh-Hans/';
         } else {
           // Default to English for all other languages
-          window.location.href = '/seele-docs/en/';
+          window.location.href = basePath + '/en/';
         }
       })();
     </script>
@@ -39,9 +41,9 @@
       <h1>SEELE Documentation</h1>
       <h2>Available Languages</h2>
       <ul>
-        <li><a href="/seele-docs/en/">English</a></li>
-        <li><a href="/seele-docs/zh-Hans/">简体中文 (Simplified Chinese)</a></li>
-        <li><a href="/seele-docs/zh-Hant/">繁體中文 (Traditional Chinese)</a></li>
+        {% for langCode, langData in languages %}
+        <li><a href="{{ siteUrl }}/{{ langCode }}/">{{ langData.nativeName }} ({{ langData.name }})</a></li>
+        {% endfor %}
       </ul>
     </noscript>
   </body>

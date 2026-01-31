@@ -27,12 +27,6 @@ export default function (eleventyConfig) {
     return fs.readFileSync(fullPath, 'utf8');
   });
 
-  // Add stripLang filter to remove language prefix from URLs
-  eleventyConfig.addFilter('stripLang', (url) => {
-    // Remove language prefixes from URL
-    return url.replace(/^\/(en|zh-Hans|zh-Hant)\//, '/').replace(/^\/(en|zh-Hans|zh-Hant)$/, '/');
-  });
-
   // Add global data for languages
   eleventyConfig.addGlobalData('languages', {
     'en': { name: 'English', nativeName: 'English' },
@@ -41,6 +35,17 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData('siteUrl', 'https://vollowx.github.io/seele-docs');
+
+  // Add stripLang filter to remove language prefix from URLs
+  eleventyConfig.addFilter('stripLang', (url) => {
+    // Get language codes from the global languages object
+    const languageCodes = Object.keys(eleventyConfig.globalData.languages || { 'en': {}, 'zh-Hans': {}, 'zh-Hant': {} });
+    const langPattern = languageCodes.join('|');
+    // Remove language prefixes from URL
+    return url
+      .replace(new RegExp(`^/(${langPattern})/`), '/')
+      .replace(new RegExp(`^/(${langPattern})$`), '/');
+  });
 
   markdownPreprocess(eleventyConfig);
 
