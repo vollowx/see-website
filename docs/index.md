@@ -12,22 +12,21 @@ toc: false
 - [简体中文 (Simplified Chinese)](zh-Hans/)
 - [繁體中文 (Traditional Chinese)](zh-Hant/)
 
-<!-- @docs-uncomment
 <script>
 (function() {
   // Auto-redirect based on browser language
   const browserLang = navigator.language || navigator.userLanguage;
   const langCode = browserLang.toLowerCase();
+  const basePath = '/seele-docs';
   
   // Map browser language codes to our supported languages
   if (langCode.startsWith('zh-hant') || langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) {
-    window.location.href = '/zh-Hant/';
+    window.location.href = basePath + '/zh-Hant/';
   } else if (langCode.startsWith('zh')) {
-    window.location.href = '/zh-Hans/';
+    window.location.href = basePath + '/zh-Hans/';
   } else {
     // Default to English for all other languages
-    window.location.href = '/en/';
+    window.location.href = basePath + '/en/';
   }
 })();
 </script>
-@docs-uncomment-end -->

@@ -10,41 +10,13 @@
 
     <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
 
-    <!-- This template is specifically for the root index page only -->
     <!-- hreflang alternate links for multi-language support -->
     {% for langCode, langData in languages %}
     <link rel="alternate" hreflang="{{ langCode }}" href="{{ siteUrl }}/{{ langCode }}/" />
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ siteUrl }}/en/" />
-
-    <script>
-      (function() {
-        // Auto-redirect based on browser language
-        const browserLang = navigator.language || navigator.userLanguage;
-        const langCode = browserLang.toLowerCase();
-        const basePath = '{{ basePath }}';
-        
-        // Map browser language codes to our supported languages
-        if (langCode.startsWith('zh-hant') || langCode.startsWith('zh-tw') || langCode.startsWith('zh-hk') || langCode.startsWith('zh-mo')) {
-          window.location.href = basePath + '/zh-Hant/';
-        } else if (langCode.startsWith('zh')) {
-          window.location.href = basePath + '/zh-Hans/';
-        } else {
-          // Default to English for all other languages
-          window.location.href = basePath + '/en/';
-        }
-      })();
-    </script>
   </head>
   <body>
-    <noscript>
-      <h1>SEELE Documentation</h1>
-      <h2>Available Languages</h2>
-      <ul>
-        {% for langCode, langData in languages %}
-        <li><a href="{{ basePath }}/{{ langCode }}/">{{ langData.nativeName }} ({{ langData.name }})</a></li>
-        {% endfor %}
-      </ul>
-    </noscript>
+    {{ content | safe }}
   </body>
 </html>
