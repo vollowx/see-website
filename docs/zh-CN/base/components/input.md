@@ -4,8 +4,8 @@ title: Input - Base - SEELE
 
 # Input
 
-- 混合了：[`InternalsAttached`](../mixins/internals-attached.md)
-- 混合了：[`FormAssociated`](../mixins/form-associated.md)
+- 混入：[`InternalsAttached`](../mixins/internals-attached.md)
+- 混入：[`FormAssociated`](../mixins/form-associated.md)
 
 基于文本的表单输入基础组件。
 

@@ -4,8 +4,8 @@ title: Menu - Base - SEELE
 
 # Menu
 
-- 混合了：[`InternalsAttached`](../mixins/internals-attached.md)
-- 混合了：[`Attachable`](../mixins/attachable.md)
+- 混入：[`InternalsAttached`](../mixins/internals-attached.md)
+- 混入：[`Attachable`](../mixins/attachable.md)
 
 用于下拉菜单和弹出菜单的基础菜单组件。
 

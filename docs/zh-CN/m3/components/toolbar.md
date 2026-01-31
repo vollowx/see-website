@@ -6,7 +6,7 @@ title: 工具栏 - M3 - SEELE
 
 工具栏显示与当前页面或上下文相关的常用操作，并将控件组合到一个紧凑的表面中。
 
-- 混合了：[`InternalsAttached`](../../base/mixins/internals-attached.md)
+- 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
 
 ## 类型
 

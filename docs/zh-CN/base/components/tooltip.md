@@ -4,8 +4,8 @@ title: Tooltip - Base - SEELE
 
 # Tooltip
 
-- 混合了：[`InternalsAttached`](../mixins/internals-attached.md)
-- 混合了：[`Attachable`](../mixins/attachable.md)
+- 混入：[`InternalsAttached`](../mixins/internals-attached.md)
+- 混入：[`Attachable`](../mixins/attachable.md)
 
 用于显示上下文信息的基础工具提示组件。
 

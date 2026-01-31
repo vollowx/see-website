@@ -8,8 +8,8 @@ title: 涟漪 - M3 - SEELE
 
 状态层是元素上的半透明覆盖层，用于指示其状态。层可以应用于整个元素或圆形形状。
 
-- 混合了：[`InternalsAttached`](../../base/mixins/internals-attached.md)
-- 混合了：[`Attachable`](../../base/mixins/attachable.md)
+- 混入：[`InternalsAttached`](../../base/mixins/internals-attached.md)
+- 混入：[`Attachable`](../../base/mixins/attachable.md)
 
 <!-- @docs-demo-code-block -->
 
