@@ -5,7 +5,7 @@ toc: false
 
 # Standard Extensible Elements
 
-本文档呈现的是来自 `@vollowx/seele@0.9.2` 的内容。
+本文档呈现的是来自 `@vollowx/seele@0.10.2` 的内容。
 
 SEELE 是一个现代、轻量级的 Web Components 库。它提供了一套高度可定制的 UI 组件，开箱即用地遵循 Material Design 3 指南，同时设计为易于扩展和重新设计样式。
 
@@ -23,6 +23,7 @@ SEELE 是一个现代、轻量级的 Web Components 库。它提供了一套高�
 - [`MenuItem`](base/classes/menu-item.md)
 - [`Option`](base/classes/option.md)
 - [`Select`](base/classes/select.md)
+- [`Slider`](base/classes/slider.md)
 - [`Switch`](base/classes/switch.md)
 - [`Tooltip`](base/classes/tooltip.md)
 
@@ -43,6 +44,7 @@ SEELE 是一个现代、轻量级的 Web Components 库。它提供了一套高�
 - [菜单](m3/components/menu.md)
 - [涟漪](m3/components/ripple.md)
 - [选择器](m3/components/select.md)
+- [滑块](m3/components/slider.md)
 - [开关](m3/components/switch.md)
 - [文本框](m3/components/text-field.md)
 - [菜单栏](m3/components/toolbar.md)

@@ -17,7 +17,7 @@ Sliders allow users to view and select a value (or range) along a track. They're
 
   <label slot="controls" for="slider-properties-value">
     Value (0-100)
-    <input type="number" id="slider-properties-value" min="0" max="100" value="50">
+    <md-outlined-text-field type="number" id="slider-properties-value" min="0" max="100" value="50"></md-outlined-text-field>
   </label>
   <label slot="controls" for="slider-properties-labeled">
     Labeled
@@ -38,9 +38,9 @@ Sliders allow users to view and select a value (or range) along a track. They're
 </sw-demo>
 @docs-uncomment-end -->
 
-### Usage
+## Usage
 
-#### Basic Slider
+### Basic Slider
 
 Sliders can be used standalone with a default value range of 0-100.
 
@@ -51,7 +51,7 @@ Sliders can be used standalone with a default value range of 0-100.
 <md-slider data-aria-label="Brightness" value="75"></md-slider>
 ```
 
-#### Range Slider
+### Range Slider
 
 Range sliders allow users to select a range between two values using start and end handles.
 
@@ -66,7 +66,7 @@ Range sliders allow users to select a range between two values using start and e
 ></md-slider>
 ```
 
-#### With Labels
+### With Labels
 
 Value labels can be displayed on the handles to show the current value(s).
 
@@ -84,7 +84,7 @@ Value labels can be displayed on the handles to show the current value(s).
 ></md-slider>
 ```
 
-#### With Tick Marks
+### With Tick Marks
 
 Tick marks can be displayed along the track to indicate step intervals.
 
@@ -104,14 +104,20 @@ Tick marks can be displayed along the track to indicate step intervals.
 ></md-slider>
 ```
 
-#### Custom Range and Step
+### Custom Range and Step
 
 Customize the minimum, maximum, and step values.
 
 <!-- @docs-demo-code-block -->
 
 ```html
-<md-slider min="0" max="200" step="5" value="100" data-aria-label="Custom range"></md-slider>
+<md-slider
+  min="0"
+  max="200"
+  step="5"
+  value="100"
+  data-aria-label="Custom range"
+></md-slider>
 
 <md-slider
   min="-50"
@@ -122,7 +128,7 @@ Customize the minimum, maximum, and step values.
 ></md-slider>
 ```
 
-#### In Forms
+### In Forms
 
 Sliders can be used in forms with the `name` attribute.
 
@@ -147,11 +153,11 @@ Sliders can be used in forms with the `name` attribute.
     ></md-slider>
   </label>
 
-  <button type="submit">Submit</button>
+  <md-button type="submit">Submit</md-button>
 </form>
 ```
 
-### Accessibility
+## Accessibility
 
 Add a `data-aria-label` attribute to sliders to provide accessible labels for screen readers.
 
@@ -181,7 +187,3 @@ For custom value text that differs from the numeric value, use `data-aria-valuet
   data-aria-valuetext="3 stars"
 ></md-slider>
 ```
-
-## Properties
-
-All properties from the base [`Slider`](../../base/classes/slider.md) class are available.

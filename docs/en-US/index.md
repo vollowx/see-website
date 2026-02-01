@@ -5,7 +5,7 @@ toc: false
 
 # Standard Extensible Elements
 
-Presenting: `@vollowx/seele@0.9.2`.
+Presenting: `@vollowx/seele@0.10.2`.
 
 SEELE is a modern, lightweight Web Components library. It provides a set of highly
 customizable UI components that follow the Material Design 3 guidelines out of the
@@ -25,6 +25,7 @@ box, while being designed for easy extension and restyling.
 - [`MenuItem`](base/classes/menu-item.md)
 - [`Option`](base/classes/option.md)
 - [`Select`](base/classes/select.md)
+- [`Slider`](base/classes/slider.md)
 - [`Switch`](base/classes/switch.md)
 - [`Tooltip`](base/classes/tooltip.md)
 
@@ -45,6 +46,7 @@ box, while being designed for easy extension and restyling.
 - [Menu](m3/components/menu.md)
 - [Ripple](m3/components/ripple.md)
 - [Select](m3/components/select.md)
+- [Slider](m3/components/slider.md)
 - [Switch](m3/components/switch.md)
 - [Text Field](m3/components/text-field.md)
 - [Toolbar](m3/components/toolbar.md)

@@ -286,6 +286,7 @@ a:has(md-icon-button) {
 }
 
 label:has(md-checkbox),
+label:has(md-slider),
 label:has(md-switch),
 label:has(md-filled-select),
 label:has(md-outlined-select),

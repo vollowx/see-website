@@ -2,7 +2,7 @@
 title: Slider - M3 - SEELE
 ---
 
-# Slider（滑块）
+# 滑块
 
 滑块允许用户查看和选择轨道上的值（或范围）。它们非常适合调整音量和亮度等设置，或应用图像滤镜。
 
@@ -17,7 +17,7 @@ title: Slider - M3 - SEELE
 
   <label slot="controls" for="slider-properties-value">
     值 (0-100)
-    <input type="number" id="slider-properties-value" min="0" max="100" value="50">
+    <md-outlined-text-field type="number" id="slider-properties-value" min="0" max="100" value="50"></md-outlined-text-field>
   </label>
   <label slot="controls" for="slider-properties-labeled">
     显示标签
@@ -38,9 +38,9 @@ title: Slider - M3 - SEELE
 </sw-demo>
 @docs-uncomment-end -->
 
-### 用法
+## 用法
 
-#### 基础滑块
+### 基础滑块
 
 滑块可以独立使用，默认值范围为 0-100。
 
@@ -51,7 +51,7 @@ title: Slider - M3 - SEELE
 <md-slider data-aria-label="亮度" value="75"></md-slider>
 ```
 
-#### 范围滑块
+### 范围滑块
 
 范围滑块允许用户使用起始和结束手柄选择两个值之间的范围。
 
@@ -66,7 +66,7 @@ title: Slider - M3 - SEELE
 ></md-slider>
 ```
 
-#### 带标签
+### 带标签
 
 可以在手柄上显示值标签以显示当前值。
 
@@ -84,7 +84,7 @@ title: Slider - M3 - SEELE
 ></md-slider>
 ```
 
-#### 带刻度标记
+### 带刻度标记
 
 可以沿轨道显示刻度标记以指示步进间隔。
 
@@ -104,14 +104,20 @@ title: Slider - M3 - SEELE
 ></md-slider>
 ```
 
-#### 自定义范围和步进
+### 自定义范围和步进
 
 自定义最小值、最大值和步进值。
 
 <!-- @docs-demo-code-block -->
 
 ```html
-<md-slider min="0" max="200" step="5" value="100" data-aria-label="自定义范围"></md-slider>
+<md-slider
+  min="0"
+  max="200"
+  step="5"
+  value="100"
+  data-aria-label="自定义范围"
+></md-slider>
 
 <md-slider
   min="-50"
@@ -122,7 +128,7 @@ title: Slider - M3 - SEELE
 ></md-slider>
 ```
 
-#### 在表单中使用
+### 在表单中使用
 
 滑块可以在表单中使用 `name` 属性。
 
@@ -147,11 +153,11 @@ title: Slider - M3 - SEELE
     ></md-slider>
   </label>
 
-  <button type="submit">提交</button>
+  <md-button type="submit">提交</md-button>
 </form>
 ```
 
-### 无障碍性
+## 无障碍性
 
 为滑块添加 `data-aria-label` 属性，为屏幕阅读器提供可访问的标签。
 
@@ -181,7 +187,3 @@ title: Slider - M3 - SEELE
   data-aria-valuetext="3 星"
 ></md-slider>
 ```
-
-## 属性
-
-基础 [`Slider`](../../base/classes/slider.md) 类的所有属性都可用。
