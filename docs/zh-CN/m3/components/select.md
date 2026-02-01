@@ -7,7 +7,7 @@ title: 选择器 - M3 - SEELE
 选择器允许用户从一组值中选择一个或多个项目。
 
 - 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- 继承自：[`Select`](../../base/components/select.md)
+- 继承自：[`Select`](../../base/classes/select.md)
 
 <!-- @docs-demo-code-block -->
 

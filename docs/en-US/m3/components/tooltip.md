@@ -7,7 +7,7 @@ title: Tooltip - M3 - SEELE
 Tooltips display informative text when users hover over, focus on, or tap an element.
 
 - Follows: [Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
-- Inherits: [`Tooltip`](../../base/components/tooltip.md)
+- Inherits: [`Tooltip`](../../base/classes/tooltip.md)
 
 <!-- @docs-demo-code-block -->
 

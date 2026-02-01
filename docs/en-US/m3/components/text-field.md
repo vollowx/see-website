@@ -7,7 +7,7 @@ title: Text Field - M3 - SEELE
 Text fields let users enter text into a UI.
 
 - Follows: [Text Fields - Material Design 3](https://m3.material.io/components/text-fields/overview)
-- Inherits: [`Input`](../../base/components/input.md)
+- Inherits: [`Input`](../../base/classes/input.md)
 
 <!-- @docs-demo-code-block -->
 

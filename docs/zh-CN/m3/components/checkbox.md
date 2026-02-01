@@ -7,7 +7,7 @@ title: 复选框 - M3 - SEELE
 复选框允许用户从一组项目中选择一个或多个项目。复选框可以打开或关闭选项。
 
 - 遵循：[Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
-- 继承自：[`Checkbox`](../../base/components/checkbox.md)
+- 继承自：[`Checkbox`](../../base/classes/checkbox.md)
 
 <!-- @docs-uncomment
 ## 交互式演示

@@ -7,7 +7,7 @@ title: Icon Button - M3 - SEELE
 ## Action Button
 
 - Follows: [Icon Buttons - Material Design 3](https://m3.material.io/components/icon-buttons/overview)
-- Inherits: [`Button`](../../base/components/button.md)
+- Inherits: [`Button`](../../base/classes/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -83,7 +83,7 @@ title: Icon Button - M3 - SEELE
 
 ## Toggle Button
 
-- Inherits: [`Switch`](../../base/components/switch.md)
+- Inherits: [`Switch`](../../base/classes/switch.md)
 
 Icon buttons can be used to select between two states.
 

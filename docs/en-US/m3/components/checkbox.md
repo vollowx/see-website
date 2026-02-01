@@ -7,7 +7,7 @@ title: Checkbox - M3 - SEELE
 Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
 
 - Follows: [Checkboxes - Material Design 3](https://m3.material.io/components/checkbox/overview)
-- Inherits: [`Checkbox`](../../base/components/checkbox.md)
+- Inherits: [`Checkbox`](../../base/classes/checkbox.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo

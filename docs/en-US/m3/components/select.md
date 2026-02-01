@@ -7,7 +7,7 @@ title: Select - M3 - SEELE
 Selects allow users to choose one or more items from a list of values.
 
 - Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- Inherits: [`Select`](../../base/components/select.md)
+- Inherits: [`Select`](../../base/classes/select.md)
 
 <!-- @docs-demo-code-block -->
 

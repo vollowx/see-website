@@ -7,7 +7,7 @@ title: 浮动操作按钮 - M3 - SEELE
 浮动操作按钮（FAB）帮助用户执行主要操作。
 
 - 遵循：[FABs - Material Design 3](https://m3.material.io/components/floating-action-button/overview)
-- 继承自：[`Button`](../../base/components/button.md)
+- 继承自：[`Button`](../../base/classes/button.md)
 
 ## 类型
 

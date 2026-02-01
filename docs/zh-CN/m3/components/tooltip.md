@@ -7,7 +7,7 @@ title: 工具提示 - M3 - SEELE
 工具提示在用户悬停、聚焦或点击元素时显示信息性文本。
 
 - 遵循：[Tooltips - Material Design 3](https://m3.material.io/components/tooltips/overview)
-- 继承自：[`Tooltip`](../../base/components/tooltip.md)
+- 继承自：[`Tooltip`](../../base/classes/tooltip.md)
 
 <!-- @docs-demo-code-block -->
 

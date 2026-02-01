@@ -7,7 +7,7 @@ title: Button - M3 - SEELE
 ## Action Button
 
 - Follows: [Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
-- Inherits: [`Button`](../../base/components/button.md)
+- Inherits: [`Button`](../../base/classes/button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
@@ -121,7 +121,7 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 ## Toggle Button
 
-- Inherits: [`Switch`](../../base/components/switch.md)
+- Inherits: [`Switch`](../../base/classes/switch.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo

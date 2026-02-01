@@ -7,7 +7,7 @@ title: 按钮 - M3 - SEELE
 ## 操作按钮
 
 - 遵循：[Buttons - Material Design 3](https://m3.material.io/components/buttons/overview)
-- 继承自：[`Button`](../../base/components/button.md)
+- 继承自：[`Button`](../../base/classes/button.md)
 
 <!-- @docs-uncomment
 ### 交互式演示
@@ -121,7 +121,7 @@ title: 按钮 - M3 - SEELE
 
 ## 切换按钮
 
-- 继承自：[`Switch`](../../base/components/switch.md)
+- 继承自：[`Switch`](../../base/classes/switch.md)
 
 <!-- @docs-uncomment
 ### 交互式演示

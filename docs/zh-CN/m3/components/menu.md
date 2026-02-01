@@ -7,7 +7,7 @@ title: 菜单 - M3 - SEELE
 菜单在临时表面上显示一组选项。当用户与按钮、操作或其他控件交互时，它们会出现。
 
 - 遵循：[Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- 继承自：[`Menu`](../../base/components/menu.md)
+- 继承自：[`Menu`](../../base/classes/menu.md)
 
 <!-- @docs-uncomment
 ## 交互式演示

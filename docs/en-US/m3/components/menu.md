@@ -7,7 +7,7 @@ title: Menu - M3 - SEELE
 Menus display a list of choices on a temporary surface. They appear when users interact with a button, action, or other control.
 
 - Follows: [Menus - Material Design 3](https://m3.material.io/components/menus/overview)
-- Inherits: [`Menu`](../../base/components/menu.md)
+- Inherits: [`Menu`](../../base/classes/menu.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo
