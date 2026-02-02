@@ -13,18 +13,19 @@ const projectRoot = path.resolve(__dirname, '..');
 
 // Get current git commit information at build time
 function getGitCommitInfo() {
+  const defaultGithubUrl = 'https://github.com/vollowx/seele-docs';
+  
   try {
     // Check if we're in a Vercel environment - use Vercel environment variables
     if (process.env.VERCEL_GIT_COMMIT_SHA) {
       const commitSha = process.env.VERCEL_GIT_COMMIT_SHA;
       const commitShortSha = commitSha.substring(0, 7);
-      const githubUrl = 'https://github.com/vollowx/seele-docs';
       
       return {
         sha: commitSha,
         shortSha: commitShortSha,
-        githubUrl: githubUrl,
-        commitUrl: `${githubUrl}/commit/${commitSha}`,
+        githubUrl: defaultGithubUrl,
+        commitUrl: `${defaultGithubUrl}/commit/${commitSha}`,
         isUnknown: false
       };
     }
@@ -35,7 +36,7 @@ function getGitCommitInfo() {
     const remoteUrl = execSync('git config --get remote.origin.url', { cwd: projectRoot, encoding: 'utf8' }).trim();
     
     // Parse GitHub URL from remote (handles both HTTPS and SSH formats)
-    let githubUrl = 'https://github.com/vollowx/seele-docs';
+    let githubUrl = defaultGithubUrl;
     if (remoteUrl) {
       const match = remoteUrl.match(/github\.com[:/](.+?)(\.git)?$/);
       if (match) {
@@ -55,7 +56,7 @@ function getGitCommitInfo() {
     return {
       sha: 'unknown',
       shortSha: 'unknown',
-      githubUrl: 'https://github.com/vollowx/seele-docs',
+      githubUrl: defaultGithubUrl,
       commitUrl: '#',
       isUnknown: true
     };
