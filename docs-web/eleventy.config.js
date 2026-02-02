@@ -14,9 +14,9 @@ const projectRoot = path.resolve(__dirname, '..');
 // Get current git commit information at build time
 function getGitCommitInfo() {
   try {
-    const commitSha = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
-    const commitShortSha = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
-    const remoteUrl = execSync('git config --get remote.origin.url', { encoding: 'utf8' }).trim();
+    const commitSha = execSync('git rev-parse HEAD', { cwd: projectRoot, encoding: 'utf8' }).trim();
+    const commitShortSha = execSync('git rev-parse --short HEAD', { cwd: projectRoot, encoding: 'utf8' }).trim();
+    const remoteUrl = execSync('git config --get remote.origin.url', { cwd: projectRoot, encoding: 'utf8' }).trim();
     
     // Parse GitHub URL from remote (handles both HTTPS and SSH formats)
     let githubUrl = 'https://github.com/vollowx/seele-docs';
