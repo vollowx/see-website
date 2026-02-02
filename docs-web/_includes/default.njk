@@ -73,10 +73,10 @@
       <sw-toolbar></sw-toolbar>
       {{ content | injectToc(toc) | safe }}
     </main>
-    
-    <footer class="docs-footer">
-      <span>@vollowx/seele@<a href="{{ seeleVersion.npmUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link" aria-label="View @vollowx/seele version {{ seeleVersion.version }} on npm">{{ seeleVersion.version }}</a></span>
-      <span>built from {% if gitCommit.isUnknown %}<code class="docs-footer__code">{{ gitCommit.shortSha }}</code>{% else %}<a href="{{ gitCommit.commitUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link" aria-label="View commit {{ gitCommit.shortSha }} on GitHub">{{ gitCommit.shortSha }}</a>{% endif %}</span>
+
+    <footer>
+      <span><a href="{{ seeleVersion.npmUrl }}" target="_blank" rel="noopener noreferrer" aria-label="View @vollowx/seele version {{ seeleVersion.version }} on npm">@vollowx/seele@{{ seeleVersion.version }}</a></span>
+      <span>commit: {% if gitCommit.isUnknown %}{{ gitCommit.shortSha }{% else %}<a href="{{ gitCommit.commitUrl }}" target="_blank" rel="noopener noreferrer" aria-label="View commit {{ gitCommit.shortSha }} on GitHub">{{ gitCommit.shortSha }}</a>{% endif %}</span>
     </footer>
   </body>
 </html>
