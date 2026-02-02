@@ -75,9 +75,9 @@
     </main>
     
     <footer class="docs-footer">
-      <span>@vollowx/seele@<a href="{{ seeleVersion.npmUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link"><code class="docs-footer__code">{{ seeleVersion.version }}</code></a></span>
+      <span>@vollowx/seele@<a href="{{ seeleVersion.npmUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link" aria-label="View @vollowx/seele version {{ seeleVersion.version }} on npm"><code class="docs-footer__code">{{ seeleVersion.version }}</code></a></span>
       <span class="docs-footer__separator">•</span>
-      <span>Built from commit {% if gitCommit.isUnknown %}<code class="docs-footer__code">{{ gitCommit.shortSha }}</code>{% else %}<a href="{{ gitCommit.commitUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link"><code class="docs-footer__code">{{ gitCommit.shortSha }}</code></a>{% endif %}</span>
+      <span>Built from commit {% if gitCommit.isUnknown %}<code class="docs-footer__code">{{ gitCommit.shortSha }}</code>{% else %}<a href="{{ gitCommit.commitUrl }}" target="_blank" rel="noopener noreferrer" class="docs-footer__link" aria-label="View commit {{ gitCommit.shortSha }} on GitHub"><code class="docs-footer__code">{{ gitCommit.shortSha }}</code></a>{% endif %}</span>
     </footer>
   </body>
 </html>
