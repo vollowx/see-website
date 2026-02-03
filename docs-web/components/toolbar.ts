@@ -12,7 +12,7 @@ export class SwToolbar extends LitElement {
       position: fixed;
       bottom: 16px;
       left: 50%;
-      z-index: 100;
+      transform: translateX(-50%);
     }
   `;
 
