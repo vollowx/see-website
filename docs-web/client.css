@@ -158,6 +158,7 @@ body {
 }
 
 body {
+  --padding-inline: 32px;
   background-color: var(--md-sys-color-surface);
   font: var(--md-sys-typography-body-large);
   margin: 0;
@@ -170,7 +171,6 @@ main {
   overflow-y: auto;
   flex-grow: 1;
   max-width: min(100%, 980px);
-  --padding-inline: 32px;
   padding-top: 32px;
   margin-inline: auto;
 }
@@ -180,13 +180,15 @@ main > * {
 }
 
 @media (max-width: 600px) {
-  main {
+  body {
     padding-top: 16px;
     --padding-inline: 16px;
   }
 }
 
 footer {
+  max-width: min(100%, 980px);
+  margin-inline: auto;
   padding-inline: var(--padding-inline);
   display: flex;
   gap: 16px;
