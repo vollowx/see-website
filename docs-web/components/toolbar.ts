@@ -8,12 +8,14 @@ const LANGUAGES: LanguageCode[] = ['en-US', 'zh-CN'];
 @customElement('sw-toolbar')
 export class SwToolbar extends LitElement {
   static override styles = css`
+    :host {
+      z-index: 100;
+    }
     md-toolbar {
       position: fixed;
       bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 100;
     }
   `;
 
