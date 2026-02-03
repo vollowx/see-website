@@ -9,13 +9,28 @@ const LANGUAGES: LanguageCode[] = ['en-US', 'zh-CN'];
 export class SwToolbar extends LitElement {
   static override styles = css`
     :host {
-      z-index: 100;
+      display: contents;
     }
     md-toolbar {
+      --margin-start: 16px;
+      --margin-end: auto;
       position: fixed;
       bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
+      z-index: 100;
+    }
+    md-toolbar#nav-toolbar {
+      left: var(--margin-start);
+      right: var(--margin-end);
+      view-transition-name: nav-toolbar;
+    }
+    md-toolbar#config-toolbar {
+      left: var(--margin-end);
+      right: var(--margin-start);
+      view-transition-name: config-toolbar;
+    }
+    :host(:dir(rtl)) md-toolbar {
+      --margin-start: auto;
+      --margin-end: 16px;
     }
   `;
 
@@ -40,9 +55,9 @@ export class SwToolbar extends LitElement {
       language: '更改语言',
       theme: '更改主题',
       github: '查看源代码',
-      themeLight: '浅色模式',
-      themeDark: '深色模式',
-      themeAuto: '设备默认值',
+      themeLight: '浅色',
+      themeDark: '深色',
+      themeAuto: '跟随设备',
     },
   };
 
@@ -218,13 +233,41 @@ export class SwToolbar extends LitElement {
     this._saveDirectionPreference();
   }
 
+  private handleIndexClick() {
+    window.location.href = `/${this.language}/`;
+  }
+
   private _handleGithubClick() {
     window.open(this.githubUrl, '_blank');
   }
 
+  // Just a reminder:
+  // Tooltip/menu offset: 16px for icon buttons and 8px for FABs
   override render() {
     return html`
-      <md-toolbar type="floating" color="vibrant">
+      <md-toolbar id="nav-toolbar" type="floating">
+        <md-icon-button
+          id="action-back-to-index"
+          @click=${this.handleIndexClick}
+        >
+          <iconify-icon icon="mdi:home"></iconify-icon>
+        </md-icon-button>
+        <md-tooltip for="action-back-to-index" offset="16"
+          >${this.language === 'en-US' ? 'Home' : '首页'}</md-tooltip
+        >
+
+        <md-icon-button
+          id="action-open-repo"
+          aria-label="GitHub repository"
+          @click=${this._handleGithubClick}
+        >
+          <iconify-icon icon="mdi:github"></iconify-icon>
+        </md-icon-button>
+        <md-tooltip for="action-open-repo" offset="16"
+          >${this._getTooltipText('github')}</md-tooltip
+        >
+      </md-toolbar>
+      <md-toolbar id="config-toolbar" type="floating" color="vibrant">
         <md-icon-button-toggle
           id="action-toggle-direction"
           variant="tonal"
@@ -263,19 +306,6 @@ export class SwToolbar extends LitElement {
           ${this._getTooltipText('theme')}
         </md-tooltip>
 
-        <md-fab
-          slot="fab"
-          color="tertiary"
-          id="action-open-repo"
-          aria-label="GitHub repository"
-          @click=${this._handleGithubClick}
-        >
-          <iconify-icon icon="mdi:github"></iconify-icon>
-        </md-fab>
-        <md-tooltip for="action-open-repo" offset="8"
-          >${this._getTooltipText('github')}</md-tooltip
-        >
-
         <md-menu
           id="theme-menu"
           for="action-toggle-theme"
@@ -290,14 +320,20 @@ export class SwToolbar extends LitElement {
           >
             ${this._getTooltipText('themeLight')}
           </md-menu-item>
-          <md-menu-item data-theme="dark" ?selected=${this.themeMode === 'dark'}>
+          <md-menu-item
+            data-theme="dark"
+            ?selected=${this.themeMode === 'dark'}
+          >
             ${this._getTooltipText('themeDark')}
           </md-menu-item>
-          <md-menu-item data-theme="auto" ?selected=${this.themeMode === 'auto'}>
+          <md-menu-item
+            data-theme="auto"
+            ?selected=${this.themeMode === 'auto'}
+          >
             ${this._getTooltipText('themeAuto')}
           </md-menu-item>
         </md-menu>
-  
+
         <md-menu
           id="language-menu"
           for="action-toggle-language"

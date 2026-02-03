@@ -158,20 +158,23 @@ body {
 }
 
 body {
+  --padding-top: 32px;
   --padding-inline: 32px;
   background-color: var(--md-sys-color-surface);
   font: var(--md-sys-typography-body-large);
   margin: 0;
   min-height: 100dvh;
   padding-bottom: 96px;
+  box-sizing: border-box;
 }
 
 main {
-  min-height: 100dvh;
+  /* top padding + 48 (footer) + 96 (toolbar) */
+  min-height: calc(100dvh - var(--padding-top) - 144px);
   overflow-y: auto;
   flex-grow: 1;
   max-width: min(100%, 980px);
-  padding-top: 32px;
+  padding-top: var(--padding-top);
   margin-inline: auto;
 }
 
@@ -181,20 +184,27 @@ main > * {
 
 @media (max-width: 600px) {
   body {
-    padding-top: 16px;
+    --padding-top: 16px;
     --padding-inline: 16px;
   }
 }
 
 footer {
   max-width: min(100%, 980px);
+  box-sizing: border-box;
   margin-inline: auto;
+  padding-top: 32px;
   padding-inline: var(--padding-inline);
   display: flex;
-  gap: 16px;
+  gap: 4px 16px;
+  flex-wrap: wrap;
   color: var(--md-sys-color-on-surface-variant);
   font: var(--md-sys-typography-label-medium);
   font-family: 'DM Mono', monospace;
+}
+
+footer span {
+  text-wrap: nowrap;
 }
 
 h1 {
@@ -211,23 +221,24 @@ h4 {
 }
 
 pre {
+  max-height: 400px;
   overflow: auto;
-  padding: 8px;
-  border-radius: 8px;
-  border: 2px solid var(--md-sys-color-surface-variant);
+  padding: 12px;
+  border-radius: 24px;
+  color: var(--md-sys-color-on-surface-variant);
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline);
 }
 
 :not(pre) > code {
-  margin-inline: 2px;
-  padding-inline: 2px;
+  padding-inline: 4px;
   border-radius: 4px;
-  outline: 2px solid var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface-variant);
 }
 
 pre,
 :not(pre) > code {
-  background-color: var(--md-sys-color-surface-container);
-  color: var(--md-sys-color-on-surface);
   font: var(--md-sys-typography-body-large);
   font-family: 'DM Mono', monospace;
 }
@@ -327,8 +338,8 @@ label:has(:disabled) {
   animation: 67ms linear both fade-in;
 }
 
-sw-toolbar {
-  view-transition-name: toolbar;
+footer {
+  view-transition-name: footer;
 }
 
 @keyframes fade-out {

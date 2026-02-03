@@ -75,8 +75,31 @@
     </main>
 
     <footer>
-      <span><a href="{{ seeleVersion.npmUrl }}" target="_blank" rel="noopener noreferrer" aria-label="View @vollowx/seele version {{ seeleVersion.version }} on npm">@vollowx/seele@{{ seeleVersion.version }}</a></span>
-      <span>commit: {% if gitCommit.isUnknown %}{{ gitCommit.shortSha }}{% else %}<a href="{{ gitCommit.commitUrl }}" target="_blank" rel="noopener noreferrer" aria-label="View commit {{ gitCommit.shortSha }} on GitHub">{{ gitCommit.shortSha }}</a>{% endif %}</span>
+      <span>
+        presenting
+        <a
+          href="{{ seeleVersion.npmUrl }}"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="View @vollowx/seele version {{ seeleVersion.version }} on npm"
+        >
+          @vollowx/seele@{{ seeleVersion.version }}
+        </a>
+      </span>
+      <span>
+        docs built from
+{% if gitCommit.isUnknown %}
+        {{ gitCommit.shortSha }}
+{% else %}
+        <a
+          href="{{ gitCommit.commitUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View commit {{ gitCommit.shortSha }} on GitHub"
+        >
+          {{ gitCommit.shortSha }}
+        </a>
+{% endif %}
+      </span>
     </footer>
   </body>
 </html>

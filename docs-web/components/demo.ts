@@ -5,7 +5,7 @@ import { customElement } from "lit/decorators.js";
 export class SwDemo extends LitElement {
   static override styles = css`
     :host {
-      border-radius: 12px;
+      border-radius: 24px;
       display: flex;
       flex-grow: 1;
     }
@@ -24,17 +24,17 @@ export class SwDemo extends LitElement {
     }
     [part~="controls"] {
       background-color: var(--md-sys-color-surface-container-low);
-      border-bottom-right-radius: 12px;
+      border-bottom-right-radius: 24px;
       border-inline-start: 1px solid var(--md-sys-color-outline);
-      border-top-right-radius: 12px;
+      border-top-right-radius: 24px;
       flex-shrink: 0;
       gap: 16px;
       min-width: 250px;
     }
     :host-context([dir="rtl"]) [part~="controls"] {
-      border-bottom-left-radius: 12px;
+      border-bottom-left-radius: 24px;
       border-bottom-right-radius: 0;
-      border-top-left-radius: 12px;
+      border-top-left-radius: 24px;
       border-top-right-radius: 0;
     }
 
@@ -61,7 +61,7 @@ export class SwDemo extends LitElement {
         flex-direction: column;
       }
       [part~="controls"] {
-        border-bottom-left-radius: 12px;
+        border-bottom-left-radius: 24px;
         border-inline-start: none;
         border-top: 1px solid var(--md-sys-color-outline);
         border-top-right-radius: 0;

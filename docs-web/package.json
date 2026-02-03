@@ -7,7 +7,7 @@
     "build:ssr-entrypoint": "node build-ssr.js",
     "build:client": "node build-client.js",
     "build:eleventy": "eleventy",
-    "preview": "wds --root-dir _site --open"
+    "preview": "wds --root-dir _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
