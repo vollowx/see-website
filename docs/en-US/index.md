@@ -24,7 +24,7 @@ box, while being designed for easy extension and restyling.
 - [`Option`](base/classes/option.md)
 - [`Select`](base/classes/select.md)
 - [`Slider`](base/classes/slider.md)
-- [`Switch`](base/classes/switch.md)
+- [`ToggleButton`](base/classes/toggle-button.md)
 - [`Tooltip`](base/classes/tooltip.md)
 
 ### Mixins

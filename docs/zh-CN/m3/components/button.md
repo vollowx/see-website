@@ -121,7 +121,7 @@ title: 按钮 - M3 - SEELE
 
 ## 切换按钮
 
-- 继承自：[`Switch`](../../base/classes/switch.md)
+- 继承自：[`ToggleButton`](../../base/classes/toggle-button.md)
 
 <!-- @docs-uncomment
 ### 交互式演示

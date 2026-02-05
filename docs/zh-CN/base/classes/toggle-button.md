@@ -1,8 +1,8 @@
 ---
-title: Switch - Base - SEELE
+title: ToggleButton - Base - SEELE
 ---
 
-# Switch
+# ToggleButton
 
 - 混入：[`InternalsAttached`](../mixins/internals-attached.md)
 - 混入：[`FormAssociated`](../mixins/form-associated.md)
@@ -11,7 +11,7 @@ title: Switch - Base - SEELE
 
 | 名称      | 类型    | 默认值  | 描述                        |
 | --------- | ------- | ------- | --------------------------- |
-| `checked` | Boolean | `false` | 开关是否处于选中/打开状态。 |
+| `checked` | Boolean | `false` | 切换按钮是否处于选中/打开状态。 |
 
 ## 事件
 

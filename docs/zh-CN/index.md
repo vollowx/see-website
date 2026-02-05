@@ -22,7 +22,7 @@ SEELE 是一个现代、轻量级的 Web Components 库。它提供了一套高�
 - [`Option`](base/classes/option.md)
 - [`Select`](base/classes/select.md)
 - [`Slider`](base/classes/slider.md)
-- [`Switch`](base/classes/switch.md)
+- [`ToggleButton`](base/classes/toggle-button.md)
 - [`Tooltip`](base/classes/tooltip.md)
 
 ### 类混合函数

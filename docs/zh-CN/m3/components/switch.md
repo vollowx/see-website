@@ -7,7 +7,7 @@ title: 开关 - M3 - SEELE
 开关是调整设置的首选方式。它们用于控制二进制选项——比如开/关或真/假。
 
 - 遵循：[Switches - Material Design 3](https://m3.material.io/components/switch/overview)
-- 继承自：[`Switch`](../../base/classes/switch.md)
+- 继承自：[`ToggleButton`](../../base/classes/toggle-button.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo

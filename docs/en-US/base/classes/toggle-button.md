@@ -1,8 +1,8 @@
 ---
-title: Switch - Base - SEELE
+title: ToggleButton - Base - SEELE
 ---
 
-# Switch
+# ToggleButton
 
 - Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
 - Mixes: [`FormAssociated`](../mixins/form-associated.md)
@@ -11,7 +11,7 @@ title: Switch - Base - SEELE
 
 | Name      | Type    | Default | Description                                    |
 | --------- | ------- | ------- | ---------------------------------------------- |
-| `checked` | Boolean | `false` | Whether the switch is in the checked/on state. |
+| `checked` | Boolean | `false` | Whether the toggle button is in the checked/on state. |
 
 ## Events
 

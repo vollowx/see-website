@@ -83,7 +83,7 @@ title: Icon Button - M3 - SEELE
 
 ## Toggle Button
 
-- Inherits: [`Switch`](../../base/classes/switch.md)
+- Inherits: [`ToggleButton`](../../base/classes/toggle-button.md)
 
 Icon buttons can be used to select between two states.
 

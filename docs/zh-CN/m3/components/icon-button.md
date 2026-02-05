@@ -83,7 +83,7 @@ title: 图标按钮 - M3 - SEELE
 
 ## 切换按钮
 
-- 继承自：[`Switch`](../../base/classes/switch.md)
+- 继承自：[`ToggleButton`](../../base/classes/toggle-button.md)
 
 图标按钮可用于在两种状态之间进行选择。
 

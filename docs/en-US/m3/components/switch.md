@@ -7,7 +7,7 @@ title: Switch - M3 - SEELE
 Switches are the preferred way to adjust settings. They're used to control binary options – think On/Off or True/False.
 
 - Follows: [Switches - Material Design 3](https://m3.material.io/components/switch/overview)
-- Inherits: [`Switch`](../../base/classes/switch.md)
+- Inherits: [`ToggleButton`](../../base/classes/toggle-button.md)
 
 <!-- @docs-uncomment
 ## Interactive Demo

@@ -121,7 +121,7 @@ Note: `color` is not part of the official Material Design 3. Color of tonal butt
 
 ## Toggle Button
 
-- Inherits: [`Switch`](../../base/classes/switch.md)
+- Inherits: [`ToggleButton`](../../base/classes/toggle-button.md)
 
 <!-- @docs-uncomment
 ### Interactive Demo
