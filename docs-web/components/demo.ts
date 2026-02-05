@@ -23,7 +23,7 @@ export class SwDemo extends LitElement {
       padding: 24px;
     }
     [part~="controls"] {
-      background-color: var(--md-sys-color-surface-container-low);
+      background-color: var(--md-sys-color-surface-container-lowest);
       border-bottom-right-radius: 24px;
       border-inline-start: 1px solid var(--md-sys-color-outline);
       border-top-right-radius: 24px;

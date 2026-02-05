@@ -2,7 +2,7 @@
   --font-family: 'DM Sans', sans-serif;
 }
 
-:root[data-md-theme='light'] {
+:root {
   --md-sys-color-background: #f9f9ff;
   --md-sys-color-on-background: #1a1c20;
   --md-sys-color-surface: #f9f9ff;
