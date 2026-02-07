@@ -32,8 +32,8 @@ title: 菜单 - M3 - SEELE
     <md-switch id="menu-properties-keepOpenClickItem"></md-switch>
   </label>
 
-  <label slot="controls" for="menu-properties-keepOpenClickOutside">
-    Keep Open (Click Outside)
+  <label slot="controls" for="menu-properties-keepOpenClickAway">
+    Keep Open (Click Away)
     <md-switch id="menu-properties-keepOpenClickOutside"></md-switch>
   </label>
 

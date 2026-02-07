@@ -32,9 +32,9 @@ Menus display a list of choices on a temporary surface. They appear when users i
     <md-switch id="menu-properties-keepOpenClickItem"></md-switch>
   </label>
 
-  <label slot="controls" for="menu-properties-keepOpenClickOutside">
-    Keep Open (Click Outside)
-    <md-switch id="menu-properties-keepOpenClickOutside"></md-switch>
+  <label slot="controls" for="menu-properties-keepOpenClickAway">
+    Keep Open (Click Away)
+    <md-switch id="menu-properties-keepOpenClickAway"></md-switch>
   </label>
 
   <label slot="controls" for="menu-properties-quick">
