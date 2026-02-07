@@ -103,7 +103,7 @@ title: 按钮 - M3 - SEELE
   <iconify-icon slot="icon" icon="material-symbols:send"></iconify-icon>
 </md-button>
 
-<md-button variant="text" trailingicon>
+<md-button variant="text" trailing-icon>
   Open
   <iconify-icon slot="icon" icon="material-symbols:open-in-new"></iconify-icon>
 </md-button>

@@ -59,6 +59,22 @@ title: 菜单 - M3 - SEELE
       <md-option value="left-end">left-end</md-option>
     </md-outlined-select>
   </label>
+
+  <label slot="controls" for="menu-properties-alignStrategy">
+    Align Strategy
+    <md-outlined-select name="align" id="menu-properties-alignStrategy" value="absolute">
+      <md-option value="absolute">absolute</md-option>
+      <md-option value="fixed">fixed</md-option>
+    </md-outlined-select>
+  </label>
+
+  <label slot="controls" for="menu-properties-color">
+    Color
+    <md-outlined-select name="align" id="menu-properties-color" value="standard">
+      <md-option value="standard">standard</md-option>
+      <md-option value="vibrant">vibrant</md-option>
+    </md-outlined-select>
+  </label>
 </sw-demo>
 @docs-uncomment-end -->
 
@@ -101,3 +117,9 @@ title: 菜单 - M3 - SEELE
   });
 </script>
 ```
+
+## 属性
+
+| 名称          | 类型                         | 默认值        | 描述                                              |
+| ------------- | ---------------------------- | -------------- | -------------------------------------------------------- |
+| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | 菜单的颜色变体。                        |

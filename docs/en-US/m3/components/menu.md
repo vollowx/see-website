@@ -59,6 +59,22 @@ Menus display a list of choices on a temporary surface. They appear when users i
       <md-option value="left-end">left-end</md-option>
     </md-outlined-select>
   </label>
+
+  <label slot="controls" for="menu-properties-alignStrategy">
+    Align Strategy
+    <md-outlined-select name="align" id="menu-properties-alignStrategy" value="absolute">
+      <md-option value="absolute">absolute</md-option>
+      <md-option value="fixed">fixed</md-option>
+    </md-outlined-select>
+  </label>
+
+  <label slot="controls" for="menu-properties-color">
+    Color
+    <md-outlined-select name="align" id="menu-properties-color" value="standard">
+      <md-option value="standard">standard</md-option>
+      <md-option value="vibrant">vibrant</md-option>
+    </md-outlined-select>
+  </label>
 </sw-demo>
 @docs-uncomment-end -->
 
@@ -101,3 +117,10 @@ Menus display a list of choices on a temporary surface. They appear when users i
   });
 </script>
 ```
+
+
+## Properties
+
+| Name          | Type                         | Default        | Description                                              |
+| ------------- | ---------------------------- | -------------- | -------------------------------------------------------- |
+| `color`       | `'standard' \| 'vibrant'`    | `'standard'`   | The color variant of the menu.                           |

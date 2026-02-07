@@ -32,6 +32,15 @@ export class SwToolbar extends LitElement {
       --margin-start: auto;
       --margin-end: 16px;
     }
+    #theme-menu {
+      min-width: 180px;
+    }
+    /* TODO: Remove after SEELE gets this styled */
+    [slot=end] {
+      block-size: 1em;
+      font-size: 24px;
+      inline-size: 1em;
+    }
   `;
 
   @property({ type: String }) githubUrl = 'https://github.com/vollowx/seele';
@@ -46,8 +55,8 @@ export class SwToolbar extends LitElement {
       language: 'Change language',
       theme: 'Change theme',
       github: 'View source code',
-      themeLight: 'Light mode',
-      themeDark: 'Dark mode',
+      themeLight: 'Light',
+      themeDark: 'Dark',
       themeAuto: 'Device Default',
     },
     'zh-CN': {
@@ -310,6 +319,7 @@ export class SwToolbar extends LitElement {
           id="theme-menu"
           for="action-toggle-theme"
           offset="16"
+          color="vibrant"
           align="top"
           align-strategy="fixed"
           @select=${this._handleThemeSelect}
@@ -319,18 +329,21 @@ export class SwToolbar extends LitElement {
             ?selected=${this.themeMode === 'light'}
           >
             ${this._getTooltipText('themeLight')}
+            <iconify-icon icon="material-symbols:light-mode" slot="end"></iconify-icon>
           </md-menu-item>
           <md-menu-item
             data-theme="dark"
             ?selected=${this.themeMode === 'dark'}
           >
             ${this._getTooltipText('themeDark')}
+            <iconify-icon icon="material-symbols:dark-mode" slot="end"></iconify-icon>
           </md-menu-item>
           <md-menu-item
             data-theme="auto"
             ?selected=${this.themeMode === 'auto'}
           >
             ${this._getTooltipText('themeAuto')}
+            <iconify-icon icon="material-symbols:brightness-auto" slot="end"></iconify-icon>
           </md-menu-item>
         </md-menu>
 
@@ -338,6 +351,7 @@ export class SwToolbar extends LitElement {
           id="language-menu"
           for="action-toggle-language"
           offset="16"
+          color="vibrant"
           align="top"
           align-strategy="fixed"
           @select=${this._handleLanguageSelect}
