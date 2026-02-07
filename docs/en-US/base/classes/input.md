@@ -5,6 +5,7 @@ title: Input - Base - SEELE
 # Input
 
 - Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`FocusDelegated`](../mixins/focus-delegated.md)
 - Mixes: [`FormAssociated`](../mixins/form-associated.md)
 
 Base input component for text-based form inputs.

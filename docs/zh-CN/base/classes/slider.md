@@ -5,6 +5,7 @@ title: Slider - Base - SEELE
 # Slider
 
 - 混合：[`InternalsAttached`](../mixins/internals-attached.md)
+- 混合：[`FocusDelegated`](../mixins/focus-delegated.md)
 - 混合：[`FormAssociated`](../mixins/form-associated.md)
 
 一个基础滑块组件，提供范围输入功能，支持单值模式和范围模式。

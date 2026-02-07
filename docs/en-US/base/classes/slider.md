@@ -5,6 +5,7 @@ title: Slider - Base - SEELE
 # Slider
 
 - Mixes: [`InternalsAttached`](../mixins/internals-attached.md)
+- Mixes: [`FocusDelegated`](../mixins/focus-delegated.md)
 - Mixes: [`FormAssociated`](../mixins/form-associated.md)
 
 A base slider component that provides range input functionality with support for single value and range (dual handle) modes.
